@@ -5,4 +5,7 @@ body {
     body__is-selected--last {
       margin: 0; }
 
+.header {
+  color: red; }
+
 /*# sourceMappingURL=main.css.map */
