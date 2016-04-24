@@ -26,6 +26,7 @@
                             @if ($errors->has('description'))
                                 {{ $errors->first('description', '<span class="help-block errorsColor">:message</span>') }}
                             @endif
+                            
                             {{ Form::label('price', 'Price') }}
                             {{ Form::text('price', null, [ 'class'=>"form-control", 'rows'=>"5"])}}
                             @if ($errors->has('price'))
