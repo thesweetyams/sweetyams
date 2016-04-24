@@ -1,0 +1,8 @@
+body {
+  background-color: green; }
+  body__is-selected {
+    color: blue; }
+    body__is-selected--last {
+      margin: 0; }
+
+/*# sourceMappingURL=main.css.map */
