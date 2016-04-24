@@ -1,0 +1,11 @@
+body{
+    background-color: green;
+
+    @include element('is-selected') {
+        color: blue;
+        
+        @include modifier('last') {
+            margin: 0;
+        }
+    }
+}
