@@ -1,8 +1,8 @@
-body {
+ul {
   background-color: green; }
-  body__is-selected {
+  ul__listitem {
     color: blue; }
-    body__is-selected--last {
+    ul__listitem--last {
       margin: 0; }
 
 .header {

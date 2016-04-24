@@ -20,7 +20,7 @@ class AdminController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('admin.create');
 	}
 
 
@@ -31,7 +31,9 @@ class AdminController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$menu = new Menu();
+
+		return $this->validation($menu);
 	}
 
 
@@ -81,6 +83,28 @@ class AdminController extends \BaseController {
 	{
 		//
 	}
+
+	public function validation($menu)
+	{
+		$validator = Validator::make(Input::all(), Menu::$rules);
+
+		// attempt validation
+		if ($validator->fails()) {
+			Session::flash('errorMessage', 'Unable to save menu item.');
+			return Redirect::back()->withInput()->withErrors($validator);
+		} else {
+			Session::flash('successMessage', 'The post was successfully update.');
+			$menu->name = Input::get('name');
+			$menu->description = Input::get('description');
+			$menu->available = 1;
+			$menu->image = Input::file('image');
+			$menu->price = Input::get('price');
+			$menu->save();
+			Log::info(['name'=>$menu->name, 'description'=>$menu->description, 'price'=>$menu->price]);
+			return Redirect::action('MainController@index');
+		}
+	}
+
 
 
 }

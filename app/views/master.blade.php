@@ -8,12 +8,5 @@
 	<link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-	<header>
-		<ul>
-			<li><a href="{{{action('AdminController@login')}}}">Login</a></li>
-			<li><a href="{{{action('AdminController@logout')}}}">Logout</a></li>
-			<li><a href="{{{action('AdminController@menuPanel')}}}">Menu Panel</a></li>
-		</ul>
-	</header>	
-</body>
-</html>
+	@include('.partials.navbar')
+	@yield('content')
