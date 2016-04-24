@@ -1,7 +1,7 @@
-body{
+ul{
     background-color: green;
 
-    @include element('is-selected') {
+    @include element('listitem') {
         color: blue;
 
         @include modifier('last') {
