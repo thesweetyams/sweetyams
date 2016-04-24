@@ -3,9 +3,13 @@ body{
 
     @include element('is-selected') {
         color: blue;
-        
+
         @include modifier('last') {
             margin: 0;
         }
     }
+}
+
+.header{
+    color:red;
 }
