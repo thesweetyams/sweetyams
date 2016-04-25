@@ -97,8 +97,14 @@ class AdminController extends \BaseController {
 			$menu->name = Input::get('name');
 			$menu->description = Input::get('description');
 			$menu->available = 1;
-			$menu->image = Input::file('image');
 			$menu->price = Input::get('price');
+			if( Input::hasFile('image')) 
+			{
+				$file = Input::file('image');
+				$name = $file->getClientOriginalName();
+				$file->move(public_path() .'/img/menuImages/', $name);
+				$menu->image = '/img/menuImages/' . $name;
+			}
 			$menu->save();
 			Log::info(['name'=>$menu->name, 'description'=>$menu->description, 'price'=>$menu->price]);
 			return Redirect::action('MainController@index');
