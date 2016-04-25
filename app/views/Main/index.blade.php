@@ -1,3 +1,5 @@
-@extends('.master')
+@extends('master')
 
 @section('content')
+
+@stop
