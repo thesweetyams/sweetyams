@@ -12,6 +12,7 @@ class MenuTableSeeder extends Seeder {
 		$menuItem->description = 'Black Beans, Garbanzo Beans, Black eyed peas, Onions, Zucchini, Roasted Garlic, Bell Pepper, Chard w/ organic brown rice.';
 		$menuItem->available = 1;
 		$menuItem->price = 650;
+		$menuItem->priority = 1;
 		$menuItem->save();
 
 		$menuItem = new Menu();
@@ -19,6 +20,7 @@ class MenuTableSeeder extends Seeder {
 		$menuItem->description = 'Green Beans, Broccoli, Corn, Zucchini, Squash';
 		$menuItem->available = 1;
 		$menuItem->price = 550;
+		$menuItem->priority = 2;
 		$menuItem->save();
 
 		$menuItem = new Menu();
@@ -26,6 +28,7 @@ class MenuTableSeeder extends Seeder {
 		$menuItem->description = 'Mustard, Collard, -seasoned perfect';
 		$menuItem->available = 1;
 		$menuItem->price = 425;
+		$menuItem->priority = 3;
 		$menuItem->save();
 
 		$menuItem = new Menu();
@@ -33,12 +36,14 @@ class MenuTableSeeder extends Seeder {
 		$menuItem->description = 'Green Cabbage & Kale w/ Sesame Seeds';
 		$menuItem->available = 1;
 		$menuItem->price = 425;
+		$menuItem->priority = 4;
 		$menuItem->save();
 
 		$menuItem = new Menu();
 		$menuItem->name = 'Sautéed Organic Broccoli & Garlic';
 		$menuItem->available = 1;
 		$menuItem->price = 425;
+		$menuItem->priority = 5;
 		$menuItem->save();
 
 		$menuItem = new Menu();
