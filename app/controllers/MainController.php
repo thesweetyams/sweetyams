@@ -82,5 +82,9 @@ class MainController extends \BaseController {
 		//
 	}
 
+	public function showTest()
+	{
+		return View::make('Main.test');
+	}
 
 }
