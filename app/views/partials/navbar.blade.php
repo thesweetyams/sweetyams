@@ -1,14 +1,12 @@
-<nav id="navbar">
-  <ul class="navList">
-    <li class="navList__item">Sweet Yams</li>
-    <li class="navList__item">Menu</li>
-    <li class="navList__item--logo">Logo</li>
-    <li class="navList__item">About Us</li>
-    <li class="navList__item">Community</li>
+<nav class="navbar">
+  <ul class="navbar__list">
+    <li class="navbar__list__item">Sweet Yams</li>
+    <li class="navbar__list__item">Menu</li>
+    <li class="navbar__list__item">About Us</li>
+    <li class="navbar__list__item">Community</li>
   </ul>
-
-
 </nav><!--end #main-nav-->
+
 
 
 
