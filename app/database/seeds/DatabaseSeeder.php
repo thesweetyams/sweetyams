@@ -10,9 +10,12 @@ class DatabaseSeeder extends Seeder {
 	public function run()
 	{
 		Eloquent::unguard();
-
+		User::truncate();
+		Menu::truncate();
+		MushroomBurgerAddOn::truncate();
 		$this->call('UserTableSeeder');
 		$this->call('MenuTableSeeder');
+		$this->call('MushroomBurgerAddOnTableSeeder');
 	}
 
 }
