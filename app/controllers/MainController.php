@@ -9,7 +9,13 @@ class MainController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('Main.index');
+		$menu = Menu::with('user')
+		->orderBy('created_at', 'desc')
+		->paginate(4);
+
+			return View::make('main.index', [
+				'menu' => $menu
+			]);
 	}
 
 
