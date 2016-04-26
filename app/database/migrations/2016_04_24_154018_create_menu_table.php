@@ -20,7 +20,7 @@ class CreateMenuTable extends Migration {
 			$table->string('available');
 			$table->string('image');
 			$table->string('price');
-			$table->string('priority')->unique();
+		
 			$table->timestamps();
 		});
 	}
