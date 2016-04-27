@@ -1,6 +1,6 @@
 <?php
 
-class MainController extends \BaseController {
+class MenuController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -9,13 +9,8 @@ class MainController extends \BaseController {
 	 */
 	public function index()
 	{
-		$menu = Menu::with('user')
-		->orderBy('created_at', 'desc')
-		->paginate(4);
-
-			return View::make('main.index', [
-				'menu' => $menu
-			]);
+		$menuItems = Menu::all();
+		return View::make('menu.index')->with('menuItems', $menuItems);
 	}
 
 
@@ -88,9 +83,5 @@ class MainController extends \BaseController {
 		//
 	}
 
-	public function showTest()
-	{
-		return View::make('Main.test');
-	}
 
 }
