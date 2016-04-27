@@ -57,7 +57,21 @@ class AdminController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$dish = $this->menuIsNull($id);
+
+		return View::make('admin.edit', [
+			'dish' => $dish
+		]);
+
+
+	}
+
+	public function menuIsNull($id){
+		$dish = Menu::find($id);
+		if (is_null($dish)) {
+			App::abort(404);
+		}
+		return $dish;
 	}
 
 
@@ -69,7 +83,8 @@ class AdminController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$menu = $this->menuIsNull($id);
+		return $this->validation($menu);
 	}
 
 
@@ -98,8 +113,10 @@ class AdminController extends \BaseController {
 			$menu->description = Input::get('description');
 			$menu->available = 1;
 			$menu->price = Input::get('price');
-			if( Input::hasFile('image')) 
+			if( Input::hasFile('image'))
 			{
+				$oldFile = $menu->image;
+				File::delete($oldFile);
 				$file = Input::file('image');
 				$name = $file->getClientOriginalName();
 				$file->move(public_path() .'/img/menuImages/', $name);
