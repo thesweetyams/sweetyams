@@ -1,10 +1,133 @@
-.navbar
-  background-image: url("../../img/textures/wood2.png")
-  min-height: 3em
-  width: 100%
+@media only screen and (min-device-width: 1024px)
 
-  .navbar__list
-    list-style-type: none
-    font-size: 2em
+  a
+    color: white
+    font-size: 2.5em
+    font-family: 'Slabo 27px', serif
+    letter-spacing: 2px
+    text-decoration: none
+    background: rgba(0,0,0,0)
+    padding: 10px 5px 5px 5px
+    display: inline-block
+    width: 100%
+    text-align: center
+    transition: all .5s
+
+  a:hover
+    background: rgba(0,0,0,0.1)
+
+  a:link
+    color: white
+
+  // Flex Container
+
+  .dropdown
     display: flex
-    justify-content: space-around
+
+  .dropdown__arrow
+    
+  .flex-ul
+    background-image: url('../../img/textures/wood2.png')
+    border-bottom: 2px solid #888888
+    box-shadow: 0px 6px 12px #888888
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+
+  .logo__image
+    height: 1em
+    width: 1em
+    margin: 10px 0px 0px 0px
+
+
+  .logo__image--yelp
+    width: 2em
+    height: 1em
+    margin: 10px 0px 0px 0px
+
+  .flex-ul__item
+    flex: 2
+
+  .flex-ul__item--social
+    display: flex
+    margin: -10px 10px 0px 0px
+
+  .flex-ul__item__dropdown
+    display: none
+
+  .flex-ul__item__dropdown a
+    display: inline-flex
+
+
+  .flex-ul__item__dropdown a:hover
+    display: inline-flex
+
+/* -------------------------------------------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2)
+
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)
+
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape)
+
+
+/* ------------------------------------------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3)
+  .flex-ul
+    background-color: green
+
+/* Portrait */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait)
+
+
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape)
+
+
+/* -------------------------------------- iPad 3 and 4 ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)
+
+
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2)
+
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2)
+
+
+/* --------------------------------------- Galaxy S5 ----------- */
+
+/* Portrait and Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3)
+
+
+/* Portrait */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)
+
+
+/* Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)
+
+
+/* ---------------------------------------- HTC One ----------- */
+
+/* Portrait and Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3)
+
+
+/* Portrait */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)
+
+
+/* Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)
