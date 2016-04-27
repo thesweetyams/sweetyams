@@ -1,6 +1,6 @@
 <nav class="flex-nav">
   <ul class="flex-ul">
-    <li class="flex-ul__item"><p><a href="#" class="dropdown">Menu<img class="dropdown__arrow" src="../../img/navicons/downarrow.png" alt="" /></a></p>
+    <li class="flex-ul__item"><p><a href="#" class="dropdown">Menu</a></p>
       <div class="flex-ul__item">
         <div class="flex-ul__item__dropdown">
           <a href="/menu">View Menu</a>
@@ -10,7 +10,7 @@
         </div>
       </div></li>
     <li class="flex-ul__item"><p><a href="#">Location</a></p></li>
-    <li class="flex-ul__item"><p><a href="#">Logo</a></p></li>
+    <li class="flex-ul__item"><p><a href="#"><img id="logo" class="dropdown__arrow" src="../../img/navicons/logo.png" alt="" /></a></p></li>
     <li class="flex-ul__item"><p><a href="#">About Us</a></p></li>
     <li class="flex-ul__item"><p><a href="#">Community</a></p>
       <div class="flex-ul__item">
@@ -20,7 +20,7 @@
           <a href="#">Edit Post</a>
         </div>
       </div></li>
-    <li class="flex-ul__item--social"><a href="#"><img src="../../img/logo/facebook.png" class="logo__image"/></a><a href="#"><img src="../../img/logo/instagram.png" class="logo__image"/></a><a href="#"><img src="../../img/logo/yelp.png" class="logo__image--yelp"/></a></li>
+    {{-- <li class="flex-ul__item--social"><a href="#"><img src="../../img/logo/facebook.png" class="logo__image"/></a><a href="#"><img src="../../img/logo/instagram.png" class="logo__image"/></a><a href="#"><img src="../../img/logo/yelp.png" class="logo__image--yelp"/></a></li> --}}
   </ul>
 </nav>
 
