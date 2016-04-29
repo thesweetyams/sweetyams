@@ -11,11 +11,12 @@ class DatabaseSeeder extends Seeder {
 	{
 		Eloquent::unguard();
 		User::truncate();
+		// Order::truncate();
 		Menu::truncate();
-		MushroomBurgerAddOn::truncate();
-		$this->call('UserTableSeeder');
+		AddOn::truncate();
+		$this->call('UsersTableSeeder');
 		$this->call('MenuTableSeeder');
-		$this->call('MushroomBurgerAddOnTableSeeder');
+		$this->call('AddOnsTableSeeder');
 	}
 
 }
