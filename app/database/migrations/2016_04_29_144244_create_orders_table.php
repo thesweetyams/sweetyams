@@ -15,10 +15,11 @@ class CreateOrdersTable extends Migration {
 		Schema::create('orders', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('subtotal');
 			$table->integer('user_id')->length(10)->unsigned();
 			$table->foreign('user_id')->references('id')->on('users');
-			$table->string('payment_method');
+			$table->integer('subtotal');
+			$table->timestamp('created_on');
+			$table->text('special_instructions');
 		});
 	}
 
@@ -31,5 +32,4 @@ class CreateOrdersTable extends Migration {
 	{
 		Schema::drop('orders');
 	}
-
 }
