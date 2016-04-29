@@ -23,8 +23,8 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password', 'remember_token');
 
-	public function menu()
+	public function orders()
 	{
-    	return $this->hasMany('Menu');
+    	return $this->hasMany('orders');
 	}
 }
