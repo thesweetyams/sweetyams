@@ -10,10 +10,13 @@ body {
 
 @media only screen and (min-device-width: 1024px) {
   .nav-container {
-    position: sticky; }
+    position: relative;
+    z-index: 5; }
 
   .flex-nav {
-    min-height: 3em; }
+    min-height: 3em;
+    position: relative;
+    z-index: 999; }
 
   .flex-ul__item--hover {
     color: white;
@@ -21,6 +24,7 @@ body {
     font-family: "Slabo 27px", serif;
     letter-spacing: 4px;
     padding: 20px 5px 5px 5px;
+    text-shadow: black 0.1em 0.1em 0.25em;
     display: inline-block;
     transition: all 0.25s; }
 
@@ -63,13 +67,49 @@ body {
     height: 11vh; }
 
   .dropdown {
-    border: 1px solid black;
-    display: none; }
+    margin: -15px 0px 0px -17px;
+    padding: 0px 0px 0px 0px;
+    display: none;
+    position: relative;
+    z-index: -1;
+    width: 10.85em;
+    height: 10em; }
+
+  .box-shadow {
+    height: 8em;
+    width: 10.75em;
+    margin: -114px 0px 0px 0px;
+    box-shadow: 0px 12px 20px #323232; }
+
+  .dropdown-list {
+    background-image: url("../../img/navicons/sign.png");
+    background-repeat: no-repeat;
+    font-size: 1.25em;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.15em;
+    list-style-type: none;
+    width: 8.85em;
+    height: 8em;
+    text-align: center;
+    padding: 30px 0px 0px 0px;
+    margin: -10px 0px 0px -2px; }
+
+  #community-dropdown {
+    margin-left: 30px;
+    font-size: 1em; }
+
+  #community-dropdown-list {
+    padding: 40px 0px 0px 0px; }
+
+  #community-dropdown-list a:hover {
+    font-size: 1.15em; }
+
+  .dropdown-list a:hover {
+    font-size: 1.02em; }
 
   .flex-ul__item--hover:hover + .dropdown,
   .dropdown:hover {
-    display: block;
-    background-color: red; } }
+    display: block; } }
 /* -------------------------------------------- iPhone 6 ----------- */
 /* Portrait and Landscape */
 /* Portrait */
