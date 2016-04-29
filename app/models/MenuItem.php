@@ -1,6 +1,6 @@
 <?php
 
-class MenuItem extends BaseModel
+class MenuItem extends Eloquent
 {
 	protected $table = 'menu_items';
 
