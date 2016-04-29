@@ -9,9 +9,8 @@ class MenuController extends \BaseController {
 	 */
 	public function index()
 	{
-		// $menuItems = MenuItem::all();
-		// ->with('menuItems', $menuItems)
-		return View::make('menu.index');
+		$menuItems = MenuItem::all();
+		return View::make('menu.index')->with('menuItems', $menuItems);
 	}
 
 

@@ -23,20 +23,14 @@ class MainController extends \BaseController {
 	}
 
 
-	public function doContact(){
-		    // public static $rules = [
-			//     'from'      => 'required|max:100',
-			//     'email'       => 'required|max:100',
-			//     'subject'      => 'required|max:100',
-			//     'body'       => 'required'
-			//     ];
-		
+	public function doContact()
+	{	
 		$from    = Input::get('from');
 		$email   = Input::get('email');
 		$subject = Input::get('subject');
 		$body    = Input::get('body');
 
-		$validator = Validator::make(Input::all(), Menu::$rules);
+		$validator = Validator::make(Input::all(), BaseModel::$rules);
 
 		// attempt validation
 		if ($validator->fails()) {

@@ -3,6 +3,7 @@
 class Menu extends BaseModel
 {
 	protected $table = 'menu';
+	public $timestamps = false;
 
 	public function menuItems() 
 	{
