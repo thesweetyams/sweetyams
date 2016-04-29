@@ -1,71 +1,73 @@
 @media only screen and (min-device-width: 1024px)
+  .nav-container
+    position: sticky
 
-  a
+
+  .flex-nav
+    min-height: 3em
+
+  .flex-ul__item--hover
     color: white
     font-size: 2.5em
     font-family: 'Slabo 27px', serif
-    letter-spacing: 2px
-    text-decoration: none
-    background: rgba(0,0,0,0)
-    padding: 10px 5px 5px 5px
+    letter-spacing: 4px
+    padding: 20px 5px 5px 5px
     display: inline-block
-    width: 100%
-    text-align: center
-    transition: all .5s
+    transition: all .25s
 
-  a:hover
-    background: rgba(0,0,0,0.1)
 
-  a:link
+  a:active,
+  a:link,
+  a:visited
     color: white
+
+  .flex-ul__item--hover:hover
+    color: white
+    font-size: 3em
+    text-decoration: underline
 
   // Flex Container
 
   #logo
-    height: 4.5em
-    width: 4.5em
-    position: relative
-    clear: both
-    z-index: 500
-    align-self: center
+    height: 14em
+    width: 14em
+
+  .logo__box
+
+    border-radius: 50%
+    height: 11em
+    width: 11.7em
+    box-shadow: 0px 32px 15px #323232
+    padding: 0px 0px 0px 0px
+    color: white
+    transition: all .75s
+    display: flex
+    justify-content: center
+    align-content: center
 
   .flex-ul
     background-image: url('../../img/textures/wood2.png')
     border-bottom: 2px solid #e26b21
     box-shadow: 0px 4px 12px #323232
     list-style: none
-    margin: 0
-    padding: 0
     display: flex
-
-  .logo__image
-    height: 1em
-    width: 1em
-    margin: 10px 0px 0px 0px
-
-
-  .logo__image--yelp
-    width: 2em
-    height: 1em
-    margin: 10px 0px 0px 0px
+    min-height: 5.25em
 
   .flex-ul__item
     flex: 2
+    height: 11vh
 
-  .flex-ul__item--social
-    display: flex
-    margin: -10px 10px 0px 0px
+    // DROPDOWN
 
-  .flex-ul__item__dropdown
+  .dropdown
+    border: 1px solid black
     display: none
 
-  .flex-ul__item__dropdown a
-    display: inline-flex
-
-
-  .flex-ul__item__dropdown a:hover
-    display: inline-flex
-
+  .flex-ul__item--hover:hover + .dropdown,
+  .dropdown:hover
+    // display: block
+    display: block
+    background-color: red
 /* -------------------------------------------- iPhone 6 ----------- */
 
 /* Portrait and Landscape */

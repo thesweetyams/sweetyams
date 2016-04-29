@@ -7,24 +7,29 @@ class MainController extends \BaseController {
 	 *
 	 * @return Response
 	 */
+	 public function sweetyamsLocation()
+ 	{
+ 		return View::make('map.location');
+ 	}
 
-	public function location()
-	{
-		return View::make('map.location');
-	}
+ 	public function sweetyamsDirection()
+ 	{
+ 		return View::make('map.direction');
+ 	}
+
 	public function setUpEmail()
 	{
 		return View::make('emails.email');
 	}
 
-	public function doContact()
-	{
-	 //    protected static $rules = [
-		//     'from'      => 'required|max:100',
-		//     'email'     => 'required|max:100',
-		//     'subject'   => 'required|max:100',
-		//     'body'      => 'required'
-		// ];
+
+	public function doContact(){
+		    // public static $rules = [
+			//     'from'      => 'required|max:100',
+			//     'email'       => 'required|max:100',
+			//     'subject'      => 'required|max:100',
+			//     'body'       => 'required'
+			//     ];
 		
 		$from    = Input::get('from');
 		$email   = Input::get('email');
