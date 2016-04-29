@@ -4,6 +4,8 @@
      #map-canvas {
          width: 770px;
          height: 481px;
+         position: relative;
+         z-index: -5;
      }
  </style>
 @endsection
