@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder {
 		AddOn::truncate();
 		$this->call('UsersTableSeeder');
 		$this->call('MenuTableSeeder');
+		$this->call('MenuItemsSeeder');
 		$this->call('AddOnsTableSeeder');
 	}
 
