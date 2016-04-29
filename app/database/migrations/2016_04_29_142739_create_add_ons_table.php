@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMushroomBurgerAddOnsTable extends Migration {
+class CreateAddOnsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,13 +12,13 @@ class CreateMushroomBurgerAddOnsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('mushroom_burger_add_ons', function(Blueprint $table) 
+		Schema::create('add_ons', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('item_description');
-			$table->boolean('add_to_burger')->default(0);
+			$table->string('description');
 			$table->integer('price');
 			$table->boolean('available');
+			$table->boolean('add_to_burger');
 		});
 	}
 
@@ -29,7 +29,7 @@ class CreateMushroomBurgerAddOnsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('mushroom_burger_add_ons');
+		Schema::drop('add_ons');
 	}
 
 }
