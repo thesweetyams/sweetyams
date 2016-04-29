@@ -7,15 +7,21 @@ class MainController extends \BaseController {
 	 *
 	 * @return Response
 	 */
+
+	public function location()
+	{
+		return View::make('map.location');
+	}
 	public function setUpEmail()
- 	{
- 		return View::make('emails.email');
- 	}
- 	public function doContact(){
- 		$from    = Input::get('from');
- 		$email   = Input::get('email');
- 		$subject = Input::get('subject');
- 		$body    = Input::get('body');
+	{
+		return View::make('emails.email');
+	}
+
+	public function doContact(){
+		$from    = Input::get('from');
+		$email   = Input::get('email');
+		$subject = Input::get('subject');
+		$body    = Input::get('body');
 
 		$validator = Validator::make(Input::all(), Menu::$rules);
 
@@ -25,20 +31,20 @@ class MainController extends \BaseController {
 			return Redirect::back()->withInput()->withErrors($validator);
 		}
 
- 		$data    = [
- 			'from'    => $from,
- 			'email'   => $email,
- 			'subject' => $subject,
- 			'body'    => $body
- 		];
- 		Mail::send('emails.contact', $data, function($message) use ($data)
- 		{
- 			$message->from($data['email'], $data['from']);
- 			$message->to('tleffew1994@gmail.com')->subject($data['subject']);
- 		});
+		$data    = [
+			'from'    => $from,
+			'email'   => $email,
+			'subject' => $subject,
+			'body'    => $body
+		];
+		Mail::send('emails.contact', $data, function($message) use ($data)
+		{
+			$message->from($data['email'], $data['from']);
+			$message->to('tleffew1994@gmail.com')->subject($data['subject']);
+		});
 		Session::flash('successMessage', 'The email was successfully sent.');
- 		return Redirect::action('MainController@index');
- 	}
+			return Redirect::action('MainController@index');
+	}
 
 	public function index()
 	{
@@ -46,9 +52,9 @@ class MainController extends \BaseController {
 		->orderBy('created_at', 'desc')
 		->paginate(4);
 
-			return View::make('main.index', [
-				'menu' => $menu
-			]);
+		return View::make('main.index', [
+			'menu' => $menu
+		]);
 	}
 
 

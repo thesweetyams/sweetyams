@@ -9,3 +9,5 @@ Route::resource('menu', 'MenuController');
 
 Route::get('/emailform', 'MainController@setUpEmail');
 Route::post('/email', 'MainController@doContact');
+
+Route::get('/location', 'MainController@location');
