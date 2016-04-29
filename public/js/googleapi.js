@@ -18,7 +18,7 @@ function initMap() {
     var sweetyams =  {lat: 29.423180, lng: -98.47596},
     indianapolis = {lat: 39.79, lng: -86.14},
     mapOptions = {
-        zoom: 18,
+        zoom: 16,
         center: sweetyams
 };
 

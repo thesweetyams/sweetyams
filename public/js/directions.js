@@ -1,44 +1,25 @@
-<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:v="urn:schemas-microsoft-com:vml">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <title>Google Maps JavaScript API Example: Directions + Static Map</title>
-    <script src=" http://maps.google.com/?file=api&amp;v=2&amp;key=AIzaSyDP5aXstShkZ4k9vTHcQmm5iGzPvExKj_U"
-      type="text/javascript"></script>
-    <style type="text/css">
-      body {
-        font-family: Verdana, Arial, sans serif;
-        font-size: 11px;
-        margin: 2px;
-      }
-      table.directions th {
-        background-color:#EEEEEE;
-      }
-      img {
-        color: #000000;
-      }
-    </style>
-    <script type="text/javascript">
 
-    var map;
-    var gdir;
-    var geocoder = null;
-    var addressMarker;
+    var map,
+    gdir,
+    geocoder = null,
+    addressMarker,
+    sweetyams = "218 N Cherry St, San Antonio, TX 78202";
+
 
     function initialize() {
-        var sweetyams = '218 N Cherry St, San Antonio, TX 78202';
       if (GBrowserIsCompatible()) {
         map = new GMap2(document.getElementById("map_canvas"));
         gdir = new GDirections(map, document.getElementById("directions"));
         GEvent.addListener(gdir, "addoverlay", onGDirectionsLoad);
         GEvent.addListener(gdir, "error", handleErrors);
 
-        setDirections("san antonio", "218 N Cherry St, San Antonio, TX 78202");
+        setDirections(sweetyams, "7406 snow valley");
       }
     }
 
-    function setDirections(fromAddress, toAddress) {
-      gdir.load("from: " + fromAddress + " to: " + "218 N Cherry St, San Antonio, TX 78202",
-                { "locale": "en_US" });
+    function setDirections(sweetyams, toAddress) {
+      gdir.load("from: " + sweetyams + " to: " + toAddress,
+                { "locale": "en_US"});
     }
 
     function handleErrors(){
@@ -76,7 +57,7 @@
    }
    params.push("path=" + polyParams + polyLatLngs.join("|"));
    params.push("size=300x300");
-   params.push("key=AIzaSyDP5aXstShkZ4k9vTHcQmm5iGzPvExKj_U");
+   params.push("key=ABQIAAAAjU0EJWnWPMv7oQ-jjS7dYxSPW5CJgpdgO_s4yyMovOaVh_KvvhSfpvagV18eOyDWu7VytS6Bi1CWxw");
 
    baseUrl += params.join("&");
 
@@ -102,50 +83,3 @@ function addImg(url, id) {
  document.getElementById(id).innerHTML = "";
  document.getElementById(id).appendChild(img);
 }
-
-    </script>
-
-  </head>
-  <body onload="initialize()">
-
-  <h2>Maps API Directions Illustrated</h2>
-  <form action="#" onsubmit="setDirections(this.from.value); return false">
-
-  <table>
-
-   <tr><th align="right">From:&nbsp;</th>
-
-   <td><input type="text" size="25" id="fromAddress" name="from"
-     value=""/></td>
- </tr>
- <tr>
-
-   <td colspan="3">
-    <input name="submit" type="submit" value="Get Directions!" />
-   </td></tr>
-   </table>
-
-
-  </form>
-
-    <br/>
-    <table class="directions">
-    <tr><th>Formatted Directions</th><th>Map</th></tr>
-
-    <tr>
-    <td valign="top"><div id="directions" style="width: 275px"></div></td>
-    <td valign="top"><div id="map_canvas" style="width: 310px; height: 400px"></div></td>
-
-    </tr>
-    </table>
-
-<hr>
-Static Maps (printable) version:
-
- <div id="staticMapOverviewIMG"></div>
- <div id="staticMapStartIMG"></div>
- <div id="staticMapEndIMG"></div>
-<br clear="all"/>
-
-  </body>
-</html>
