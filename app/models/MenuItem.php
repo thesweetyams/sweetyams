@@ -2,5 +2,5 @@
 
 class MenuItem extends BaseModel
 {
-	protected $table = 'menu';
+	protected $table = 'menu_items';
 }

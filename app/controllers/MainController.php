@@ -17,13 +17,15 @@ class MainController extends \BaseController {
 		return View::make('emails.email');
 	}
 
-	public function doContact(){
-		    public static $rules = [
-			    'from'      => 'required|max:100',
-			    'email'       => 'required|max:100',
-			    'subject'      => 'required|max:100',
-			    'body'       => 'required'
-			    ];
+	public function doContact()
+	{
+	 //    protected static $rules = [
+		//     'from'      => 'required|max:100',
+		//     'email'     => 'required|max:100',
+		//     'subject'   => 'required|max:100',
+		//     'body'      => 'required'
+		// ];
+		
 		$from    = Input::get('from');
 		$email   = Input::get('email');
 		$subject = Input::get('subject');
