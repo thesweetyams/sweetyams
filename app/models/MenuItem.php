@@ -9,4 +9,9 @@ class MenuItem extends BaseModel
 		return $this->belongsTo('Menu');
 	}
 
+	public function addOns() 
+	{
+		return $this->hasMany('AddOn');
+	}
+
 }

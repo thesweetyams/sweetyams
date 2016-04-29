@@ -8,4 +8,19 @@ class OrderItem extends Eloquent
 	{
 		return $this->hasOne('MenuItem');
 	}
+
+	public function orderItemAddOns() 
+	{
+		return $this->hasMany('OrderItemAddOn');
+	}
+
+	public function addOns()
+	{
+		return $this->hasMany('AddOn');
+	}
+
+	public function orders() 
+	{
+		return $this->belongsTo('Order');
+	}
 }

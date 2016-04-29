@@ -8,4 +8,9 @@ class Order extends Eloquent
 	{
 		return $this->hasManyThrough('MenuItem', 'OrderItem');
 	}
+
+	public function orderItems()
+	{
+		return $this->hasMany('OrderItem');
+	}
 }
