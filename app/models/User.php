@@ -25,6 +25,6 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 
 	public function orders()
 	{
-    	return $this->hasMany('orders');
+    	return $this->hasMany('Order');
 	}
 }
