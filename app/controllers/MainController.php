@@ -7,6 +7,7 @@ class MainController extends \BaseController {
 	 *
 	 * @return Response
 	 */
+
 	 public function sweetyamsLocation()
  	{
  		return View::make('map.location');
@@ -22,9 +23,40 @@ class MainController extends \BaseController {
 		return View::make('emails.email');
 	}
 
+	public function setUpAboutUs()
+	{
+		return View::make('main.aboutus');
+	}
+
+	public function setUpBlog()
+	{
+		return View::make('main.blog');
+	}
+
+	public function setUpEvents()
+	{
+		return View::make('main.events');
+	}
+
+	public function setUpJuiceSubscription()
+	{
+		return View::make('main.juiceSubcription');
+	}
+
+	public function setUpCatering()
+	{
+		return View::make('main.catering');
+	}
+
+
+	public function setUpProjects()
+	{
+		return View::make('main.projects');
+	}
+
 
 	public function doContact()
-	{	
+	{
 		$from    = Input::get('from');
 		$email   = Input::get('email');
 		$subject = Input::get('subject');
