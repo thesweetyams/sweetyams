@@ -12,3 +12,11 @@ Route::post('/email', 'MainController@doContact');
 
 Route::get('/location', 'MainController@sweetyamsLocation');
 Route::get('/direction', 'MainController@sweetyamsDirection');
+
+Route::get('/juice', 'MainController@setUpJuiceSubscription');
+Route::get('/catering', 'MainController@SetUpCatering');
+Route::get('/order', 'MenuController@setUpOrdering');
+Route::get('/aboutus', 'MainController@setUpAboutUs');
+Route::get('/blog', 'MainController@setUpBlog');
+Route::get('/events', 'MainController@setUpEvents');
+Route::get('/projects', 'MainController@setUpProjects');

@@ -7,6 +7,12 @@ class MenuController extends \BaseController {
 	 *
 	 * @return Response
 	 */
+
+	 public function setUpOrdering()
+	 {
+		 return View::make('main.ordering');
+	 }
+	 
 	public function index()
 	{
 		$menuItems = MenuItem::all();
