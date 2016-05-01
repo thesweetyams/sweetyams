@@ -105,6 +105,14 @@ class MenuItemsTableSeeder extends Seeder {
 		$menuItem->price = 700;
 		$menuItem->save();
 
+		// Mushroom Burger
+		$menuItem = new MenuItem;
+		$menuItem->name = "Organic Mushroom Burger";
+		$menuItem->description = "Marinated Portabella  on a GF Bun with a roasted pepper garlic spread, topped with our SY chutney.  Served with ORG House salad & ORG Brown Rice.";
+		$menuItem->available = 1;
+		$menuItem->price = 895;
+		$menuItem->save();
+
 		// Raw Organic Veggie Love Sandwich
 
 		$menuItem = new MenuItem;

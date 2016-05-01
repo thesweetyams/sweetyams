@@ -19,6 +19,7 @@ class CreateAddOnsTable extends Migration {
 			$table->integer('price');
 			$table->boolean('available');
 			$table->boolean('add_to_burger');
+			$table->integer('add_on_type');
 		});
 	}
 
