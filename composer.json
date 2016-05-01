@@ -18,6 +18,9 @@
 			"app/database/seeds",
 			"app/tests/TestCase.php"
 		],
+		"psr-0": {
+		  "Acme": "app/lib"
+	  }
 	},
 	"scripts": {
 		"post-install-cmd": [

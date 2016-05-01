@@ -1,5 +1,5 @@
 <?php
-
+// App::bind('Acme\Billing\BillingInterface', 'Acme\Billing\StripeBilling');
 Route::get('/', 'MainController@index');
 
 Route::resource('admin', 'AdminController');
@@ -21,6 +21,4 @@ Route::get('/blog', 'MainController@setUpBlog');
 Route::get('/events', 'MainController@setUpEvents');
 Route::get('/projects', 'MainController@setUpProjects');
 
-Route::post('/buy', function() {
-    dd(Input::all());
-});
+Route::post('/order', 'MainController@charge');

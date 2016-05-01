@@ -1,4 +1,5 @@
 <?php
+use Stripe;
 
 class MainController extends \BaseController {
 
@@ -7,10 +8,22 @@ class MainController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	 public function buy()
-	 {
-		dd(Input::all()); 
-	 }
+
+	 public function charge()
+     {
+         try {
+			 $stripe = new charge();
+
+             return $stripe->create([
+                 'amount' => 10 * 100,
+                 'currency' => 'usd',
+                 'description' => Input::get('email'),
+                 'card' => Input::get('stripeToken')
+             ]);
+         } catch (Stripe_CardError $e) {
+             dd('card was declined');
+         }
+     }
 	 public function sweetyamsLocation()
  	{
  		return View::make('map.location');

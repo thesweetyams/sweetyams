@@ -24,7 +24,16 @@
    </label>
 </div>
 <div class="">
+   <label>
+       <span>Email:</span>
+       <input type="email" id="email" name="email">
+   </label>
+</div>
+
+<div class="">
     {{Form::submit('Buy Now')}}
+</div>
+<div class="payments-errors">
 </div>
  {{Form::close()}}
 @stop
