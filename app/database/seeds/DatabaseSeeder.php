@@ -16,10 +16,12 @@ class DatabaseSeeder extends Seeder {
 		Menu::truncate();
 		MenuItem::truncate();
 		AddOn::truncate();
+		ItemAddOn::truncate();
 		$this->call('UsersTableSeeder');
 		$this->call('OrdersTableSeeder');
 		$this->call('MenuTableSeeder');
 		$this->call('MenuItemsTableSeeder');
+		$this->call('ItemAddOnsTableSeeder');
 		$this->call('AddOnsTableSeeder');
 	}
 
