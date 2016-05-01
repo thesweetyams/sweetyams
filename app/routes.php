@@ -20,3 +20,7 @@ Route::get('/aboutus', 'MainController@setUpAboutUs');
 Route::get('/blog', 'MainController@setUpBlog');
 Route::get('/events', 'MainController@setUpEvents');
 Route::get('/projects', 'MainController@setUpProjects');
+
+Route::post('/buy', function() {
+    dd(Input::all());
+});

@@ -10,9 +10,9 @@ class MenuController extends \BaseController {
 
 	 public function setUpOrdering()
 	 {
-		 return View::make('main.ordering');
+		 return View::make('menu.ordering');
 	 }
-	 
+
 	public function index()
 	{
 		$menuItems = MenuItem::all();

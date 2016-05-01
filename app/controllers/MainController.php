@@ -7,7 +7,10 @@ class MainController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-
+	 public function buy()
+	 {
+		dd(Input::all()); 
+	 }
 	 public function sweetyamsLocation()
  	{
  		return View::make('map.location');
