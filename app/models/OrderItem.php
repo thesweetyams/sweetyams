@@ -3,6 +3,7 @@
 class OrderItem extends Eloquent
 {
 	protected $table = 'order_items';
+	public $timestamps = false;
 
 	public function menuItems() 
 	{
@@ -12,11 +13,6 @@ class OrderItem extends Eloquent
 	public function orderItemAddOns() 
 	{
 		return $this->hasMany('OrderItemAddOn');
-	}
-
-	public function addOns()
-	{
-		return $this->hasMany('AddOn');
 	}
 
 	public function orders() 
