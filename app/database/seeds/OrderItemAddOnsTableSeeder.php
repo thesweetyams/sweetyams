@@ -1,6 +1,6 @@
 <?php
 
-class OrderItemsAddOnsTableSeeder extends Seeder
+class OrderItemAddOnsTableSeeder extends Seeder
 {
 	public function run()
 	{
@@ -12,5 +12,6 @@ class OrderItemsAddOnsTableSeeder extends Seeder
 		$orderItemAddOn = new OrderItemAddOn;
 		$orderItemAddOn->order_item_id = 1;
 		$orderItemAddOn->add_on_id = 4;  // Pointer to the Turkey Chili on the add_ons table
+		$orderItemAddOn->save();
 	}
 }
