@@ -15,7 +15,8 @@ class MainController extends \BaseController {
 
 		// Get the credit card details submitted by the form
 		$token = $_POST['stripeToken'];
-
+		$userEmail = $_POST['email'];
+		$description = 'this is the description';
 		// Create the charge on Stripe's servers - this will charge the user's card
 		try {
 		  $charge = \Stripe\Charge::create(array(
@@ -24,6 +25,20 @@ class MainController extends \BaseController {
 		    "source" => $token,
 		    "description" => "Example charge"
 		    ));
+
+
+			$data    = [
+				'userEmail'   => $userEmail,
+				'body'    => $description
+			];
+			Mail::send('emails.contact', $data, function($message) use ($data)
+			{
+				$message->from('tleffew1994@gmail.com', 'SweetYams');
+				$message->to($data['userEmail'])->subject('Order Details');
+			});
+			Session::flash('successMessage', 'The email was successfully sent.');
+			return Redirect::action('MainController@index');
+
 		} catch(\Stripe\Error\Card $e) {
 		  // The card has been declined
 		}
