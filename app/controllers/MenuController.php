@@ -10,15 +10,13 @@ class MenuController extends \BaseController {
 
 	 public function setUpOrdering() 
 	 {
-<<<<<<< HEAD
 	 	// $order = new Order;
 	 	$menu = Menu::all();
 	 	// $order = Order::with('MenuItem')->get();
 	 	// dd(Order::with('orderItems')->getQuery()->toSQL(),$order->first()->orderItems->first()->menuItems /*$order->orderItems*/);
 		return View::make('menu.ordering')->with(['menu' => $menu]);
-=======
-		 return View::make('menu.ordering');
->>>>>>> cbb40fa25bd98c31bc0dcc9a49a55928e84ca6f0
+		return View::make('menu.ordering');
+
 	 }
 
 	public function index()
