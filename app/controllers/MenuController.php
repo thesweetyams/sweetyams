@@ -10,7 +10,7 @@ class MenuController extends \BaseController {
 
 	 public function setUpOrdering()
 	 {
-	 	$order = Order::find(1);
+	 	$order = Order::with('orderItems', 'menuItems')->get();
 	 	dd($order);
 		return View::make('menu.ordering')->with(['order' => $order]);
 	 }
