@@ -1,14 +1,4 @@
 @extends('.master')
-@section('css')
-<style type="text/css">
-     #map-canvas {
-         width: 770px;
-         height: 481px;
-         position: relative;
-         z-index: -5;
-     }
- </style>
-@endsection
 @section('content')
     <div id="map-canvas"></div>
     <input id="addressForm" type="text" name="name" value="" placeholder="Enter address">
