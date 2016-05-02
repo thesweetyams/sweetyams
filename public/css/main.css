@@ -42,7 +42,8 @@ html {
   .flex-ul__item--hover:hover {
     color: white;
     font-size: 3em;
-    text-decoration: underline; }
+    text-decoration: underline;
+    text-shadow: black 0.1em 0.1em 0.5em; }
 
   #logo {
     height: 14em;
@@ -162,7 +163,8 @@ html {
   height: 2em;
   width: 2em;
   margin-top: 1.25em;
-  flex: 1; }
+  flex: 1;
+  text-shadow: black 0.1em 0em 0.25em; }
 
 .social__logo--yelp {
   width: 4em; }
