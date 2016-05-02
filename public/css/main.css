@@ -4,9 +4,15 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
-body {
+.Site {
   margin: 0;
-  background-image: linear-gradient(260deg, #b2f0b2 60%, #e5f2e5 100%); }
+  background-image: linear-gradient(260deg, #00FA9A 0%, #98FB98 100%);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+.Site-content {
+  flex: 1; }
 
 @media only screen and (min-device-width: 1024px) {
   .nav-container {
@@ -46,7 +52,7 @@ body {
     border-radius: 50%;
     height: 11em;
     width: 11.7em;
-    box-shadow: 0px 32px 15px #323232;
+    box-shadow: 0px 35px 15px #323232;
     padding: 0px 0px 0px 0px;
     color: white;
     transition: all 0.75s;
@@ -133,5 +139,32 @@ body {
 /* Portrait and Landscape */
 /* Portrait */
 /* Landscape */
+.footer {
+  background-image: url("../../img/textures/wood2.png");
+  box-shadow: -1px -4px 15px #323232;
+  border-top: 2px solid #e26b21; }
+
+.social {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around; }
+
+.social__info {
+  margin-top: 1.5em;
+  font-size: 1em;
+  flex: 0.5;
+  font-family: "Slabo", serif;
+  font-weight: 500;
+  color: white;
+  text-shadow: black 0.1em 0em 0.25em; }
+
+.social__logo {
+  height: 2em;
+  width: 2em;
+  margin-top: 1.25em;
+  flex: 1; }
+
+.social__logo--yelp {
+  width: 4em; }
 
 /*# sourceMappingURL=main.css.map */
