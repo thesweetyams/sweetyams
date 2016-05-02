@@ -4,23 +4,23 @@
       <li class="flex-ul__item"><div class="flex-ul__item--hover">Menu</div>
         <div class="dropdown">
           <ul class="dropdown-list">
-            <li><a href="#">View Menu</a></li>
-            <li><a href="#">Juice Subscription</a></li>
-            <li><a href="#">Catering</a></li>
-            <li><a href="#">Order Now!</a></li>
+            <li><a href="{{{action('MenuController@index')}}}">View Menu</a></li>
+            <li><a href="{{{action('MainController@setUpJuiceSubscription')}}}">Juice Subscription</a></li>
+            <li><a href="{{{action('MainController@setUpCatering')}}}">Catering</a></li>
+            <li><a href="{{{action('MenuController@setUpOrdering')}}}">Order Now!</a></li>
           </ul>
           <div class="box-shadow"></div>
         </div>
       </li>
-      <li class="flex-ul__item"><a class="flex-ul__item--hover" href="#">Location</a></li>
-      <li class="flex-ul__item"><div class="logo__box"><a href="#"><img id="logo" src="../../img/navicons/logo.png"/></a></div></li>
-      <li class="flex-ul__item"><a class="flex-ul__item--hover" href="#">About</a></li>
+      <li class="flex-ul__item"><a class="flex-ul__item--hover" href="{{{action('MainController@sweetyamsLocation')}}}">Location</a></li>
+      <li class="flex-ul__item"><div class="logo__box"><a href="{{{action('MainController@index')}}}"><img id="logo" src="../../img/navicons/logo.png"/></a></div></li>
+      <li class="flex-ul__item"><a class="flex-ul__item--hover" href="{{{action('MainController@setUpAboutUs')}}}">About</a></li>
       <li class="flex-ul__item"><div class="flex-ul__item--hover">Community</div>
         <div class="dropdown" id="community-dropdown">
           <ul class="dropdown-list" id="community-dropdown-list">
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Events</a></li>
+            <li><a href="{{{action('MainController@setUpBlog')}}}">Blog</a></li>
+            <li><a href="{{{action('MainController@setUpProjects')}}}">Projects</a></li>
+            <li><a href="{{{action('MainController@setUpEvents')}}}">Events</a></li>
           </ul>
           <div class="box-shadow"></div>
         </div>

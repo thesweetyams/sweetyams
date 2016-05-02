@@ -1,4 +1,5 @@
 <?php
+use Stripe;
 
 class MainController extends \BaseController {
 
@@ -7,6 +8,26 @@ class MainController extends \BaseController {
 	 *
 	 * @return Response
 	 */
+
+	 public function charge()
+     {
+		\Stripe\Stripe::setApiKey("sk_test_ZOKQRbihmavV58CCw8pyAF4h");
+
+		// Get the credit card details submitted by the form
+		$token = $_POST['stripeToken'];
+
+		// Create the charge on Stripe's servers - this will charge the user's card
+		try {
+		  $charge = \Stripe\Charge::create(array(
+		    "amount" => 1000, // amount in cents, again
+		    "currency" => "usd",
+		    "source" => $token,
+		    "description" => "Example charge"
+		    ));
+		} catch(\Stripe\Error\Card $e) {
+		  // The card has been declined
+		}
+	}
 	 public function sweetyamsLocation()
  	{
  		return View::make('map.location');
@@ -22,9 +43,40 @@ class MainController extends \BaseController {
 		return View::make('emails.email');
 	}
 
+	public function setUpAboutUs()
+	{
+		return View::make('main.aboutus');
+	}
+
+	public function setUpBlog()
+	{
+		return View::make('main.blog');
+	}
+
+	public function setUpEvents()
+	{
+		return View::make('main.events');
+	}
+
+	public function setUpJuiceSubscription()
+	{
+		return View::make('main.juiceSubcription');
+	}
+
+	public function setUpCatering()
+	{
+		return View::make('main.catering');
+	}
+
+
+	public function setUpProjects()
+	{
+		return View::make('main.projects');
+	}
+
 
 	public function doContact()
-	{	
+	{
 		$from    = Input::get('from');
 		$email   = Input::get('email');
 		$subject = Input::get('subject');
@@ -55,13 +107,8 @@ class MainController extends \BaseController {
 
 	public function index()
 	{
-		$menu = MenuItem::with('user')
-				->orderBy('created_at', 'desc')
-				->paginate(4);
-
-		return View::make('main.index', [
-			'menu' => $menu
-		]);
+		$menuItems = MenuItem::all();
+		return View::make('main.index')->with('menuItems' , $menuItems);
 	}
 
 
