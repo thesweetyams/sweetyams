@@ -13,7 +13,7 @@
         </div>
       </li>
       <li class="flex-ul__item"><a class="flex-ul__item--hover" href="{{{action('MainController@sweetyamsLocation')}}}">Location</a></li>
-      <li class="flex-ul__item"><div class="logo__box"><a href="{{{action('MainController@index')}}}"><img id="logo" src="../../img/navicons/logo.png"/></a></div></li>
+      <li class="flex-ul__item"><div class="logo__box"><a href="{{{action('MainController@index')}}}"><img id="logo" src="../../img/navicons/logo2.png"/></a></div></li>
       <li class="flex-ul__item"><a class="flex-ul__item--hover" href="{{{action('MainController@setUpAboutUs')}}}">About</a></li>
       <li class="flex-ul__item"><div class="flex-ul__item--hover">Community</div>
         <div class="dropdown" id="community-dropdown">
