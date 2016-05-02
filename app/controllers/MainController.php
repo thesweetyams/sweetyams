@@ -11,19 +11,23 @@ class MainController extends \BaseController {
 
 	 public function charge()
      {
-         try {
-			 $stripe = new charge();
+		\Stripe\Stripe::setApiKey("sk_test_ZOKQRbihmavV58CCw8pyAF4h");
 
-             return $stripe->create([
-                 'amount' => 10 * 100,
-                 'currency' => 'usd',
-                 'description' => Input::get('email'),
-                 'card' => Input::get('stripeToken')
-             ]);
-         } catch (Stripe_CardError $e) {
-             dd('card was declined');
-         }
-     }
+		// Get the credit card details submitted by the form
+		$token = $_POST['stripeToken'];
+
+		// Create the charge on Stripe's servers - this will charge the user's card
+		try {
+		  $charge = \Stripe\Charge::create(array(
+		    "amount" => 1000, // amount in cents, again
+		    "currency" => "usd",
+		    "source" => $token,
+		    "description" => "Example charge"
+		    ));
+		} catch(\Stripe\Error\Card $e) {
+		  // The card has been declined
+		}
+	}
 	 public function sweetyamsLocation()
  	{
  		return View::make('map.location');
