@@ -36,7 +36,6 @@
 <div class="payments-errors">
 </div>
  {{Form::close()}}
->>>>>>> cbb40fa25bd98c31bc0dcc9a49a55928e84ca6f0
 @stop
 
 @section('js')
