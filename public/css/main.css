@@ -6,7 +6,7 @@ html {
 
 .Site {
   margin: 0;
-  background-image: linear-gradient(260deg, #00FA9A 0%, #98FB98 100%);
+  background-image: linear-gradient(260deg, #00FA9A 0%, #98FB98 70%);
   display: flex;
   min-height: 100vh;
   flex-direction: column; }
