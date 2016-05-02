@@ -9,7 +9,7 @@ class OrdersController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		$order = 
 	}
 
 
