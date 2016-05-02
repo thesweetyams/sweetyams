@@ -6,7 +6,7 @@
           <ul class="dropdown-list">
             <li><a href="{{{action('MenuController@index')}}}">View Menu</a></li>
             <li><a href="{{{action('MainController@setUpJuiceSubscription')}}}">Juice Subscription</a></li>
-            <li><a href="{{{action('MainController@SetUpCatering')}}}">Catering</a></li>
+            <li><a href="{{{action('MainController@setUpCatering')}}}">Catering</a></li>
             <li><a href="{{{action('MenuController@setUpOrdering')}}}">Order Now!</a></li>
           </ul>
           <div class="box-shadow"></div>
