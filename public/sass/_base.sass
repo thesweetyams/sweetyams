@@ -1,5 +1,5 @@
-$backgroundOne: #e5f2e5
-$backgroundTwo: #b2f0b2
+$backgroundOne: #98FB98
+$backgroundTwo: #00FA9A
 
 html
   box-sizing: border-box
@@ -7,6 +7,12 @@ html
 *, *:before, *:after
   box-sizing: inherit
 
-body
+.Site
   margin: 0
-  background-image: linear-gradient(260deg, $backgroundTwo 60%, $backgroundOne 100%)
+  background-image: linear-gradient(260deg, $backgroundTwo 0%, $backgroundOne 100%)
+  display: flex
+  min-height: 100vh
+  flex-direction: column
+
+.Site-content
+  flex: 1

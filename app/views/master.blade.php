@@ -10,12 +10,23 @@
 	<link href='https://fonts.googleapis.com/css?family=Handlee|Slabo+27px' rel='stylesheet' type='text/css'>
 	@yield('css')
 </head>
-<body>
+<body class="Site">
 	<div class="wrapper">
 		@include('.partials.navbar')
+		<p>
+		</p>
 		@yield('content')
 	</div>
 
+	<div class="Site-content">
+		<p>
+
+		</p>
+	</div>
+
+	<footer class="footer">
+		@include('.partials.footer')
+	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	@yield('js')
