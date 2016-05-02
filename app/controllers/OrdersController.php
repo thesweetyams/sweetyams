@@ -2,17 +2,10 @@
 
 class OrdersController extends \BaseController {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
+	public function index() 
 	{
-		$order = 
+		
 	}
-
-
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -20,9 +13,12 @@ class OrdersController extends \BaseController {
 	 */
 	public function create()
 	{
-		$menuItems = MenuItem::with('AddOn')->get();
-
-		return View::make('orders.create')->with('menu', $menu);
+		$menuCategory = Menu::all();
+		$menuItems = MenuItem::all();
+		$addOns = AddOn::all();
+		return View::make('orders.create')->with(['menuItems' => $menuItems, 'menuCategory' => $menuCategory, 'addOns' => $addOns]);
+		// $menuItems = MenuItem::with('addOns')->get();
+		// return View::make('orders.create')->with(['menuItems' => $menuItems, 'menuCategoryById' => $menuCategoryById]);
 	}
 
 
