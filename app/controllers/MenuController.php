@@ -8,11 +8,13 @@ class MenuController extends \BaseController {
 	 * @return Response
 	 */
 
-	 public function setUpOrdering()
+	 public function setUpOrdering() 
 	 {
-	 	$order = Order::with('orderItems', 'menuItems')->get();
-	 	dd($order);
-		return View::make('menu.ordering')->with(['order' => $order]);
+	 	// $order = new Order;
+	 	$menu = Menu::all();
+	 	// $order = Order::with('MenuItem')->get();
+	 	// dd(Order::with('orderItems')->getQuery()->toSQL(),$order->first()->orderItems->first()->menuItems /*$order->orderItems*/);
+		return View::make('menu.ordering')->with(['menu' => $menu]);
 	 }
 	 
 	public function index()
