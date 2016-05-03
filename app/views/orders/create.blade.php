@@ -2,15 +2,22 @@
 
 @section('content')
 
-<h1>This shows the menu items </h1>
-<h2>Chicken Dished</h2>
 
-{{ Form::open(['' => '', '' => '']) }}
-@foreach($menuItems as $chicken)
-{{ Form::open(array('action' => 'OrdersController@store', 'method' => 'POST'))}}
-
-
-@endforeach
+{{ Form::open(['action' => 'OrdersController@store', 'method' => 'post']) }}
+	@foreach($menuCategory as $category)
+		<h2 style="text-decoration: underline;">{{{$category->name}}}</h2> <!-- Menu Section Title -->
+			@foreach($menuItems as $item)
+				@if($category->id == $item->menu_id)
+					<div class="form-group">
+						<p>{{{$item->name}}}</p>
+						<p>{{{$item->price}}}</p>
+						{{ Form::hidden($item->id, $item->price)}} 
+						{{ Form::submit('Add Item', ['class' => 'btn btn-info pull-right']) }}
+					</div>
+				@endif
+			@endforeach
+	@endforeach
 {{ Form::close() }}
 
+		
 @stop

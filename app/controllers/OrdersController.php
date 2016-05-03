@@ -2,17 +2,10 @@
 
 class OrdersController extends \BaseController {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
+	public function index() 
 	{
-		//
+		
 	}
-
-
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -20,9 +13,12 @@ class OrdersController extends \BaseController {
 	 */
 	public function create()
 	{
-		$menuItems = MenuItem::with('AddOn')->get();
-
-		return View::make('orders.create')->with('menu', $menu);
+		$menuCategory = Menu::all();
+		$menuItems = MenuItem::all();
+		$addOns = AddOn::all();
+		return View::make('orders.create')->with(['menuItems' => $menuItems, 'menuCategory' => $menuCategory, 'addOns' => $addOns]);
+		// $menuItems = MenuItem::with('addOns')->get();
+		// return View::make('orders.create')->with(['menuItems' => $menuItems, 'menuCategoryById' => $menuCategoryById]);
 	}
 
 
@@ -32,29 +28,29 @@ class OrdersController extends \BaseController {
 	 * @return Response
 	 */
 	public function store()
-	{
-		$order = new Order();
+	{	
 		// change below to use Auth::id() once auth is working
-		$order->user_id = User::first()->id();
-		$order->special_instructions = Input::get('special_instructions');
+		$order = new Order();
+		$order->user_id = 1;
+		$order->special_instructions = 'Some special instructions';
 		$order->save();
 
 		
+		$variable = Input::get(1);
+		dd($variable);
 		// items name attribute is an array (assuming checkbox inputs in the UI)
-		foreach(Input::get('items') as $item) {
+		foreach($variable as $item) {
 			$orderItem = new OrderItem();
 			$orderItem->order_id = $order->id;
 			$orderItem->item_id = $item->id;
 			$orderItem->save();
 		}
-		$order->subtotal = OrderItem::subtotal($order->id);
-
-
+		// $order->subtotal = OrderItem::subtotal($order->id);
 		// store a new order
 		if($order->save()) {
-			// return Redirect::action('OrdersController@show', $order->id);
+			return Redirect::action('OrdersController@create', $order->id = 1)->with(['order' => $order]);
 		} else {
-			// redirect back with inputs
+			echo 'false';
 		}
 	}
 
