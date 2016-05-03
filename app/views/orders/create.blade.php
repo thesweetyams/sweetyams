@@ -8,16 +8,16 @@
 		<h2 style="text-decoration: underline;">{{{$category->name}}}</h2> <!-- Menu Section Title -->
 			@foreach($menuItems as $item)
 				@if($category->id == $item->menu_id)
-					<p>{{{$item->name}}}</p>
-					<p>{{{$item->price}}}</p>
-					{{ Form::submit('Add Item', ['class' => 'btn btn-info pull-right', 'value' => {{{$item->price}}}]) }}
+					<div class="form-group">
+						<p>{{{$item->name}}}</p>
+						<p>{{{$item->price}}}</p>
+						{{ Form::hidden($item->id, $item->price)}} 
+						{{ Form::submit('Add Item', ['class' => 'btn btn-info pull-right']) }}
+					</div>
 				@endif
 			@endforeach
 	@endforeach
 {{ Form::close() }}
 
-
 		
-	
-
 @stop
