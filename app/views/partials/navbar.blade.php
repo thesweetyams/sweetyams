@@ -7,7 +7,7 @@
             <li><a href="{{{action('MenuController@index')}}}">View Menu</a></li>
             <li><a href="{{{action('MainController@setUpJuiceSubscription')}}}">Juice Subscription</a></li>
             <li><a href="{{{action('MainController@setUpCatering')}}}">Catering</a></li>
-            <li><a href="{{{action('MenuController@setUpOrdering')}}}">Order Now!</a></li>
+            <li><a href="{{{action('OrdersController@create')}}}">Order Now!</a></li>
           </ul>
           <div class="box-shadow"></div>
         </div>
