@@ -22,6 +22,7 @@ class OrdersController extends \BaseController {
 
 	public function store()
 	{	
+
 		if (Session::has('order_id')) {
 			$order = Order::find(Session::get('order_id'));
 		} else {
@@ -69,7 +70,8 @@ class OrdersController extends \BaseController {
 	}
 	public function confirmOrder()
 	{
-		// changes a "pending" or "confirm"
+		dd(Session::all());
+		return View::make('orders.confirm')->with();
 	}
 
 	/**

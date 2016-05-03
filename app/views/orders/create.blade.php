@@ -20,6 +20,7 @@
 				@endif  <!-- category check if check -->
 			@endforeach  <!-- .menuItems as item -->
 		@endforeach  <!-- .menuCategory as category -->
+	<a href="{{{action("OrdersController@confirmOrder")}}}">Confirm Order</a>
 </div>
 
 		
