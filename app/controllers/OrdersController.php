@@ -4,7 +4,7 @@ class OrdersController extends \BaseController {
 
 	public function index() 
 	{
-		
+		return View::make('orders.example');
 	}
 	/**
 	 * Show the form for creating a new resource.
@@ -16,35 +16,33 @@ class OrdersController extends \BaseController {
 		$menuCategory = Menu::all();
 		$menuItems = MenuItem::all();
 		$addOns = AddOn::all();
-		return View::make('orders.create')->with(['menuItems' => $menuItems, 'menuCategory' => $menuCategory, 'addOns' => $addOns]);
-		// $menuItems = MenuItem::with('addOns')->get();
-		// return View::make('orders.create')->with(['menuItems' => $menuItems, 'menuCategoryById' => $menuCategoryById]);
+		return View::make('orders.create')->with(['menuItems' => $menuItems, 'menuCategory' => $menuCategory, 'addOns' => $addOns]);		
 	}
 
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
 	public function store()
 	{	
-		// change below to use Auth::id() once auth is working
-		$order = new Order();
-		$order->user_id = 1;
-		$order->special_instructions = 'Some special instructions';
-		$order->save();
-
-		
-		$variable = Input::get(1);
-		dd($variable);
-		// items name attribute is an array (assuming checkbox inputs in the UI)
-		foreach($variable as $item) {
-			$orderItem = new OrderItem();
-			$orderItem->order_id = $order->id;
-			$orderItem->item_id = $item->id;
-			$orderItem->save();
+		if (Session::has('order_id')) {
+			$order = Order::find(Session::get('order_id'));
+		} else {
+			$order = new Order();
+			$order->user_id = 1; //Auth::id();
+			//$order->special_instructions = 'Allergic to fish!';
+			$order->save();
+			Session::put('order_id', $order->id);
 		}
+		
+		$orderItem = new OrderItem();
+		$orderItem->menu_item_id = Input::get('item_id');
+		$orderItem->order_id = $order->id;
+		$orderItem->save();
+		
+		// items name attribute is an array (assuming checkbox inputs in the UI)
+		// foreach($variable as $item) {
+		// 	$orderItem->order_id = $order->id;
+		// 	$orderItem->item_id = $item->id;
+		// 	$orderItem->save();
+		// }
 		// $order->subtotal = OrderItem::subtotal($order->id);
 		// store a new order
 		if($order->save()) {
