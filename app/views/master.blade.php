@@ -14,14 +14,11 @@
 <body class="Site">
 	<div class="wrapper">
 		@include('.partials.navbar')
-		<p>
-		</p>
-		@yield('content')
 	</div>
 
 	<div class="Site-content">
 		<p>
-
+		@include('.partials.content')
 		</p>
 	</div>
 
