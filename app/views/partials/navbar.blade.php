@@ -18,9 +18,10 @@
       <li class="flex-ul__item"><div class="flex-ul__item--hover">Community</div>
         <div class="dropdown" id="community-dropdown">
           <ul class="dropdown-list" id="community-dropdown-list">
-            <li><a href="{{{action('MainController@setUpBlog')}}}">Blog</a></li>
-            <li><a href="{{{action('MainController@setUpProjects')}}}">Projects</a></li>
-            <li><a href="{{{action('MainController@setUpEvents')}}}">Events</a></li>
+            <li><a href="#"><img class="social__logo" src="../../img/logo/yelp.png" alt="" />Yelp</a></li>
+            <li><a href="#"><img class="social__logo" src="../../img/logo/instagram2.png" alt="" /></a></li>
+            <li><a href="#"><img class="social__logo social__logo--yelp" src="../../img/logo/facebook.png" alt="" />Facebook</a></li>
+            <li><a href="#">Gallery</a></li>
           </ul>
           <div class="box-shadow"></div>
         </div>
