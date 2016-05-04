@@ -32,20 +32,21 @@ html {
     font-family: "Slabo 27px", serif;
     letter-spacing: 4px;
     padding: 20px 5px 5px 5px;
-    text-shadow: black 0.1em 0.1em 0.25em;
+    text-shadow: black 0.1em 0.1em 0.3em;
     display: inline-block;
     transition: all 0.25s; }
 
   a:active,
   a:link,
   a:visited {
-    color: white; }
+    color: white;
+    text-decoration: none; }
 
   .flex-ul__item--hover:hover {
     color: white;
     font-size: 3em;
-    text-decoration: underline;
-    text-shadow: black 0.1em 0.1em 0.5em; }
+    text-decoration: none;
+    text-shadow: black 0.1em 0.1em 0.2em; }
 
   #logo {
     height: 12em;
@@ -118,7 +119,7 @@ html {
     font-size: 1.15em; }
 
   .dropdown-list a:hover {
-    font-size: 1.02em; }
+    font-size: 1.05em; }
 
   .flex-ul__item--hover:hover + .dropdown,
   .dropdown:hover {
@@ -155,7 +156,7 @@ html {
   opacity: 0.5;
   position: relative;
   z-index: -5;
-  box-shadow: -5px -10px 100px 20px #E6FFBF; }
+  box-shadow: -15px -10px 160px 30px #E6FFBF; }
 
 .footer {
   background-image: url("../../img/textures/wood2.png");
