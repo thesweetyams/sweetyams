@@ -71,8 +71,8 @@ class OrdersController extends \BaseController {
 	{
 		$orderId = Session::get('order_id');
 		$order = Order::find($orderId);
-		$order->subtotal();
-		return View::make('orders.confirm')->with(['orderId' => $orderId]);
+		$total = $order->subtotal();
+		return View::make('orders.confirm')->with(['orderId' => $orderId, 'total' => $total]);
 	}
 
 	/**
