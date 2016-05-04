@@ -78,6 +78,10 @@ class OrdersController extends \BaseController {
 												   'total' => $total, 
 												   'orderItems' => $orderItems]);
 	}
+	public function ($total) 
+	{
+		return View::make('orders.pay')->with($total);
+	}
 
 	/**
 	 * Show the form for editing the specified resource.
@@ -115,7 +119,6 @@ class OrdersController extends \BaseController {
 		$orderItem->delete();
 		Session::flash('successMessage', 'The post was successfully deleted');
 		return Redirect::action('OrdersController@confirmOrder');
-
 	}
 
 
