@@ -5,6 +5,7 @@ Route::get('/', 'MainController@index');
 
 Route::resource('admin', 'AdminController');
 Route::get('/orders/confirm', 'OrdersController@confirmOrder');
+Route::get('/orders/pay', 'OrdersController@payOrder');
 Route::resource('orders', 'OrdersController');
 Route::resource('menu', 'MenuController');
 
