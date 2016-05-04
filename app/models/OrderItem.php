@@ -5,22 +5,13 @@ class OrderItem extends Eloquent
 	protected $table = 'order_items';
 	public $timestamps = false;
 
-	public function menuItems()
+	public function menuItem()
 	{
-		return $this->hasOne('MenuItem');
+		//order_items.menu_item_id (FOREIGN)  -> menu_item.id (PRIMARY == OWNER)     belongsTo
+		//order_item.id (PRIMARY == OWNER) -> menu_item.order_item_id (FOREIGN) hasOne
+		return $this->belongsTo('MenuItem');
 	}
-	public function subtotal($id)
-	{
-		$total = 0;
-		// $items = OrderItem::->where('item_id', $id)->get();
 
-		foreach($items as $item) {
-			$total += $item->menuItems()->price;
-		}
-
-		// do the same thing for add_ons based off the addons
-		return $total;
-	}
 	public function orderItemAddOns()
 	{
 		return $this->hasMany('OrderItemAddOn');

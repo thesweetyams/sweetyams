@@ -4,10 +4,11 @@ Route::get('/', 'MainController@index');
 
 
 Route::resource('admin', 'AdminController');
+Route::get('/orders/confirm', 'OrdersController@confirmOrder');
 Route::resource('orders', 'OrdersController');
 Route::resource('menu', 'MenuController');
 
-
+	
 Route::get('/emailform', 'MainController@setUpEmail');
 Route::post('/email', 'MainController@doContact');
 Route::get('/test', 'MainController@showTest');

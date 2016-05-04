@@ -10,6 +10,4 @@ class AddOn extends Eloquent
 	{
 		return $this->belongsTo('MenuItem');
 	}
-
-	
 }
