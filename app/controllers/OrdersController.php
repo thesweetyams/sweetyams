@@ -1,4 +1,5 @@
 <?php
+ 
 
 class OrdersController extends \BaseController {
 
@@ -22,20 +23,18 @@ class OrdersController extends \BaseController {
 
 	public function store()
 	{	
-
 		if (Session::has('order_id')) {
 			$order = Order::find(Session::get('order_id'));
 		} else {
 			$order = new Order();
-			$order->user_id = 1; //Auth::id();
-			//$order->special_instructions = 'Allergic to fish!';
+			$order->user_id = 1; 
 			$order->save();
 			Session::put('order_id', $order->id);
 		}
-		
-		$orderItem = new OrderItem();
+	
+		$orderItem = new OrderItem;
 		$orderItem->menu_item_id = Input::get('item_id');
-		$orderItem->order_id = $order->id;
+		$orderItem->order_id = Session::get('order_id');
 		$orderItem->save();
 		
 		// items name attribute is an array (assuming checkbox inputs in the UI)
@@ -70,8 +69,10 @@ class OrdersController extends \BaseController {
 	}
 	public function confirmOrder()
 	{
-		dd(Session::all());
-		return View::make('orders.confirm')->with();
+		$orderId = Session::get('order_id');
+		$order = Order::find($orderId);
+		$order->subtotal();
+		return View::make('orders.confirm')->with(['orderId' => $orderId]);
 	}
 
 	/**
