@@ -4,8 +4,8 @@ Route::get('/', 'MainController@index');
 
 
 Route::resource('admin', 'AdminController');
+Route::get('/orders/confirm', 'OrdersController@confirmOrder');
 Route::resource('orders', 'OrdersController');
-Route::get('/order/confirm', 'OrdersController@confirmOrder');
 Route::resource('menu', 'MenuController');
 
 	
