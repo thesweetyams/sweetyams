@@ -17,12 +17,10 @@
 	</div>
 
 	<div class="Site-content">
-		@yield('content')		
+		@yield('content')
 	</div>
 
-	<footer class="footer">
 		@include('.partials.footer')
-	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	@yield('js')
