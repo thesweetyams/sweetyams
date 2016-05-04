@@ -78,7 +78,7 @@ class OrdersController extends \BaseController {
 												   'total' => $total, 
 												   'orderItems' => $orderItems]);
 	}
-	public function ($total) 
+	public function payOrder($total) 
 	{
 		return View::make('orders.pay')->with($total);
 	}
