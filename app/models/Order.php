@@ -7,8 +7,7 @@ class Order extends Eloquent
 
 	public function subtotal()
 	{
-		self::where('order_id', '>', 100)->paginate();
-
+		// self::where('order_id', '>', 100)->paginate();
 		$total = 0;
 		foreach($this->orderItems as $item) {
 			var_dump($item->menuItem->price);
