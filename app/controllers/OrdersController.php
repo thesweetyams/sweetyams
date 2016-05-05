@@ -71,8 +71,16 @@ class OrdersController extends \BaseController {
 	{
 		$orderId = Session::get('order_id');
 		$order = Order::find($orderId);
+		$orderItem = OrderItem::find($orderId);
 		$total = $order->subtotal();
-		return View::make('orders.confirm')->with(['orderId' => $orderId, 'total' => $total]);
+		$orderItems = OrderItem::where('order_id', $orderId)->get();
+		return View::make('orders.confirm')->with(['orderId' => $orderId,
+												   'total' => $total, 
+												   'orderItems' => $orderItems]);
+	}
+	public function payOrder($total) 
+	{
+		return View::make('orders.pay')->with($total);
 	}
 
 	/**
@@ -107,7 +115,10 @@ class OrdersController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$orderItem = OrderItem::find($id);	
+		$orderItem->delete();
+		Session::flash('successMessage', 'The post was successfully deleted');
+		return Redirect::action('OrdersController@confirmOrder');
 	}
 
 

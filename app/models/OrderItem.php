@@ -16,6 +16,10 @@ class OrderItem extends Eloquent
 	{
 		return $this->hasMany('OrderItemAddOn');
 	}
+	public function hasAddOns($id) 
+	{
+		return empty($this->id->orderItemAddOns) ? false : true;
+	}
 
 	public function orders()
 	{
