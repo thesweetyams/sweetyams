@@ -4,11 +4,79 @@ $backgroundLeft: #71D161
 
 .content-container
   display: flex
+  flex-direction: column
   border-radius: .25em
   margin: -1.5em 10em
+  padding-top: 8em
   min-height: 100vh
   background-image: linear-gradient(260deg, $backgroundRight 0%, $backgroundMid 100%)
-  opacity: .5
   position: relative
   z-index: -5
-  box-shadow: -5px -10px 100px 20px #E6FFBF
+  box-shadow: -15px -10px 160px 30px #E6FFBF
+  font-family: 'Slabo 27px', serif
+
+.Site-content
+  position: relative
+  z-index: -10
+
+//////////////////// JUICE SUBSCRIPTIONS /////////////////
+.flex
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+  margin-bottom: 2em
+
+.flex__contact
+  flex-direction: column
+
+.flex__title
+  margin: 0em auto
+  text-decoration: underline
+  padding-right: .75em
+  text-align: center
+
+.flex__text
+  font-size: 1.25em
+  letter-spacing: .05em
+  margin: auto
+  margin-bottom: 1em
+
+.flex__juice
+  height: 24em
+  width: 32em
+  margin-right: 2em
+  box-shadow: 2px 8px 15px 2px #323232
+  border-radius: 4px
+
+.flex__fields
+  display: flex
+  margin: auto
+  margin-bottom: 3em
+
+.flex__form
+  width: 30em
+  display: flex
+  align-content: center
+
+.flex__form--input
+  // width: 30em
+
+#flex__juice--left
+  justify-content: flex-start
+
+#flex__juice--right
+  justify-content: flex-end
+
+///////////////////////// CATERING //////////////////////
+.flex__cater
+  height: 22em
+  width: 32em
+  margin-right: 2em
+  box-shadow: 2px 8px 15px 2px #323232
+  border-radius: 4px
+
+#flex__cater--left
+  justify-content: flex-start
+
+#flex__cater--right
+  justify-content: flex-end

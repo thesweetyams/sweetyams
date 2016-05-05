@@ -1,7 +1,7 @@
 <div class="nav-container">
   <nav class="flex-nav">
     <ul class="flex-ul">
-      <li class="flex-ul__item"><div class="flex-ul__item--hover">Menu</div>
+      <li class="flex-ul__item flex-ul__item--menu"><div class="flex-ul__item--hover">Menu</div>
         <div class="dropdown">
           <ul class="dropdown-list">
             <li><a href="{{{action('MenuController@index')}}}">View Menu</a></li>
@@ -12,15 +12,15 @@
           <div class="box-shadow"></div>
         </div>
       </li>
-      <li class="flex-ul__item"><a class="flex-ul__item--hover" href="{{{action('MainController@sweetyamsLocation')}}}">Location</a></li>
-      <li class="flex-ul__item"><div class="logo__box"><a href="{{{action('MainController@index')}}}"><img id="logo" src="../../img/navicons/logo2.png"/></a></div></li>
-      <li class="flex-ul__item"><a class="flex-ul__item--hover" href="{{{action('MainController@setUpAboutUs')}}}">About</a></li>
-      <li class="flex-ul__item"><div class="flex-ul__item--hover">Community</div>
+      <li class="flex-ul__item flex-ul__item--contact"><a class="flex-ul__item--hover" href="{{{action('MainController@sweetyamsLocation')}}}">Contact</a></li>
+      <li class="flex-ul__item flex-ul__item--logo"><div class="logo__box"><a href="{{{action('MainController@index')}}}"><img id="logo" src="../../img/navicons/logo2.png"/></a></div></li>
+      <li class="flex-ul__item flex-ul__item--about"><a class="flex-ul__item--hover" href="{{{action('MainController@setUpAboutUs')}}}">About</a></li>
+      <li class="flex-ul__item flex-ul__item--community"><div class="flex-ul__item--hover">Social</div>
         <div class="dropdown" id="community-dropdown">
           <ul class="dropdown-list" id="community-dropdown-list">
-            <li><a href="#"><img class="social__logo" src="../../img/logo/yelp.png" alt="" />Yelp</a></li>
-            <li><a href="#"><img class="social__logo" src="../../img/logo/instagram2.png" alt="" /></a></li>
-            <li><a href="#"><img class="social__logo social__logo--yelp" src="../../img/logo/facebook.png" alt="" />Facebook</a></li>
+            <li><a href="#">Yelp</a></li>
+            <li><li><a href="#">Instagram</a></li></li>
+            <li><a href="#">Facebook</a></li>
             <li><a href="#">Gallery</a></li>
           </ul>
           <div class="box-shadow"></div>
