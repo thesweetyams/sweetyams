@@ -66,13 +66,12 @@ class OrdersController extends \BaseController {
 	public function confirmOrder()
 	{
 		$orderId = Session::get('order_id');
-		$order = Order::find($orderId);
-		$orderItem = OrderItem::find($orderId);
-		$orderItemAddOns = OrderItemAddOn::find($orderId);
-		$total = $order->subtotal();
-		$orderItems = OrderItem::where('order_id', $orderId)->get();
-		return View::make('orders.confirm')->with(['orderId' => $orderId, 'total' => $total,
-												   'orderItems' => $orderItems, 'orderItemAddOns' => $orderItemAddOns]);
+		$order = Order::with('orderItems.orderItemAddons')->find($orderId);
+		// $total = $order->subtotal();
+		// $orderItems = OrderItem::where('order_id', $orderId)->get();
+		// return View::make('orders.confirm')->with(['orderId' => $orderId, 'total' => $total,
+		// 										   'orderItems' => $orderItems, 'orderItemAddOns' => $orderItemAddOns]);
+		return View::make('orders.confirm')->with(['order' => $order]);
 	}
 
 	public function payOrder() 

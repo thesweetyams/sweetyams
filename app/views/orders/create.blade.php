@@ -29,6 +29,9 @@
 					@endif  <!-- category check if check -->
 				@endforeach  <!-- .menuItems as item -->
 		@endforeach  <!-- .menuCategory as category -->
+		<div id="orderItems" class="col-md-3">
+			
+		</div>
 	<a href="{{{action("OrdersController@confirmOrder")}}}"><button style="color: black;">Confirm Order</button></a>
 </div>
 

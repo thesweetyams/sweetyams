@@ -10,15 +10,12 @@ class Order extends Eloquent
 
 		$total = 0;
 		// each Menu Item price +=
-		foreach($this->orderItems as $item) {	
+		foreach($this->orderItems as $item) {
+			// $total of Menu Item prices	
 	 		$total += $item->menuItem->price;
-	 		// $orderItemAddOns = method that lives on the OrderItem Model
-
 	 		foreach ($item->orderItemAddOns as $orderItemAddOn) {
-	 		// add_on_id = the column name on the order_item_add_ons table
-	 		// $orderAddOn->addOns = the method without parenthesis which access the property
-	 		$total += $orderItemAddOn->addOn->price;
-
+	 			// $total of Order Item Add On prices
+	 			$total += $orderItemAddOn->addOn->price;
 	 		}
 	 	}
 		return $total;	
