@@ -8,6 +8,10 @@ class AddOn extends Eloquent
 
 	public function menuItems() 
 	{
-		return $this->belongsTo('MenuItem');
+		return $this->belongsToMany('MenuItem');
+	}
+	public function orderItemAddOn()
+	{
+		return $this->hasMany('OrderItemAddOn');
 	}
 }

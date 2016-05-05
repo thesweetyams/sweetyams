@@ -23,14 +23,16 @@ class OrdersController extends \BaseController {
 
 	public function store()
 	{	
-		if (Session::has('order_id')) {
+		if (Session::has('order_id') && Order::find(Session::get('order_id')) != null) {
 			$order = Order::find(Session::get('order_id'));
+
 		} else {
 			$order = new Order();
 			$order->user_id = 1; 
 			$order->save();
 			Session::put('order_id', $order->id);
 		}
+
 		$orderItem = new OrderItem;
 		$orderItem->menu_item_id = Input::get('item_id');
 		$orderItem->order_id = Session::get('order_id');
@@ -52,13 +54,6 @@ class OrdersController extends \BaseController {
 		}
 	}
 
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function show($id)
 	{
 		// shows the current order of the currently authed user
@@ -97,28 +92,17 @@ class OrdersController extends \BaseController {
 		//
 	}
 
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function update($id)
 	{
 		//
 	}
 
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function destroy($id)
 	{
 		$orderItem = OrderItem::find($id);	
+		foreach ($orderItem->orderItemAddOns as $orderItemAddOn) {
+			$orderItemAddOn->delete();
+		}
 		$orderItem->delete();
 		Session::flash('successMessage', 'The post was successfully deleted');
 		return Redirect::action('OrdersController@confirmOrder');

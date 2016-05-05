@@ -11,14 +11,11 @@
 
 
 	<p>You're total: ${{{$total}}}</p>
-	@foreach($orderItems as $item)
-		<h5>{{{$item->menuItem->name}}}</h5>
-			@if($item->menuItem->name == "Organic Mushroom Burger")
-				@foreach()
+	@foreach($orderItems as $orderItem)
+		<!-- $item  -->
+		<h5>{{{$orderItem->menuItem->name}}}</h5>
 
-				@endforeach
-			@endif	
-		{{ Form::open(['method' => 'DELETE', 'action' => ['OrdersController@destroy', $item->id]]) }}
+		{{ Form::open(['method' => 'DELETE', 'action' => ['OrdersController@destroy', $orderItem->id]]) }}
 			{{ Form::submit('Delete Item', ['class' => 'btn btn-danger']) }}
 		{{ Form::close() }}
 	@endforeach

@@ -22,7 +22,7 @@ class OrderItem extends Eloquent
 		return $this->hasManyThrough('AddOn', 'OrderItemAddOn');
 	}
 
-	public function orders()
+	public function order()
 	{
 		return $this->belongsTo('Order');
 	}
