@@ -45,14 +45,6 @@ class OrdersController extends \BaseController {
 			}
 		}
 
-		// items name attribute is an array (assuming checkbox inputs in the UI)
-		// foreach($variable as $item) {
-		// 	$orderItem->order_id = $order->id;
-		// 	$orderItem->item_id = $item->id;
-		// 	$orderItem->save();
-		// }
-		// $order->subtotal = OrderItem::subtotal($order->id);
-		// store a new order
 		if($order->save()) {
 			return Redirect::action('OrdersController@create', $order->id = 1)->with(['order' => $order]);
 		} else {

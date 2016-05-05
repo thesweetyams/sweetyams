@@ -9,14 +9,14 @@ class Order extends Eloquent
 	{
 
 		$total = 0;
-		foreach($this->orderItems as $item) {
+		foreach($this->orderItems as $item) {	
 	 		$total += $item->menuItem->price;
-	 		foreach ($item->orderItemAddOns as $orderAddon) {
-	 			$orderAddon->addon_id = $orderAddon->add_on_id;
-	 			dd($orderAddon->add_on_id, $orderAddon->addon->price);
-	 			$total += $orderAddon->addon->price;
+	 		foreach ($item->orderItemAddOns as $orderAddOn) {
+	 			$orderAddOn->add_on_id = $orderAddOn->add_on_id;
+	 			$total += $orderAddOn->addOn->price;
 	 		}
 	 	}
+	 	dd($total);
 		return $total;	
 	}
 
