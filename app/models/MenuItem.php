@@ -16,7 +16,8 @@ class MenuItem extends Eloquent
 
 	public function orderItems() 
 	{
-		return $this->belongsTo('OrderItem');
+		return $this->hasMany('OrderItem');
 	}
+
 
 }
