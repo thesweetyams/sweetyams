@@ -7,7 +7,7 @@ class Order extends Eloquent
 
 	public function subtotal()
 	{
-		// self::where('order_id', '>', 100)->paginate();
+
 		$total = 0;
 		foreach($this->orderItems as $item) {
 	 		$total += $item->menuItem->price;
@@ -15,8 +15,7 @@ class Order extends Eloquent
 	 			$total += $orderAddon->addon->price;
 	 		}
 	 	}
-		return $total;
-		
+		return $total;	
 	}
 
 	// public function subtotal($id)

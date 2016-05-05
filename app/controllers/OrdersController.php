@@ -67,6 +67,7 @@ class OrdersController extends \BaseController {
 		// edit should goto ordersController@edit
 		// confirm should goto confirmOrder() below
 	}
+
 	public function confirmOrder()
 	{
 		$orderId = Session::get('order_id');
@@ -74,13 +75,13 @@ class OrdersController extends \BaseController {
 		$orderItem = OrderItem::find($orderId);
 		$total = $order->subtotal();
 		$orderItems = OrderItem::where('order_id', $orderId)->get();
-		return View::make('orders.confirm')->with(['orderId' => $orderId,
-												   'total' => $total, 
-												   'orderItems' => $orderItems]);
+		return View::make('orders.confirm')->with(['orderId' => $orderId, 'total' => $total, 'orderItems' => $orderItems]);
 	}
-	public function payOrder($total) 
+
+	public function payOrder() 
 	{
-		return View::make('orders.pay')->with($total);
+
+		return View::make('orders.pay');
 	}
 
 	/**
