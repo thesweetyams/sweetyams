@@ -8,7 +8,24 @@ class MainController extends \BaseController {
 	 *
 	 * @return Response
 	 */
+  public function signin()
+  {
+    return View::make('register.signin');
+  }
 
+  public function signup()
+  {
+    $loginInfo = [
+			['first_name', 'First Name'],
+			['last_name', 'Last Name'],
+			['password', 'Password'],
+			['ver_password', 'Confirm Password'],
+			['email', 'Email'],
+			['username', 'Username']
+		];
+    return View::make('register.signup',['loginInfo' => $loginInfo]);
+  }
+  
 	 public function charge()
      {
 		\Stripe\Stripe::setApiKey("sk_test_ZOKQRbihmavV58CCw8pyAF4h");
