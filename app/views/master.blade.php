@@ -17,7 +17,9 @@
 	</div>
 
 	<div class="Site-content">
-		@yield('content')
+		<div class="content-container">
+			@yield('content')
+		</div>
 	</div>
 
 		@include('.partials.footer')

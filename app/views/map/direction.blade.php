@@ -107,7 +107,6 @@ function addImg(url, id) {
 
   </head>
   <body onload="initialize()">
-
   <h2>Maps API Directions Illustrated</h2>
   <form action="#" onsubmit="setDirections(this.from.value); return false">
 
@@ -146,6 +145,8 @@ Static Maps (printable) version:
  <div id="staticMapStartIMG"></div>
  <div id="staticMapEndIMG"></div>
 <br clear="all"/>
-
+  <p>
+    this is a map
+  </p>
   </body>
 </html>
