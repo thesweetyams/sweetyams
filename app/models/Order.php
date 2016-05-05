@@ -12,23 +12,13 @@ class Order extends Eloquent
 		foreach($this->orderItems as $item) {
 	 		$total += $item->menuItem->price;
 	 		foreach ($item->orderItemAddOns as $orderAddon) {
+	 			$orderAddon->addon_id = $orderAddon->add_on_id;
+	 			dd($orderAddon->add_on_id, $orderAddon->addon->price);
 	 			$total += $orderAddon->addon->price;
 	 		}
 	 	}
 		return $total;	
 	}
-
-	// public function subtotal($id)
-	// {
-	// 	$total = 0;
-	// 	$items = $this->where('item_id', $id)->get();
-	// 	foreach($items as $item) {
-	// 		$total += $item->menuItems()->price;
-	// 	}
-	// 	dd($total);
-	// 	// do the same thing for add_ons based off the addons
-	// 	return $total;
-	// }
 
 	public function menuItems() 
 	{

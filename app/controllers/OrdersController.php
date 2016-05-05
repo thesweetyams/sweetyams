@@ -31,12 +31,20 @@ class OrdersController extends \BaseController {
 			$order->save();
 			Session::put('order_id', $order->id);
 		}
-	
 		$orderItem = new OrderItem;
 		$orderItem->menu_item_id = Input::get('item_id');
 		$orderItem->order_id = Session::get('order_id');
 		$orderItem->save();
 		
+		if (Input::has('add_on_id')) {
+			foreach(Input::get('add_on_id') as $addOn) {	
+				$orderItemAddOn = new OrderItemAddOn;
+				$orderItemAddOn->order_item_id = $orderItem->id;
+				$orderItemAddOn->add_on_id = $addOn;
+				$orderItemAddOn->save();
+			}
+		}
+
 		// items name attribute is an array (assuming checkbox inputs in the UI)
 		// foreach($variable as $item) {
 		// 	$orderItem->order_id = $order->id;
@@ -73,9 +81,11 @@ class OrdersController extends \BaseController {
 		$orderId = Session::get('order_id');
 		$order = Order::find($orderId);
 		$orderItem = OrderItem::find($orderId);
+		$orderItemAddOns = OrderItemAddOn::find($orderId);
 		$total = $order->subtotal();
 		$orderItems = OrderItem::where('order_id', $orderId)->get();
-		return View::make('orders.confirm')->with(['orderId' => $orderId, 'total' => $total, 'orderItems' => $orderItems]);
+		return View::make('orders.confirm')->with(['orderId' => $orderId, 'total' => $total,
+												   'orderItems' => $orderItems, 'orderItemAddOns' => $orderItemAddOns]);
 	}
 
 	public function payOrder() 

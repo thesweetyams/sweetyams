@@ -13,7 +13,11 @@
 	<p>You're total: ${{{$total}}}</p>
 	@foreach($orderItems as $item)
 		<h5>{{{$item->menuItem->name}}}</h5>
-			
+			@if($item->menuItem->name == "Organic Mushroom Burger")
+				@foreach()
+
+				@endforeach
+			@endif	
 		{{ Form::open(['method' => 'DELETE', 'action' => ['OrdersController@destroy', $item->id]]) }}
 			{{ Form::submit('Delete Item', ['class' => 'btn btn-danger']) }}
 		{{ Form::close() }}

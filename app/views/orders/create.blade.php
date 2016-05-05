@@ -18,7 +18,7 @@
 									@foreach($addOns as $addOn)
 										<span>{{{$addOn->description}}}</span>
 										<span>{{{$addOn->price}}}</span>
-										{{Form::checkbox($addOn->id, $addOn->price, null, ['class' => 'checkbox'])}} 
+										{{Form::checkbox('add_on_id[]', $addOn->id, null, ['class' => 'checkbox'])}} 
 									@endforeach
 								@endif
 
