@@ -30,3 +30,4 @@ Route::get('/projects', 'MainController@setUpProjects');
 Route::get('/order', 'MenuController@setUpOrdering');
 Route::post('/order', 'MainController@charge');
 
+Route::post('/signin', 'UsersController@doLogin');

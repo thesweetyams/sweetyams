@@ -16,12 +16,13 @@ class MainController extends \BaseController {
   public function signup()
   {
     $loginInfo = [
-			['first_name', 'First Name'],
-			['last_name', 'Last Name'],
+			['firstName', 'First Name'],
+			['lastName', 'Last Name'],
 			['password', 'Password'],
-			['ver_password', 'Confirm Password'],
+			['verPassword', 'Confirm Password'],
 			['email', 'Email'],
-			['username', 'Username']
+			['phone', 'Phone Number'],
+			['address', 'Address']
 		];
     return View::make('register.signup',['loginInfo' => $loginInfo]);
   }

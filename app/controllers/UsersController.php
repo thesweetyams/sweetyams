@@ -92,17 +92,18 @@ class UsersController extends \BaseController {
 			return Redirect::back()->withInput()->withErrors($validator);
 		} else {
 			if (Input::get('password') === Input::get('verPassword')) {
-dd('test');
 				$user->password = Input::get('password');
 			} else {
 				Session::flash('errorMessage', 'Your passwords did not match');
 				return Redirect::back()->withInput();
 			}
 			Session::flash('successMessage', 'The post was successfully update.');
-			$user->first_name = Input::get('first_name');
-			$user->last_name = Input::get('last_name');
+			$user->first_name = Input::get('firstName');
+			$user->last_name = Input::get('lastName');
 			$user->password = Input::get('password');
 			$user->email = Input::get('email');
+			$user->phone = Input::get('phone');
+			$user->address = Input::get('address');
 			$user->role = 'user';
 			$user->save();
 			//Log::info(['title'=>$user->title, 'body'=>$user->body, 'user_id'=>$user->user_id]);
@@ -118,7 +119,7 @@ dd('test');
 		}
 
 		if (Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password')))) {
-			return Redirect::back();
+      return Redirect::action('MainController@index');
 		}
 		else {
 			return Redirect::back();
