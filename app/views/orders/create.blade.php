@@ -42,7 +42,8 @@
 	<!-- Current Order Catalog -->
 	<div class="col-md-3" id="ajaxContainer">
 		<p>Current Order Items:</p>
-			<ul id="orders"></ul>
+			<ul id="orders">
+			</ul>
 	</div> <!-- #ajaxContainer -->
 
 </div> <!-- .row -->

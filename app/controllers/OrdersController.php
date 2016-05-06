@@ -7,11 +7,7 @@ class OrdersController extends \BaseController {
 	{
 		return View::make('orders.example');
 	}
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
+
 	public function create()
 	{
 		$menuCategory = Menu::all();
@@ -20,7 +16,6 @@ class OrdersController extends \BaseController {
 		return View::make('orders.create')->with(['menuItems' => $menuItems, 'menuCategory' => $menuCategory,
 												  'addOns' => $addOns]);		
 	}
-
 
 	public function store()
 	{	
@@ -76,16 +71,49 @@ class OrdersController extends \BaseController {
 
 	public function payOrder() 
 	{
-
+		$order = Order::find(Session::get('order_id'));
+		//$orderItems = OrderItem::find('order_id', $orderId)->get();
+		$total = $order->subtotal();
 		return View::make('orders.pay');
 	}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
+	 public function charge()
+     {
+		\Stripe\Stripe::setApiKey("sk_test_ZOKQRbihmavV58CCw8pyAF4h");
+
+		// Get the credit card details submitted by the form
+		$token = $_POST['stripeToken'];
+		$userEmail = $_POST['email'];
+		$description = 'this is the description';
+		$order = Order::find(Session::get('order_id'));
+		//$orderItems = OrderItem::find('order_id', $orderId)->get();
+		// Create the charge on Stripe's servers - this will charge the user's card
+		try {
+		  $charge = \Stripe\Charge::create(array(
+		    "amount" => $order->subtotal() * 100, // amount in cents, again
+		    "currency" => "usd",
+		    "source" => $token,
+		    "description" => "Example charge"
+		    ));
+
+
+			$data    = [
+				'userEmail'   => $userEmail,
+				'body'    => $description
+			];
+			Mail::send('emails.contact', $data, function($message) use ($data)
+			{
+				$message->from('tleffew1994@gmail.com', 'SweetYams');
+				$message->to($data['userEmail'])->subject('Order Details');
+			});
+			Session::flash('successMessage', 'The email was successfully sent.');
+			return Redirect::action('MainController@index');
+
+		} catch(\Stripe\Error\Card $e) {
+		  // The card has been declined
+		}
+	}
+
 	public function edit($id)
 	{
 		//
@@ -107,12 +135,11 @@ class OrdersController extends \BaseController {
 		return Redirect::action('OrdersController@confirmOrder');
 	}
 
-	public function getAjax() 
-	{
-		$orderId = Input::get('order_id');
-		$order = OrderItem::find($orderId); dd($order);
-		return $order;
-	}
-
+	// public function getAjax() 
+	// {
+	// 	$orderId = Input::get('order_id');
+	// 	$orderItems = OrderItem::($orderId);
+	// 	return $order;
+	// }
 
 }
