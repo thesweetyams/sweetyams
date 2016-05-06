@@ -12,12 +12,12 @@
 			<h2>{{{$category->name}}}</h2> 
 				@foreach($menuItems as $item)
 					@if($category->id == $item->menu_id)
-						{{ Form::open(['action' => 'OrdersController@store', 'method' => 'post']) }}
-							<div class="form-group menuFormItems">
+						{{ Form::open(['action' => 'OrdersController@store', 'method' => 'post', 'class' => 'menuItemForm']) }}
+							<div class="form-group menuFormDivs">
 								<!-- Single Menu Item Name -->
 								<span>{{{$item->name}}}</span>
 								<!-- The Price of One Menu Item --> 
-								<span>{{{$item->price()}}}</span>  
+								<span>${{{$item->price()}}}</span>  
 								
 								<!-- Mushroom Burger AddOns -->
 								@if($category->name == 'Organic Mushroom Burger') 
@@ -41,7 +41,7 @@
 </div>
 	<!-- Current Order Catalog -->
 	<div class="col-md-3" id="ajaxContainer">
-		<p>Current Order Items:</p>
+		<p class="currentOrder">Current Order Items:</p>
 			<ul id="orders">
 			</ul>
 	</div> <!-- #ajaxContainer -->
