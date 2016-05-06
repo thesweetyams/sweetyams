@@ -19,6 +19,6 @@
 		{{ Form::close() }}
 
 	@endforeach
-	<a href="{{{action("OrdersController@create")}}}">Edit Order</a>
-	<a href="{{{action("OrdersController@payOrder")}}}">Checkout</a>
+	<a href="{{{action("OrdersController@create")}}}" style="color:black;"><button>Edit Order</button></a>
+	<a href="{{{action("OrdersController@payOrder")}}}" style="color:black;"><button>Checkout</button></a>
 @stop

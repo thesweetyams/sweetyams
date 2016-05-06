@@ -1,10 +1,10 @@
 @extends('master')
-
+@section('css')
+<link rel="stylesheet" href="/css/temporary.css">
+@stop
 @section('content')
-// $menuItems
-// $menuCategory
-// $addOns
-<div class="col-md-6 col-md-offset-2" style="margin-top: 50px">
+<div class="row">
+<div class="col-md-6 col-md-offset-2">
 		@foreach($menuCategory as $category)
 			<h2 style="text-decoration: underline;">{{{$category->name}}}</h2> <!-- Menu Section Title -->
 				@foreach($menuItems as $item)
@@ -29,26 +29,29 @@
 					@endif  <!-- category check if check -->
 				@endforeach  <!-- .menuItems as item -->
 		@endforeach  <!-- .menuCategory as category -->
-		<div id="orderItems" class="col-md-3">
-			
-		</div>
-	<a href="{{{action("OrdersController@confirmOrder")}}}"><button style="color: black;">Confirm Order</button></a>
+	
+	<a href="{{{action("OrdersController@confirmOrder")}}}"class="confirmOrder"><button class="confirmOrder">Confirm Order</button></a>
 </div>
+<div class="col-md-3" id="ajaxContainer">
+	<p>Current Order Items:</p>
+</div> <!-- #ajaxContainer -->
+
+</div> <!-- .row -->
 		
 @stop
 
 @section('js')
-<script>
-$(function (){
-	var orders = $('#orders');
-	$.ajax({
-		type: 'get',
-		url:  'orders/create',
-		success: function(orders) {
-			$.each(orders, function(i, order) {
-				$orders.append('<li>Order Item: '+ order.name + '</li>');
-			});
-		}
-	});
-});
-</script>
+<!-- 
+// $(function (){
+// 	var orders = $('#orders');
+// 	$.ajax({
+// 		type: 'get',
+// 		url:  'orders/create',
+// 		success: function(orders) {
+// 			$.each(orders, function(i, order) {
+// 				$orders.append('<li>Order Item: '+ order.name + '</li>');
+// 			});
+// 		}
+// 	});
+// }); */
+ -->

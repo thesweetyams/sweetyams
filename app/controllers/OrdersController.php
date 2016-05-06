@@ -17,6 +17,7 @@ class OrdersController extends \BaseController {
 		$menuCategory = Menu::all();
 		$menuItems = MenuItem::all();
 		$addOns = AddOn::all();
+		$jsonOrder = MenuItem::all()->toJson();
 		return View::make('orders.create')->with(['menuItems' => $menuItems, 'menuCategory' => $menuCategory, 'addOns' => $addOns]);		
 	}
 
