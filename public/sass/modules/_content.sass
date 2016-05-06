@@ -59,16 +59,18 @@ $backgroundLeft: #71D161
   display: flex
   align-content: center
 
-.flex__form--input
-  // width: 30em
+#flex__form--text
+  height: 4em
 
 #flex__juice--left,
 #flex__food--left
   justify-content: flex-start
+  margin-bottom: .5em
 
 #flex__juice--right,
 #flex__food--right
   justify-content: flex-end
+  margin-bottom: .5em
 
 ///////////////////////// CATERING //////////////////////
 .flex__cater
@@ -80,6 +82,43 @@ $backgroundLeft: #71D161
 
 #flex__cater--left
   justify-content: flex-start
+  margin-bottom: 2em
 
 #flex__cater--right
   justify-content: flex-end
+  margin-bottom: 2em
+
+////////////////////////// ABOUT //////////////////////
+
+
+//////////////////////////// MAP //////////////////////
+#map-canvas
+  width: 80%
+  height: 70%
+  min-height: 25em
+  position: relative
+  margin: 0em auto 0em auto
+  display: flex
+  flex: 1
+  justify-content: space-between
+  z-index: 2
+  border: 30px
+  border-bottom: 0px
+  border-image: url('../../img/textures/wood2.png') 40 repeat
+
+#addressForm
+  height: 10%
+  width: 80%
+  margin: auto auto 0em auto
+  border: 30px
+  border-top: 5px
+  border-bottom: 0px
+  border-image: url('../../img/textures/wood2.png') 40 repeat
+
+#addressButton
+  height: 10%
+  width: 80%
+  margin: auto auto 3em auto
+  border: 30px
+  border-top: 5px
+  border-image: url('../../img/textures/wood2.png') 40 repeat
