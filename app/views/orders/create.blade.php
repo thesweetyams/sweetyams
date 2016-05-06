@@ -13,24 +13,24 @@
 				@foreach($menuItems as $item)
 					@if($category->id == $item->menu_id)
 						{{ Form::open(['action' => 'OrdersController@store', 'method' => 'post']) }}
-							<div class="form-group">
+							<div class="form-group menuFormItems">
 								<!-- Single Menu Item Name -->
 								<span>{{{$item->name}}}</span>
 								<!-- The Price of One Menu Item --> 
-								<span>{{{$item->price}}}</span>  
+								<span>{{{$item->price()}}}</span>  
 								
 								<!-- Mushroom Burger AddOns -->
 								@if($category->name == 'Organic Mushroom Burger') 
 									@foreach($addOns as $addOn)
 										<span>{{{$addOn->description}}}</span>
-										<span>{{{$addOn->price}}}</span>
+										<span>{{{$addOn->price()}}}</span>
 										{{Form::checkbox('add_on_id[]', $addOn->id, null, ['class' => 'checkbox'])}} 
 									@endforeach
 								@endif
 								
 								<!-- Each Menu Items Button and Hidden Id -->
 								{{ Form::hidden('item_id', $item->id, ['class' => 'item_id'])}} 
-								{{ Form::button('Add to Order', ['class' => 'btn btn-info pull-right','class' => 'ajaxBuildButton', 'style' => 'display: inline-block;']) }}
+								{{ Form::button('Add to Order', ['class' => 'ajaxBuildButton']) }}
 
 							</div> <!-- .form-group -->
 						{{ Form::close() }}

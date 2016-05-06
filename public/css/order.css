@@ -19,3 +19,12 @@
 #ajaxBuildButton {
 	
 }
+.orderLis {
+	background-color: white;
+	list-style-type: none;
+}
+
+.menuItemForms {
+	width: 100%;
+	display: flex;
+}
