@@ -15,7 +15,7 @@
     <hr>
 
     <div class="flex">
-      <h1 class="flex__title">We cater events!</h1>
+      <h1 class="flex__title">We Cater Events!</h1>
       <p class="flex__text">
         We focus on consumption of nutrients by way of organic caters. After much research and amazing results, we try and keep it very simple.
         <br><br>
@@ -30,7 +30,7 @@
     </div>
 
     <div class="flex flex__contact">
-      <h1 class="flex__title">Contact us</h1>
+      <h1 class="flex__title">Contact Us</h1>
       <p class="flex__text">
         Talk to us about catering for your next event!
       </p>
