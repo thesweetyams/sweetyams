@@ -4,6 +4,8 @@ Route::get('/', 'MainController@index');
 
 Route::resource('user', 'UsersController');
 Route::resource('admin', 'AdminController');
+Route::get('/orders/getAjax', 'OrdersController@getAjax');
+Route::post('/orders/ajaxPost', 'OrdersController@ajaxPost');
 Route::get('/orders/confirm', 'OrdersController@confirmOrder');
 Route::get('/orders/pay', 'OrdersController@payOrder');
 Route::resource('orders', 'OrdersController');

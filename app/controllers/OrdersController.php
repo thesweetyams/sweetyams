@@ -17,7 +17,8 @@ class OrdersController extends \BaseController {
 		$menuCategory = Menu::all();
 		$menuItems = MenuItem::all();
 		$addOns = AddOn::all();
-		return View::make('orders.create')->with(['menuItems' => $menuItems, 'menuCategory' => $menuCategory, 'addOns' => $addOns]);		
+		return View::make('orders.create')->with(['menuItems' => $menuItems, 'menuCategory' => $menuCategory,
+												  'addOns' => $addOns]);		
 	}
 
 
@@ -48,10 +49,9 @@ class OrdersController extends \BaseController {
 		}
 
 		if($order->save()) {
-			return Redirect::action('OrdersController@create', $order->id = 1)->with(['order' => $order]);
-		} else {
-			echo 'false';
-		}
+			//return Redirect::action('OrdersController@create', $order->id = 1)->with(['order' => $order]);
+			return $orderItem->menuItem;
+		} 
 	}
 
 	public function show($id)
@@ -105,6 +105,13 @@ class OrdersController extends \BaseController {
 		$orderItem->delete();
 		Session::flash('successMessage', 'The post was successfully deleted');
 		return Redirect::action('OrdersController@confirmOrder');
+	}
+
+	public function getAjax() 
+	{
+		$orderId = Input::get('order_id');
+		$order = OrderItem::find($orderId); dd($order);
+		return $order;
 	}
 
 
