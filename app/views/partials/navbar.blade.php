@@ -18,10 +18,10 @@
       <li class="flex-ul__item flex-ul__item--community"><div class="flex-ul__item--hover">Social</div>
         <div class="dropdown" id="community-dropdown">
           <ul class="dropdown-list" id="community-dropdown-list">
-            <li><a href="#">Yelp</a></li>
-            <li><li><a href="#">Instagram</a></li></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Gallery</a></li>
+            <li><a href="http://www.yelp.com/biz/sweet-yams-san-antonio-4" target="_blank">Yelp</a></li>
+            <li><li><a href="https://www.instagram.com/sweetyamsorganic/" target="_blank">Instagram</a></li></li>
+            <li><a href="https://www.facebook.com/SweetYamsOrganic/" target="_blank">Facebook</a></li>
+            <li><a href="#" target="_blank">Gallery</a></li>
           </ul>
           <div class="box-shadow"></div>
         </div>
