@@ -4,6 +4,7 @@ class OrderItem extends Eloquent
 {
 	protected $table = 'order_items';
 	public $timestamps = false;
+	
 
 	public function menuItem()
 	{
@@ -16,12 +17,12 @@ class OrderItem extends Eloquent
 	{
 		return $this->hasMany('OrderItemAddOn');
 	}
-	public function hasAddOns($id) 
+	public function addOns()
 	{
-		return empty($this->id->orderItemAddOns) ? false : true;
+		return $this->hasManyThrough('AddOn', 'OrderItemAddOn');
 	}
 
-	public function orders()
+	public function order()
 	{
 		return $this->belongsTo('Order');
 	}

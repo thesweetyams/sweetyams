@@ -7,29 +7,19 @@ class Order extends Eloquent
 
 	public function subtotal()
 	{
-		// self::where('order_id', '>', 100)->paginate();
+
 		$total = 0;
+		// each Menu Item price +=
 		foreach($this->orderItems as $item) {
+			// $total of Menu Item prices	
 	 		$total += $item->menuItem->price;
-	 		foreach ($item->orderItemAddOns as $orderAddon) {
-	 			$total += $orderAddon->addon->price;
+	 		foreach ($item->orderItemAddOns as $orderItemAddOn) {
+	 			// $total of Order Item Add On prices
+	 			$total += $orderItemAddOn->addOn->price;
 	 		}
 	 	}
-		return $total;
-		
+		return $total;	
 	}
-
-	// public function subtotal($id)
-	// {
-	// 	$total = 0;
-	// 	$items = $this->where('item_id', $id)->get();
-	// 	foreach($items as $item) {
-	// 		$total += $item->menuItems()->price;
-	// 	}
-	// 	dd($total);
-	// 	// do the same thing for add_ons based off the addons
-	// 	return $total;
-	// }
 
 	public function menuItems() 
 	{

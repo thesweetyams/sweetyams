@@ -1,0 +1,21 @@
+.form-group {
+	border: 1px solid black;
+}
+
+.confirmOrder {
+	display: block;
+	margin-bottom: 200px;
+}
+
+#ajaxContainer {
+	border: 1px solid black;
+	height: 200px;
+	min-width: 300px;
+	position: fixed;
+	right: 100px;
+	top: 200px;
+}
+
+#ajaxBuildButton {
+	
+}
