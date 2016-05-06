@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('css')
-	<link rel="stylesheet" href="/css/temporary.css">
+	<link rel="stylesheet" href="/css/order.css">
 @stop
 
 @section('content')
@@ -12,7 +12,7 @@
 			<h2>{{{$category->name}}}</h2> 
 				@foreach($menuItems as $item)
 					@if($category->id == $item->menu_id)
-						{{ Form::open(['action' => 'OrdersController@store', 'method' => 'post', 'style' => 'border: 1px solid black']) }}
+						{{ Form::open(['action' => 'OrdersController@store', 'method' => 'post']) }}
 							<div class="form-group">
 								<!-- Single Menu Item Name -->
 								<span>{{{$item->name}}}</span>
@@ -39,6 +39,7 @@
 		@endforeach  <!-- .menuCategory as category -->
 	<a href="{{{action("OrdersController@confirmOrder")}}}"class="confirmOrder"><button class="confirmOrder">Confirm Order</button></a>
 </div>
+	<!-- Current Order Catalog -->
 	<div class="col-md-3" id="ajaxContainer">
 		<p>Current Order Items:</p>
 			<ul id="orders"></ul>
