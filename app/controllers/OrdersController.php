@@ -1,5 +1,5 @@
 <?php
- 
+use Stripe as Stripe; 
 
 class OrdersController extends \BaseController {
 
@@ -79,6 +79,11 @@ class OrdersController extends \BaseController {
 
 	 public function charge()
      {
+		$order = Order::find(Session::get('order_id'));
+    foreach ($order->orderItems as $orderItem) {
+      $orderArray[] = $orderItem->menuItem->name;
+      $orderPrice[] = $orderItem->menuItem->price;
+    }
 		\Stripe\Stripe::setApiKey("sk_test_ZOKQRbihmavV58CCw8pyAF4h");
 
 		// Get the credit card details submitted by the form
@@ -99,7 +104,8 @@ class OrdersController extends \BaseController {
 
 			$data    = [
 				'userEmail'   => $userEmail,
-				'body'    => $description
+        'order'    => $orderArray,
+        'price' => $orderPrice
 			];
 			Mail::send('emails.contact', $data, function($message) use ($data)
 			{
