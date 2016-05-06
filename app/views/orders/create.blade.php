@@ -17,13 +17,13 @@
 								<!-- Single Menu Item Name -->
 								<span>{{{$item->name}}}</span>
 								<!-- The Price of One Menu Item --> 
-								<span>{{{$item->price}}}</span>  
+								<span>{{{$item->price()}}}</span>  
 								
 								<!-- Mushroom Burger AddOns -->
 								@if($category->name == 'Organic Mushroom Burger') 
 									@foreach($addOns as $addOn)
 										<span>{{{$addOn->description}}}</span>
-										<span>{{{$addOn->price}}}</span>
+										<span>{{{$addOn->price()}}}</span>
 										{{Form::checkbox('add_on_id[]', $addOn->id, null, ['class' => 'checkbox'])}} 
 									@endforeach
 								@endif
