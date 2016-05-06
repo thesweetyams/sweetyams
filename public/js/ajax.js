@@ -10,7 +10,8 @@ $(function (){
 				'item_id': $item_id
 			},
 			success: function(orders) {
-				$orders.append('<li class="orderLis">' + orders.name + '</li>');
+				console.log(orders);
+				$orders.append('<li class="orderLis">' + orders.name + ': ' + '$' + (orders.price / 100) + '</li>');
 			},
 			error: function() {
 				alert('something is wrong');
