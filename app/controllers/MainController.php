@@ -1,5 +1,4 @@
 <?php
-use Stripe;
 
 class MainController extends \BaseController {
 
@@ -27,42 +26,6 @@ class MainController extends \BaseController {
     return View::make('register.signup',['loginInfo' => $loginInfo]);
   }
   
-	 public function charge()
-     {
-		\Stripe\Stripe::setApiKey("sk_test_ZOKQRbihmavV58CCw8pyAF4h");
-
-		// Get the credit card details submitted by the form
-		$token = $_POST['stripeToken'];
-		$userEmail = $_POST['email'];
-		$description = 'this is the description';
-		$order = Order::find(Session::get('order_id'));
-		//$orderItems = OrderItem::find('order_id', $orderId)->get();
-		// Create the charge on Stripe's servers - this will charge the user's card
-		try {
-		  $charge = \Stripe\Charge::create(array(
-		    "amount" => $order->subtotal() * 100, // amount in cents, again
-		    "currency" => "usd",
-		    "source" => $token,
-		    "description" => "Example charge"
-		    ));
-
-
-			$data    = [
-				'userEmail'   => $userEmail,
-				'body'    => $description
-			];
-			Mail::send('emails.contact', $data, function($message) use ($data)
-			{
-				$message->from('tleffew1994@gmail.com', 'SweetYams');
-				$message->to($data['userEmail'])->subject('Order Details');
-			});
-			Session::flash('successMessage', 'The email was successfully sent.');
-			return Redirect::action('MainController@index');
-
-		} catch(\Stripe\Error\Card $e) {
-		  // The card has been declined
-		}
-	}
 	 public function sweetyamsLocation()
  	{
  		return View::make('map.location');
