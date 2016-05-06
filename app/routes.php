@@ -26,8 +26,7 @@ Route::get('/blog', 'MainController@setUpBlog');
 Route::get('/events', 'MainController@setUpEvents');
 Route::get('/projects', 'MainController@setUpProjects');
 
-
 Route::get('/order', 'MenuController@setUpOrdering');
-Route::post('/order', 'MainController@charge');
+Route::post('/orders/pay', 'OrdersController@charge');
 
 Route::post('/signin', 'UsersController@doLogin');
