@@ -18,7 +18,7 @@ class Order extends Eloquent
 	 			$total += $orderItemAddOn->addOn->price;
 	 		}
 	 	}
-		return $total;	
+		return number_format((float)($total / 100), 2, '.', '');	
 	}
 
 	public function menuItems() 
