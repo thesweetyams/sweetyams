@@ -16,15 +16,32 @@
 	top: 200px;
 }
 
-#ajaxBuildButton {
-	
+.ajaxBuildButton {
+	background-color: #E06D31;
 }
 .orderLis {
 	background-color: white;
 	list-style-type: none;
 }
 
-.menuItemForms {
+.menuItemForm {
 	width: 100%;
 	display: flex;
+}
+
+.currentOrder {
+	font-size: 1.25em;
+	text-align: center;
+}
+
+#orders > li {
+	text-align: left;
+}
+
+.menuItemFont {
+	font-weight: 200;
+}
+
+.menuItemPrice {
+	font-weight: 500;
 }
