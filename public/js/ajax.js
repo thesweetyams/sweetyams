@@ -10,7 +10,7 @@ $(function (){
 				'item_id': $item_id
 			},
 			success: function(orders) {
-				$orders.append('<li>' + orders.name + '</li>');
+				$orders.append('<li class="orderLis">' + orders.name + '</li>');
 			},
 			error: function() {
 				alert('something is wrong');
