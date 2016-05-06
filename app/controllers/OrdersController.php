@@ -7,11 +7,7 @@ class OrdersController extends \BaseController {
 	{
 		return View::make('orders.example');
 	}
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
+
 	public function create()
 	{
 		$menuCategory = Menu::all();
@@ -20,7 +16,6 @@ class OrdersController extends \BaseController {
 		return View::make('orders.create')->with(['menuItems' => $menuItems, 'menuCategory' => $menuCategory,
 												  'addOns' => $addOns]);		
 	}
-
 
 	public function store()
 	{	
@@ -76,16 +71,13 @@ class OrdersController extends \BaseController {
 
 	public function payOrder() 
 	{
-
+		$order = Order::find(Session::get('order_id'));
+		//$orderItems = OrderItem::find('order_id', $orderId)->get();
+		$total = $order->subtotal();
 		return View::make('orders.pay');
 	}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
+
 	public function edit($id)
 	{
 		//
@@ -107,12 +99,11 @@ class OrdersController extends \BaseController {
 		return Redirect::action('OrdersController@confirmOrder');
 	}
 
-	public function getAjax() 
-	{
-		$orderId = Input::get('order_id');
-		$order = OrderItem::find($orderId); dd($order);
-		return $order;
-	}
-
+	// public function getAjax() 
+	// {
+	// 	$orderId = Input::get('order_id');
+	// 	$orderItems = OrderItem::($orderId);
+	// 	return $order;
+	// }
 
 }

@@ -43,11 +43,5 @@ class MenuTableSeeder extends Seeder
 		$newMenu->name = "Add Ons";
 		$newMenu->save();
 
-
-		$newMenu = new Menu;
-		$newMenu->name = "Juice Subscription Menu";
-		$newMenu->save();
-
-
 	}
 }

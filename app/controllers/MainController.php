@@ -35,10 +35,12 @@ class MainController extends \BaseController {
 		$token = $_POST['stripeToken'];
 		$userEmail = $_POST['email'];
 		$description = 'this is the description';
+		$order = Order::find(Session::get('order_id'));
+		//$orderItems = OrderItem::find('order_id', $orderId)->get();
 		// Create the charge on Stripe's servers - this will charge the user's card
 		try {
 		  $charge = \Stripe\Charge::create(array(
-		    "amount" => 1000, // amount in cents, again
+		    "amount" => $order->subtotal() * 100, // amount in cents, again
 		    "currency" => "usd",
 		    "source" => $token,
 		    "description" => "Example charge"
