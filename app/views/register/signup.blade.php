@@ -1,7 +1,12 @@
 @extends ('.master')
 
 @section ('content')
+ 
   <div class="container">
+    @if (Session::has('errorMessage'))
+        <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
+    @endif
+  
     {{Form::open(['action' => 'UsersController@store', 'method' => 'post'])}}
 				<div class="row">
 						@foreach($loginInfo as $info)
