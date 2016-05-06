@@ -119,7 +119,7 @@ class UsersController extends \BaseController {
 		}
 
 		if (Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password')))) {
-			return Redirect::back();
+      return Redirect::action('MainController@index');
 		}
 		else {
 			return Redirect::back();

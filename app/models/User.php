@@ -17,10 +17,10 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	protected $table = 'users';
 
   public static $rules = array(
-    'password'      => 'required|min:7|max:15',
-    'email'        => 'required|max:100',
     'firstName'   => 'required|min:1|max:15',
     'lastName'   => 'required|min:1|max:15',
+    'password'      => 'required|min:7|max:15',
+    'email'        => 'required|max:100',
     'phone'   => 'required|min:1|max:15',
     'address'   => 'required|min:1|max:150',
 	);
