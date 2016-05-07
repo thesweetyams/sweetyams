@@ -22,7 +22,7 @@
 	<a href="{{{action("OrdersController@create")}}}" style="color:black;"><button>Edit Order</button></a>
 	<a href="{{{action("OrdersController@payOrder")}}}" style="color:black;"><button>Checkout</button></a>
   {{Form::open(['action' => 'OrdersController@charge', 'id' => 'billing-form'])}}
-	<script
+	<script>
   var $total = parseInt($('#totalCost').html());
 		src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 		data-key="pk_test_4T6h97uNSVAN155P37yKURj7"
@@ -32,4 +32,10 @@
     data-locale="auto">
     {{Form::close()}}
 	</script>
+@stop
+
+@section('js')
+
+<script src="/js/main.js"></script>
+
 @stop

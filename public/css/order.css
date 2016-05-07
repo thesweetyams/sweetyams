@@ -1,19 +1,34 @@
-.form-group {
+/*
+Parent: 										
+	orderPageContainer				
+
+Children:
+	ajaxContainer
+	menuItemsFilter
+	itemsContainer
+*/
+
+.orderPageContainer {
+	max-width: 100%;
+	display: flex;
+	flex-direction: row;
+	/*margin: 0 auto;*/
 	border: 1px solid black;
 }
-
-.confirmOrder {
-	display: block;
-	margin-bottom: 200px;
+.column {
+	margin: 10px;
+	flex-grow: 1;
+	flex-shrink: 1;
 }
-
-#ajaxContainer {
-	border: 1px solid black;
-	height: 200px;
-	min-width: 300px;
-	position: fixed;
-	right: 100px;
-	top: 200px;
+.ajaxContainer {
+	background-color: blue;
+}
+.menuItemsSidebar {
+	background-color: orange;
+}
+.itemsContainer {
+	background-color: salmon;
+	flex-basis: 35%;
 }
 
 .ajaxBuildButton {
@@ -32,10 +47,6 @@
 .currentOrder {
 	font-size: 1.25em;
 	text-align: center;
-}
-
-#orders > li {
-	text-align: left;
 }
 
 .menuItemFont {
