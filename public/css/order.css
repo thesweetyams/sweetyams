@@ -8,6 +8,7 @@ Children:
 	itemsContainer
 */
 
+/* Parent Flex Container*/
 .orderPageContainer {
 	max-width: 100%;
 	display: flex;
@@ -15,25 +16,37 @@ Children:
 	/*margin: 0 auto;*/
 	border: 1px solid black;
 }
+
+/* Flex Children Columns*/
 .column {
 	margin: 10px;
 	flex-grow: 1;
 	flex-shrink: 1;
 }
-.ajaxContainer {
-	background-color: blue;
-}
+
+/* Side Bar */
 .menuItemsSidebar {
-	background-color: orange;
-}
-.itemsContainer {
-	background-color: salmon;
-	flex-basis: 35%;
+	border-top: 30px solid #ebb84d;
 }
 
-.ajaxBuildButton {
+/* Menu Items/Form */
+.itemsContainer {
+	display: flex;
+	flex-direction: column;
+	border-top: 30px solid #df682b;
+	flex-basis: 35%;
+}
+.addItemButton {
+	align-self: flex-end;
 	background-color: #E06D31;
 }
+
+
+/* Current Order Display */
+#ajaxContainer {
+	border-top: 30px solid #ebb84d;
+}
+
 .orderLis {
 	background-color: white;
 	list-style-type: none;

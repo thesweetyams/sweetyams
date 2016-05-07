@@ -38,7 +38,7 @@
 
 										<!-- Each Menu Items Button and Hidden Id -->
 										{{ Form::hidden('item_id', $item->id, ['class' => 'item_id'])}}
-										{{ Form::submit('Add to Order', ['class' => 'ajaxBuildButton']) }}
+										{{ Form::submit('Add to Order', ['class' => 'addItemButton']) }}
 
 									</div> <!-- .menuFormDivs -->
 								{{ Form::close() }}
@@ -50,7 +50,7 @@
 
 		<!-- Third Column -->
 		<!-- Order Display -->
-		<div class="ajaxContainer column">
+		<div id="ajaxContainer" class="column">
 			<h6 class="currentOrder">Current Order Items:</h6>
 				<ul id="orders"></ul>
 		</div> <!-- #ajaxContainer -->
@@ -59,5 +59,6 @@
 
 
 @section('js')
+	
 	<script src="/js/ajax.js"></script>
  @stop
