@@ -125,6 +125,7 @@ class MenuItemsTableSeeder extends Seeder {
 		$menuItem->name = "Organic Mushroom Burger";
 		$menuItem->description = "Marinated Portabella  on a GF Bun with a roasted pepper garlic spread, topped with our SY chutney.  Served with ORG House salad & ORG Brown Rice.";
 		$menuItem->available = 1;
+		$menuItem->image = "/img/menuImages/gluten_free_mushroom_burger.jpg";
 		$menuItem->price = 895;
 		$menuItem->save();
 
@@ -304,6 +305,7 @@ class MenuItemsTableSeeder extends Seeder {
 		$menuItem->name = 'Salmon Fillet';
 		$menuItem->description = 'Sustainably Farm raised Sautéed Salmon fillet over brown rice and a house salad.  Choose: SY Red Sauce, Lemon Garlic, Sesame Ginger, Chili Love Sauce or blackened.';
 		$menuItem->available = 1;
+		$menuItem->image = "/img/menuImages/blackend_salmon.jpg";
 		$menuItem->price = 1150;
 		$menuItem->save();
 

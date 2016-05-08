@@ -19,3 +19,8 @@ $(function (){
 		});
 	})
 });
+
+// $('.className:checked').each(function() {
+//		selected_value.push($(this).val());
+//		console.log(select_value);
+// });

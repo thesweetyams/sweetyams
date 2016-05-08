@@ -1,4 +1,4 @@
-@extends('master')
+
 @section('content')
     @if (Session::has('errorMessage'))
         <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>

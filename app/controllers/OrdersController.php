@@ -3,7 +3,7 @@ use Stripe as Stripe;
 
 class OrdersController extends \BaseController {
 
-	public function index()
+	public function index() 
 	{
 		return View::make('orders.example');
 	}
@@ -43,9 +43,10 @@ class OrdersController extends \BaseController {
 			}
 		}
 
-		if($order->save()) {
-			//return Redirect::action('OrdersController@create', $order->id = 1)->with(['order' => $order]);
-			return $orderItem->menuItem;
+		if($order->save() ) 
+		{
+			// return $orderItem->menuItem; 
+			return Redirect::action('OrdersController@create', $order->id = 1)->with(['order' => $order]);
 		}
 	}
 
