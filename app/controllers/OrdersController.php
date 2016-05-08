@@ -40,14 +40,15 @@ class OrdersController extends \BaseController {
 				$orderItemAddOn = new OrderItemAddOn;
 				$orderItemAddOn->order_item_id = $orderItem->id;
 				$orderItemAddOn->add_on_id = $addOn;
+				$orderItemAddOns[] = $orderItemAddOn->addOn;
 				$orderItemAddOn->save();
 			}
 		}
-
+		
 		if($order->save() ) 
 		{
 			// this returns a json response that you can manipulate in the view
-			return $orderItem->menuItem; 
+			return [$orderItem->menuItem, $orderItemAddOns];
 			// return Redirect::action('OrdersController@create', $order->id = 1)->with(['order' => $order]);
 		}
 	}
