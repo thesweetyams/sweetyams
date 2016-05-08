@@ -10,6 +10,7 @@
 	
 		<!-- First Column -->
 		<div class="menuItemsSidebar column">
+			<h2 class="menuNameHeader">Menu Items</h2>
 			@foreach($menuCategory as $category)
 				<a href="#{{{$category->id}}}"><h5 class="menuName">{{{$category->name}}}</h5></a>
 			@endforeach

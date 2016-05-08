@@ -17,11 +17,21 @@ Children:
 	border: 1px solid black;
 }
 
+.menuNameHeader {
+	/*font-size: 1.5em;*/
+	padding-bottom: 5px;
+	background-color: #75d264;
+	border-bottom: 3px solid #75d264;
+	color: black;
+}
 .menuName {
 	color: black;
+	font-family: Arial;
+	font-weight: light;
 	font-size: 1.25em;
 	padding-bottom: 5px;
-	background-color: orange;
+	background-color: #75d264;
+	border-bottom: 3px solid #75d264;
 }
 
 /* Flex Children Columns*/
@@ -33,16 +43,16 @@ Children:
 
 /* Side Bar */
 .menuItemsSidebar {
-	flex-shrink: auto;
 	border-top: 30px solid #ebb84d;
 	display: flex;
 	flex-direction: column;
+	flex-shrink: 0;
 }
 
 /* Menu Items/Form */
 .itemsContainer {
-	flex-grow: 1;
 	display: flex;
+	flex-basis: 50%;
 	flex-direction: column;
 	border-top: 30px solid #df682b;
 }
@@ -55,12 +65,16 @@ Children:
 	flex-direction: column;
 }
 .addItemButton {
+	border-radius: 5px;
 	margin-right: auto;
 	color: #e06d31;
   	background: rgba(0,0,0,0);
-  	border: solid 5px #e06d31;
+  	border: solid 3px #e06d31;
 }
 
+.menuCategory {
+	border-bottom: 3px solid black;
+}
 
 /* Current Order Display */
 #ajaxContainer {
