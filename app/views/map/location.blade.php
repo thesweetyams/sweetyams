@@ -36,7 +36,7 @@
       {{Form::close()}}
       <hr>
     </div>
-    <h3 class="flex__text">Send us a message and we'll get back to you as soon as possible</h3>
+    <h3 class="flex__text">Send us a message and we'll get back to you as soon as we can!</h3>
     <br>
 @endsection
 

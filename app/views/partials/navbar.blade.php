@@ -19,7 +19,7 @@
         <div class="dropdown" id="community-dropdown">
           <ul class="dropdown-list" id="community-dropdown-list">
             <li><a href="http://www.yelp.com/biz/sweet-yams-san-antonio-4" target="_blank">Yelp</a></li>
-            <li><li><a href="https://www.instagram.com/sweetyamsorganic/" target="_blank">Instagram</a></li></li>
+            <li><a href="https://www.instagram.com/sweetyamsorganic/" target="_blank">Instagram</a></li>
             <li><a href="https://www.facebook.com/SweetYamsOrganic/" target="_blank">Facebook</a></li>
             <li><a href="#" target="_blank">Gallery</a></li>
           </ul>
