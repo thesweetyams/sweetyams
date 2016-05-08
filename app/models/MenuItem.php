@@ -18,6 +18,9 @@ class MenuItem extends Eloquent
 	{
 		return $this->hasMany('OrderItem');
 	}
-
+	public function price() 
+	{
+		return number_format((float)($this->price / 100), 2, '.', '');
+	}
 
 }

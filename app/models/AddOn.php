@@ -14,4 +14,8 @@ class AddOn extends Eloquent
 	{
 		return $this->hasMany('OrderItemAddOn');
 	}
+	public function price() 
+	{
+		return number_format((float)($this->price / 100), 2, '.', '');
+	}
 }
