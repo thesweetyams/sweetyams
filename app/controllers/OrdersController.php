@@ -13,8 +13,9 @@ class OrdersController extends \BaseController {
 		$menuCategory = Menu::all();
 		$menuItems    = MenuItem::all();
 		$addOns       = AddOn::all();
-		return View::make('orders.create')->with(['menuItems' => $menuItems, 'menuCategory' => $menuCategory,
-			'addOns' => $addOns]);
+		return View::make('orders.create')->with(['menuItems' => $menuItems,
+												  'menuCategory' => $menuCategory,
+												  'addOns' => $addOns]);
 	}
 
 	public function store()
@@ -45,8 +46,9 @@ class OrdersController extends \BaseController {
 
 		if($order->save() ) 
 		{
-			// return $orderItem->menuItem; 
-			return Redirect::action('OrdersController@create', $order->id = 1)->with(['order' => $order]);
+			// this returns a json response that you can manipulate in the view
+			return $orderItem->menuItem; 
+			// return Redirect::action('OrdersController@create', $order->id = 1)->with(['order' => $order]);
 		}
 	}
 
