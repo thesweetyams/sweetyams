@@ -3,9 +3,9 @@ setTimeout(function() {
 }, 500);
 
 $(function() {
-  	var $p = $('p');
-  	$p.hide().each(function(index) {
-    	$(this).delay(700 * index).fadeIn(700);
+  	var $h5 = $('h5');
+  	$h5.hide().each(function(index) {
+    	$(this).delay(150 * index).fadeIn(400);
 	});
 });
 

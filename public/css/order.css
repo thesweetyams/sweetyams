@@ -17,55 +17,52 @@ Children:
 	border: 1px solid black;
 }
 
+.menuName {
+	color: black;
+	font-size: 1.25em;
+	padding-bottom: 5px;
+	background-color: orange;
+}
+
 /* Flex Children Columns*/
 .column {
 	margin: 10px;
-	flex-grow: 1;
 	flex-shrink: 1;
+	flex-grow: 1;
 }
 
 /* Side Bar */
 .menuItemsSidebar {
+	flex-shrink: auto;
 	border-top: 30px solid #ebb84d;
+	display: flex;
+	flex-direction: column;
 }
 
 /* Menu Items/Form */
 .itemsContainer {
+	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
 	border-top: 30px solid #df682b;
-	flex-basis: 35%;
+}
+.menuItemForm {
+	font-family: Arial;
+	width: 100%;
+	font-size: 1.25;
+	font-weight: light;
+	display: flex;
+	flex-direction: column;
 }
 .addItemButton {
-	align-self: flex-end;
-	background-color: #E06D31;
+	margin-right: auto;
+	color: #e06d31;
+  	background: rgba(0,0,0,0);
+  	border: solid 5px #e06d31;
 }
 
 
 /* Current Order Display */
 #ajaxContainer {
 	border-top: 30px solid #ebb84d;
-}
-
-.orderLis {
-	background-color: white;
-	list-style-type: none;
-}
-
-.menuItemForm {
-	width: 100%;
-	display: flex;
-}
-
-.currentOrder {
-	font-size: 1.25em;
-	text-align: center;
-}
-
-.menuItemFont {
-	font-weight: 200;
-}
-
-.menuItemPrice {
-	font-weight: 500;
 }
