@@ -55,7 +55,6 @@
 		<!-- Order Display -->
 		<div id="ajaxContainer" class="column">
 			<h6 class="currentOrder">Current Order Items:</h6>
-				<ul id="orders"></ul>
 		</div> <!-- #ajaxContainer -->
 
 </div> <!-- .ordersPageContainer -->
