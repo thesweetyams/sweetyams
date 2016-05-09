@@ -1,7 +1,7 @@
 $(function (){
 	$('.addItemButton').on('click', function(e) {
 		e.preventDefault();
-		var $orders = $('#orders');
+		var $orders = $('#ajaxContainer');
 		var $item_id = $(this).parent().find('.item_id').val();
 		var $addOnVals = [];
 
@@ -17,12 +17,11 @@ $(function (){
 				'add_on_id': $addOnVals
 			},
 			success: function(order) {
-				var addons = '<ul>';
+				$orders.append('<p>' + order.order_item.name + ': ' + '$' + (order.order_item.price / 100) + '</p>');
 				order.item_addons.forEach(function(addon) {
-					addons += '<li>' + addon.description + addon.price + '</li>';
+					$orders.append('<ul><li>' + addon.description + ' ' + addon.price + '</li></ul>');
 				});
-				addons += '</ul>';
-				$orders.append('<li>' + order.order_item.name + ': ' + '$' + (order.order_item.price / 100) + addons + '</li>');
+				$('.checkbox').prop('checked', false);
 			},
 			error: function(a) {
 				console.log(a);
