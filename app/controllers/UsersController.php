@@ -119,7 +119,7 @@ class UsersController extends \BaseController {
 		}
 
 		if (Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password')))) {
-      return Redirect::action('MainController@index');
+      return Redirect::action('OrdersController@create');
 		}
 		else {
 			return Redirect::back();
