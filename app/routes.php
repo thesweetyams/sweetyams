@@ -28,6 +28,6 @@ Route::get('/projects', 'MainController@setUpProjects');
 
 Route::get('/order', 'MenuController@setUpOrdering');
 Route::post('/orders/create', 'OrdersController@charge');
-Route::post('/orders/create', 'OrdersController@payWithCash');
+Route::post('/orders/payWithCash', 'OrdersController@payWithCash');
 
 Route::post('/signin', 'UsersController@doLogin');
