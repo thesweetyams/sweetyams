@@ -1,22 +1,66 @@
 @extends('master')
 @section('css')
-	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" href="/css/slider-simp.css" media="screen" title="no title" charset="utf-8">
 @stop
 
 @section('content')
-
+	<div id="slider">
+		<div class="slides">
+			<!-- First slide -->
+			<div class="slider">
+				<div class="legend"></div>
+				<div class="content">
+					<div class="content-txt">
+						<h1> Your title </h1>
+						<h2> Your description </h2>
+					</div>
+				</div>
+				<div class="images">
+					<img src="/img/pictures/mural.jpeg">
+				</div>
+			</div>
+			<!-- Second slide -->
+			<div class="slider">
+				<div class="legend"></div>
+				<div class="content">
+					<div class="content-txt">
+						<h1> Your title </h1>
+						<h2> Your description </h2>
+					</div>
+				</div>
+				<div class="images">
+					<img src="/img/pictures/chocolate.jpeg">
+				</div>
+			</div>
+			<!-- Third slide -->
+			<div class="slider">
+				<div class="legend"></div>
+				<div class="content">
+					<div class="content-txt">
+						<h1> Your title </h1>
+						<h2> Your description </h2>
+					</div>
+				</div>
+				<div class="images">
+					<img src="/img/pictures/fruitsalad.jpeg">
+				</div>
+			</div>
+			<!-- Fourth slide -->
+			<div class="slider">
+				<div class="legend"></div>
+				<div class="content">
+					<div class="content-txt">
+						<h1> Your title </h1>
+						<h2> Your description </h2>
+					</div>
+				</div>
+				<div class="images">
+					<img src="/img/pictures/lemon.jpeg">
+				</div>
+			</div>
+		</div>
+	</div>
 @stop
 
 @section('js')
-	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script type="text/javascript" src="slick/slick.min.js"></script>
-	<script type="text/javascript">
-	$(document).ready(function(){
-		$('.your-class').slick({
-			setting-name: setting-value
-		});
-	});
-
-	</script>
 @stop
