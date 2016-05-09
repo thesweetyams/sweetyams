@@ -1,7 +1,6 @@
 /*
 Parent: 										
 	orderPageContainer				
-
 Children:
 	ajaxContainer
 	menuItemsFilter
@@ -15,7 +14,19 @@ Children:
 	flex-direction: row;
 	/*margin: 0 auto;*/
 }
-
+a.menuName {
+	font-size: 1.5em;
+	font-weight: 300;
+	color: black;
+	border-bottom: 3px solid black;
+}
+a.menuName:hover {
+	background-color: #d6f8b2;
+}
+h2.menuCategory {
+	color: black;
+	text-align: center;
+}
 .menuNameHeader {
 	/*font-size: 1.5em;*/
 	padding-bottom: 5px;

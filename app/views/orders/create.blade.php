@@ -10,9 +10,9 @@
 	
 		<!-- First Column -->
 		<div class="menuItemsSidebar column">
-			<h2 class="menuNameHeader">Menu Items</h2>
+			<h2 class="menuNameHeader" id="top">Menu Items</h2>
 			@foreach($menuCategory as $category)
-				<a href="#{{{$category->id}}}"><h5 class="menuName">{{{$category->name}}}</h5></a>
+				<a href="#{{{$category->id}}}" class="menuName"><h5>{{{$category->name}}}</h5></a>
 			@endforeach
 		</div>
 
@@ -20,7 +20,7 @@
 		<div class="itemsContainer column">
 			@foreach($menuCategory as $category)
 				<!-- Menu Section Title -->
-				<h2 class="menuCategory">{{{$category->name}}}</h2>
+				<a href="#top" id="{{{$category->id}}}"><h2 class="menuCategory">{{{$category->name}}}</h2></a>
 					@foreach($menuItems as $item)
 						@if($category->id == $item->menu_id)
 							{{ Form::open(['action' => 'OrdersController@store', 'method' => 'post', 'class' => 'menuItemForm']) }}
