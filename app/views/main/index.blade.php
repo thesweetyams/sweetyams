@@ -4,62 +4,41 @@
 @stop
 
 @section('content')
+	<h1 class="flex__title" id="welcome">Welcome to Sweet Yams!</h1>
 	<div id="slider">
 		<div class="slides">
-			<!-- First slide -->
+			<!-- Second slide -->
 			<div class="slider">
 				<div class="legend"></div>
-				<div class="content">
-					<div class="content-txt">
-						<h1> Your title </h1>
-						<h2> Your description </h2>
-					</div>
-				</div>
-				<div class="slider__image">
+				<div class="images">
 					<img src="/img/pictures/mural.jpeg">
 				</div>
 			</div>
 			<!-- Second slide -->
 			<div class="slider">
 				<div class="legend"></div>
-				<div class="content">
-					<div class="content-txt">
-						<h1> Your title </h1>
-						<h2> Your description </h2>
-					</div>
-				</div>
-				<div class="slider__image">
-					<img src="/img/pictures/chocolate.jpeg">
+				<div class="images">
+					<img src="/img/pictures/sweetpotato3.jpeg">
 				</div>
 			</div>
 			<!-- Third slide -->
 			<div class="slider">
 				<div class="legend"></div>
-				<div class="content">
-					<div class="content-txt">
-						<h1> Your title </h1>
-						<h2> Your description </h2>
-					</div>
-				</div>
-				<div class="slider__image">
-					<img src="/img/pictures/fruitsalad.jpeg">
+				<div class="images">
+					<img src="/img/pictures/organic.jpeg">
 				</div>
 			</div>
 			<!-- Fourth slide -->
 			<div class="slider">
 				<div class="legend"></div>
-				<div class="content">
-					<div class="content-txt">
-						<h1> Your title </h1>
-						<h2> Your description </h2>
-					</div>
-				</div>
-				<div class="slider__image">
-					<img src="/img/pictures/lemon.jpeg">
+				<div class="images">
+					<img src="/img/pictures/juice.jpeg">
 				</div>
 			</div>
 		</div>
 	</div>
+
+
 @stop
 
 @section('js')
