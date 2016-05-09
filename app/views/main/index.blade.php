@@ -9,28 +9,24 @@
 		<div class="slides">
 			<!-- Second slide -->
 			<div class="slider">
-				<div class="legend"></div>
 				<div class="images">
 					<img src="/img/pictures/mural.jpeg">
 				</div>
 			</div>
 			<!-- Second slide -->
 			<div class="slider">
-				<div class="legend"></div>
 				<div class="images">
 					<img src="/img/pictures/sweetpotato3.jpeg">
 				</div>
 			</div>
 			<!-- Third slide -->
 			<div class="slider">
-				<div class="legend"></div>
 				<div class="images">
 					<img src="/img/pictures/organic.jpeg">
 				</div>
 			</div>
 			<!-- Fourth slide -->
 			<div class="slider">
-				<div class="legend"></div>
 				<div class="images">
 					<img src="/img/pictures/juice.jpeg">
 				</div>
