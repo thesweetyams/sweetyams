@@ -35,6 +35,7 @@ class OrdersController extends \BaseController {
 		$orderItem->order_id = Session::get('order_id');
 		$orderItem->save();
 
+		$orderItemAddOns = [];
 		if (Input::has('add_on_id')) {
 			foreach(Input::get('add_on_id') as $addOn) {
 				$orderItemAddOn = new OrderItemAddOn;
@@ -47,8 +48,9 @@ class OrdersController extends \BaseController {
 		
 		if($order->save() ) 
 		{
+			// return $orderItemAddOns;
 			// this returns a json response that you can manipulate in the view
-			return [$orderItem->menuItem, $orderItemAddOns];
+			return ['order_item' => $orderItem->menuItem, 'item_addons' => $orderItemAddOns];
 			// return Redirect::action('OrdersController@create', $order->id = 1)->with(['order' => $order]);
 		}
 	}
