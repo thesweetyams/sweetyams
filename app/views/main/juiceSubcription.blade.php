@@ -22,7 +22,7 @@
         We feel that it is by far the most effective healing aid on Earth. Weight loss, diabetes, high blood pressure, and many of the effects of most cancers are minimized or eliminated. It's very simple and it takes about 30-60 days for the body to acclimate and start the process of healing and abundant nutrient rejuvenation.. We believe in this program and its results. We extend our full money back guarantee to any that are not satisfied with the results of this program.
       </p>
         <br><br>
-        <h3>20-Day($15 a day) &nbsp &nbsp 30-Day($12 a day)</h3>
+        <h3 class="flex__text">20-Day($15 a day) &nbsp &nbsp 30-Day($12 a day)</h3>
         <br><br>
       <p class="flex__text">
         This program would cost $40-60 a day at most juice places. "The body is the healer, the juice is the aid". "The juices work!" All formulas are made from organic farm fresh vegetables including: carrots, beets, and chard, kales a variety of lettuce, greens, cucumbers and other medicinal living veggies. The best health and fitness program in the nation 100% effective or 100% money back guarentee. For those losing weight, we regularly see a loss of 7-12lbs. a week. The nutrient packed juices increase your energy, clarity and devotion to health. The key to success is commitment and consistency.
@@ -46,11 +46,11 @@
         Let Sweet Yams take care of the food while you take care of yourself and the family. Just select your list of delicious choices from our menu nd we will package them for you to take home or to work and enjoy at your own convenience. All items are less than 500 calories. So enjoy our clean organic foods and eat what you want!
       </p>
         <br><br>
-        <h3>Packages: (for 3 days)</h3>
+        <h3 class="flex__text">Packages: (for 3 days)</h3>
         <br><br>
-        <h3>3 meals or 6 meals</h3>
+        <h3 class="flex__text">3 meals or 6 meals</h3>
         <br><br>
-        <h3>(Each meal costs $10.50, plus a $6 service fee per 3 meals [one-time fee]-reusable containers)</h3>
+        <h3 class="flex__text">(Each meal costs $10.50, plus a $6 service fee per 3 meals [one-time fee]-reusable containers)</h3>
         <br><br>
       <p class="flex__text">
         Please order at least 24 hours prior to pick up/delivery of your food. Eating right and juicing regular can rid our body of dangerous toxins and regenerate your organs. Our food program is for health, pleasure, and convenience. The healthiest choice you can make in your life is the juice. Take your life back to youthful greatness.
