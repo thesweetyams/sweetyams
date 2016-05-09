@@ -7,6 +7,7 @@ class OrdersController extends \BaseController {
   {
     $this->beforeFilter('auth', array('except' => array('index', 'show')));
   }
+
   public function index()
   {
     return View::make('orders.example');
@@ -96,7 +97,25 @@ class OrdersController extends \BaseController {
   {
     $order = $this->findOrderId();
     $email = Auth::user()->email;
-    dd($email);
+    foreach ($order->orderItems as $orderItem) {
+      $orderArray[] = $orderItem->menuItem->name;
+      $orderPrice[] = $orderItem->menuItem->price();
+    }
+    $description = 'this is the description';
+
+    $data    = [
+      'userEmail' => $email,
+      'order'     => $orderArray,
+      'price'     => $orderPrice
+    ];
+
+    Mail::send('emails.contact', $data, function($message) use ($data)
+    {
+      $message->from('tleffew1994@gmail.com', 'SweetYams');
+      $message->to($data['userEmail'])->subject('Order Details');
+    });
+    Session::flash('successMessage', 'The order was successfully sent.');
+    return Redirect::actian('MainController@index'); 
   }
 
   public function sendChargeEmail()
