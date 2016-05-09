@@ -78,6 +78,10 @@
         {{Form::label('phone', 'Phone', ['class' => 'flex__form'])}}
         {{Form::text('phone',null, ['class' => 'flex__form'])}}
       </fieldset>
+      <fieldset class="flex__form">
+        {{Form::label('message', 'Message', ['class' => 'flex__form'])}}
+        {{Form::textarea('message',null, ['class' => 'flex__form', 'id' => 'flex__form--text'])}}
+      </fieldset>
       {{Form::close()}}
       <hr>
     </div>

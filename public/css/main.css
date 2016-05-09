@@ -252,6 +252,9 @@ body {
   justify-content: flex-end;
   margin-bottom: 2em; }
 
+#welcome {
+  margin-bottom: -1em; }
+
 #map-canvas {
   width: 80%;
   height: 70%;
@@ -264,7 +267,8 @@ body {
   z-index: 2;
   border: 30px;
   border-bottom: 0px;
-  border-image: url("../../img/textures/wood2.png") 40 repeat; }
+  border-image: url("../../img/textures/wood2.png") 40 repeat;
+  box-shadow: 2px 8px 15px 2px #323232; }
 
 #addressForm {
   height: 10%;
@@ -273,7 +277,10 @@ body {
   border: 30px;
   border-top: 5px;
   border-bottom: 0px;
-  border-image: url("../../img/textures/wood2.png") 40 repeat; }
+  border-image: url("../../img/textures/wood2.png") 40 repeat;
+  box-shadow: 2px 8px 15px 2px #323232;
+  position: relative;
+  z-index: 3; }
 
 #addressButton {
   height: 10%;
@@ -281,7 +288,10 @@ body {
   margin: auto auto 3em auto;
   border: 30px;
   border-top: 5px;
-  border-image: url("../../img/textures/wood2.png") 40 repeat; }
+  border-image: url("../../img/textures/wood2.png") 40 repeat;
+  box-shadow: 2px 8px 15px 2px #323232;
+  position: relative;
+  z-index: 4; }
 
 .item {
   height: 10%;
