@@ -21,7 +21,7 @@ $(function (){
 				order.item_addons.forEach(function(addon) {
 					$orders.append('<ul><li>' + addon.description + ' ' + addon.price + '</li></ul>');
 				});
-				
+				$('.checkbox').prop('checked', false);
 			},
 			error: function(a) {
 				console.log(a);
