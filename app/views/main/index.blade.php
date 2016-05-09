@@ -15,7 +15,7 @@
 						<h2> Your description </h2>
 					</div>
 				</div>
-				<div class="images">
+				<div class="slider__image">
 					<img src="/img/pictures/mural.jpeg">
 				</div>
 			</div>
@@ -28,7 +28,7 @@
 						<h2> Your description </h2>
 					</div>
 				</div>
-				<div class="images">
+				<div class="slider__image">
 					<img src="/img/pictures/chocolate.jpeg">
 				</div>
 			</div>
@@ -41,7 +41,7 @@
 						<h2> Your description </h2>
 					</div>
 				</div>
-				<div class="images">
+				<div class="slider__image">
 					<img src="/img/pictures/fruitsalad.jpeg">
 				</div>
 			</div>
@@ -54,7 +54,7 @@
 						<h2> Your description </h2>
 					</div>
 				</div>
-				<div class="images">
+				<div class="slider__image">
 					<img src="/img/pictures/lemon.jpeg">
 				</div>
 			</div>
