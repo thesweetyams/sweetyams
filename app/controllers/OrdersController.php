@@ -13,8 +13,9 @@ class OrdersController extends \BaseController {
 		$menuCategory = Menu::all();
 		$menuItems    = MenuItem::all();
 		$addOns       = AddOn::all();
-		return View::make('orders.create')->with(['menuItems' => $menuItems, 'menuCategory' => $menuCategory,
-			'addOns' => $addOns]);
+		return View::make('orders.create')->with(['menuItems' => $menuItems,
+												  'menuCategory' => $menuCategory,
+												  'addOns' => $addOns]);
 	}
 
 	public function store()
@@ -34,19 +35,23 @@ class OrdersController extends \BaseController {
 		$orderItem->order_id = Session::get('order_id');
 		$orderItem->save();
 
+		$orderItemAddOns = [];
 		if (Input::has('add_on_id')) {
 			foreach(Input::get('add_on_id') as $addOn) {
 				$orderItemAddOn = new OrderItemAddOn;
 				$orderItemAddOn->order_item_id = $orderItem->id;
 				$orderItemAddOn->add_on_id = $addOn;
+				$orderItemAddOns[] = $orderItemAddOn->addOn;
 				$orderItemAddOn->save();
 			}
 		}
-
+		
 		if($order->save() ) 
 		{
-			// return $orderItem->menuItem; 
-			return Redirect::action('OrdersController@create', $order->id = 1)->with(['order' => $order]);
+			// return $orderItemAddOns;
+			// this returns a json response that you can manipulate in the view
+			return ['order_item' => $orderItem->menuItem, 'item_addons' => $orderItemAddOns];
+			// return Redirect::action('OrdersController@create', $order->id = 1)->with(['order' => $order]);
 		}
 	}
 
