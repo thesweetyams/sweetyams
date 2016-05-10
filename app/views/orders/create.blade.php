@@ -56,7 +56,7 @@
 		
 			<div id="ajaxContainer">
 				<h1 class="currentOrderHeader">Current Order</h1>
-				<a href="{{{action("OrdersController@confirmOrder")}}}"class="confirmOrder"><button class="confirmOrder butn">Confirm Order</button></a>
+				<a href="{{{action("OrdersController@confirmOrder")}}}"class="confirmOrder"><button id="confirmButton" class="confirmOrder butn">Confirm Order</button></a>
 			</div> <!-- #ajaxContainer -->
 
 @stop
