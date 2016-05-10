@@ -16,7 +16,7 @@
 		@include('.partials.navbar')
 	</div>
 
-	<div class="Site-content">
+	<div class="Site-content desktop-content">
 		<div class="content-container">
 			@yield('content')
 		</div>
