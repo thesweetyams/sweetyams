@@ -20,6 +20,7 @@
 		<div class="itemsContainer column">
 			@foreach($menuCategory as $category)
 				<!-- Menu Section Title -->
+				
 				<a href="#top" id="{{{$category->id}}}"><h2 class="menuCategory">{{{$category->name}}}</h2></a>
 					@foreach($menuItems as $item)
 						@if($category->id == $item->menu_id)
