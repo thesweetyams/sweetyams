@@ -98,7 +98,7 @@ a.menuName:first-of-type {
 	font-size: 1.25;
 	font-weight: light;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	margin-bottom: 10px;
 
 }
@@ -162,3 +162,12 @@ p {
 .singleOrderItem {
 	text-align: left;
 }
+
+
+/* Session Components CSS */
+.Alert {
+	position: relative;
+	background-color: #ddd;
+	border: 1px solid darken(#ddd, 10%);
+	padding: 1em;
+}	
