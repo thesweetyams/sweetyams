@@ -4,10 +4,10 @@
       <li class="flex-ul__item flex-ul__item--menu"><div class="flex-ul__item--hover">Menu</div>
         <div class="dropdown">
           <ul class="dropdown-list">
-            <li><a href="{{{action('MenuController@index')}}}">View Menu</a></li>
-            <li><a href="{{{action('MainController@setUpJuiceSubscription')}}}">Health Programs</a></li>
-            <li><a href="{{{action('MainController@setUpCatering')}}}">Catering</a></li>
-            <li><a href="{{{action('OrdersController@create')}}}">Order Now!</a></li>
+            <li><a class="drop__text" href="{{{action('MenuController@index')}}}">View Menu</a></li>
+            <li><a class="drop__text" href="{{{action('MainController@setUpJuiceSubscription')}}}">Health Programs</a></li>
+            <li><a class="drop__text" href="{{{action('MainController@setUpCatering')}}}">Catering</a></li>
+            <li><a class="drop__text" href="{{{action('OrdersController@create')}}}">Order Now!</a></li>
           </ul>
           <div class="box-shadow"></div>
         </div>
@@ -18,10 +18,10 @@
       <li class="flex-ul__item flex-ul__item--community"><div class="flex-ul__item--hover">Social</div>
         <div class="dropdown" id="community-dropdown">
           <ul class="dropdown-list" id="community-dropdown-list">
-            <li><a href="http://www.yelp.com/biz/sweet-yams-san-antonio-4" target="_blank">Yelp</a></li>
-            <li><a href="https://www.instagram.com/sweetyamsorganic/" target="_blank">Instagram</a></li>
-            <li><a href="https://www.facebook.com/SweetYamsOrganic/" target="_blank">Facebook</a></li>
-            <li><a href="#" target="_blank">Gallery</a></li>
+            <li><a class="drop__text" href="http://www.yelp.com/biz/sweet-yams-san-antonio-4" target="_blank">Yelp</a></li>
+            <li><a class="drop__text" href="https://www.instagram.com/sweetyamsorganic/" target="_blank">Instagram</a></li>
+            <li><a class="drop__text" href="https://www.facebook.com/SweetYamsOrganic/" target="_blank">Facebook</a></li>
+            <li><a class="drop__text" href="#" target="_blank">Gallery</a></li>
           </ul>
           <div class="box-shadow"></div>
         </div>
