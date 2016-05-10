@@ -1,408 +1,700 @@
-@media only screen and (min-device-width: 1024px){
-  /* Slider */
-  #slider{
-    width:100%;
-    height: 45em;
-    position:relative;
-    overflow:hidden;
-  }
-  .slides{
-    width:400%;
-    height:100%;
-    position:relative;
-    -webkit-animation:slide 20s infinite;
-    -moz-animation:slide 20s infinite;
-    animation:slide 20s infinite;
-  }
-  .slider{
-    width:25%;
-    height:100%;
-    display: flex;
-    float:left;
-    position:relative;
-    z-index:1;
-    overflow:hidden;
-  }
-  .images{
-    width: 50em;
-    height: 30em;
-    margin-top: -3em;
-    display: flex;
-    margin: auto;
-  }
-  .images img{
-    width: 50em;
-    height: 30em;
-    margin-top: -3em;
-    border-radius: 3px;
-    box-shadow: 8px 8px 12px 2px #323232;
-  }
-
-  /* Animation */
-  @-webkit-keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
-  }
-  @-moz-keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
-  }
-  @keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
-  }
+@media screen and (min-width: 815px){
+/* Slider */
+#slider{
+  width:100%;
+  height: 45em;
+  position:relative;
+  overflow:hidden;
 }
-/* -------------------------------------------- iPhone 6 ----------- */
-
-/* Portrait and Landscape */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2){}
-
-
-/* Portrait */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
-  /* Slider */
-  .Site-content{
-    height: 120em;
-    width: 95em;
-    margin-left: -1em;
-  }
-
-  #slider{
-    margin-top: 20em
-    width:100%;
-    height: 45em;
-    position:relative;
-    overflow:hidden;
-  }
-  .slides{
-    width:400%;
-    height:100%;
-    position:relative;
-    -webkit-animation:slide 20s infinite;
-    -moz-animation:slide 20s infinite;
-    animation:slide 20s infinite;
-  }
-  .slider{
-    width:25%;
-    height:100%;
-    display: flex;
-    float:left;
-    position:relative;
-    z-index:1;
-    overflow:hidden;
-  }
-  .slide img{
-    width:55em;
-    height:33em;
-  }
-  .slide img{
-    width:55em;
-    height:33em;
-  }
-  .images{
-    width: 55em;
-    height: 33em;
-    display: flex;
-    margin: auto;
-  }
-  .images img{
-    width: 55em;
-    height: 33em;
-    border-radius: 3px;
-    box-shadow: 8px 8px 12px 2px #323232;
-  }
-
-  /* Animation */
-  @-webkit-keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
-  }
-  @-moz-keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
-  }
-  @keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
-  }
+.slides{
+  width:400%;
+  height:100%;
+  position:relative;
+  -webkit-animation:slide 20s infinite;
+  -moz-animation:slide 20s infinite;
+  animation:slide 20s infinite;
+}
+.slider{
+  width:25%;
+  height:100%;
+  display: flex;
+  float:left;
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+}
+.images{
+  width: 55em;
+  height: 33em;
+  margin-top: 1em;
+  display: flex;
+  margin: auto;
+}
+.images img{
+  width: 55em;
+  height: 33em;
+  border-radius: 3px;
+  box-shadow: 8px 8px 12px 2px #323232;
 }
 
-/* Landscape */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape){
-  /* Slider */
-  .Site-content{
-    height: 116em;
-    width: 85em;
-    margin-left: -6em;
+/* Animation */
+@-webkit-keyframes slide{
+  0%,100%{
+    margin-left:0%;
   }
-
-  #slider{
-    margin-top: 5em;
-    width:100%;
-    height: 45em;
-    position:relative;
-    overflow:hidden;
+  21%{
+    margin-left:0%;
   }
-  .slides{
-    width:400%;
-    height:100%;
-    position:relative;
-    -webkit-animation:slide 20s infinite;
-    -moz-animation:slide 20s infinite;
-    animation:slide 20s infinite;
+  25%{
+    margin-left:-100%;
   }
-  .slider{
-    width:25%;
-    height:100%;
-    display: flex;
-    float:left;
-    position:relative;
-    z-index:1;
-    overflow:hidden;
+  46%{
+    margin-left:-100%;
   }
-  .slide img{
-    width:55em;
-    height:33em;
+  50%{
+    margin-left:-200%;
   }
-  .slide img{
-    width:55em;
-    height:33em;
+  71%{
+    margin-left:-200%;
   }
-  .images{
-    width: 55em;
-    height: 33em;
-    display: flex;
-    margin: auto;
+  75%{
+    margin-left:-300%;
   }
-  .images img{
-    width: 55em;
-    height: 33em;
-    border-radius: 3px;
-    box-shadow: 8px 8px 12px 2px #323232;
-  }
-
-  /* Animation */
-  @-webkit-keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
-  }
-  @-moz-keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
-  }
-  @keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
+  96%{
+    margin-left:-300%;
   }
 }
+@-moz-keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-300%;
+  }
+  96%{
+    margin-left:-300%;
+  }
+}
+@keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-300%;
+  }
+  96%{
+    margin-left:-300%;
+  }
+}
+}
 
-  /* ------------------------------------------- iPhone 6+ ----------- */
+@media screen and (max-width: 814px) and (min-width: 715px){
+#slider{
+  width:100%;
+  height: 45em;
+  position:relative;
+  overflow:hidden;
+}
+.slides{
+  width:400%;
+  height:100%;
+  position:relative;
+  -webkit-animation:slide 20s infinite;
+  -moz-animation:slide 20s infinite;
+  animation:slide 20s infinite;
+}
+.slider{
+  width:25%;
+  height:100%;
+  display: flex;
+  float:left;
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+}
+.images{
+  width: 45em;
+  height: 27em;
+  margin-top: 1em;
+  display: flex;
+  margin: auto;
+  position: relative;
+  left: 1em;
+}
+.images img{
+  width: 45em;
+  height: 27em;
+  margin-top: -3em;
+  margin-left: 2em
+  border-radius: 3px;
+  box-shadow: 8px 8px 12px 2px #323232;
+}
+.flex__title{
+  position: relative;
+  left: 1em;
+}
 
-  /* Portrait and Landscape */
-  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3)
+/* Animation */
+@-webkit-keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-300%;
+  }
+  96%{
+    margin-left:-300%;
+  }
+}
+@-moz-keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-300%;
+  }
+  96%{
+    margin-left:-300%;
+  }
+}
+@keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-300%;
+  }
+  96%{
+    margin-left:-300%;
+  }
+}
+}
+
+@media screen and (max-width: 715px) and (min-width: 686px){
+#slider{
+  width:100%;
+  height: 45em;
+  position:relative;
+  overflow:hidden;
+}
+.slides{
+  width:400%;
+  height:100%;
+  position:relative;
+  -webkit-animation:slide 20s infinite;
+  -moz-animation:slide 20s infinite;
+  animation:slide 20s infinite;
+}
+.slider{
+  width:25%;
+  height:100%;
+  display: flex;
+  float:left;
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+}
+.images{
+  width: 35em;
+  height: 21em;
+  margin-top: 1em;
+  display: flex;
+  margin: auto;
+  position: relative;
+  left: 1em;
+}
+.flex__title{
+  position: relative;
+  left: 1em;
+}
+.images img{
+  width: 35em;
+  height: 21em;
+  margin-top: -6em;
+  border-radius: 3px;
+  box-shadow: 8px 8px 12px 2px #323232;
+}
+
+/* Animation */
+@-webkit-keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-300%;
+  }
+  96%{
+    margin-left:-300%;
+  }
+}
+@-moz-keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-300%;
+  }
+  96%{
+    margin-left:-300%;
+  }
+}
+@keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-300%;
+  }
+  96%{
+    margin-left:-300%;
+  }
+}
+}
 
 
-  /* Portrait */
-  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait)
+@media screen and (max-width: 686px) and (min-width: 560px){
+#slider{
+  width:100%;
+  height: 45em;
+  position:relative;
+  overflow:hidden;
+}
+.slides{
+  width:400%;
+  height:100%;
+  position:relative;
+  -webkit-animation:slide 20s infinite;
+  -moz-animation:slide 20s infinite;
+  animation:slide 20s infinite;
+}
+.slider{
+  width:25%;
+  height:100%;
+  display: flex;
+  float:left;
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+}
+.images{
+  width: 35em;
+  height: 21em;
+  margin-top: 1em;
+  display: flex;
+  margin: auto;
+  position: relative;
+  left: 1em;
+}
+.flex__title{
+  position: relative;
+  left: 1em;
+}
+.images img{
+  width: 35em;
+  height: 21em;
+  margin-top: -6em;
+  border-radius: 3px;
+  box-shadow: 8px 8px 12px 2px #323232;
+}
 
+/* Animation */
+@-webkit-keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-300%;
+  }
+  96%{
+    margin-left:-300%;
+  }
+}
+@-moz-keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-300%;
+  }
+  96%{
+    margin-left:-300%;
+  }
+}
+@keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-300%;
+  }
+  96%{
+    margin-left:-300%;
+  }
+}
+.flex-ul__item--hover{
+  margin-top: .4em;
+  margin-left: -.75em;
+  font-size: 2em;
+}
 
-  /* Landscape */
-  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape)
+.flex-ul__item--hover:hover{
+  font-size: 2.5em;
+}
+
+#logo {
+  height: 7em;
+  width: 7em;
+  transition: all 0s
+}
+
+.logo__box{
+  height: 6.5em;
+  width: 7em;
+  box-shadow: 0px 20px 20px -10px #323232;
+  margin-left: -.75em;
+  margin-top: 1em;
+  transition: all 0s
+}
+#community-dropdown{
+  margin-left: -60px;
+}
+}
+
+@media screen and (max-width: 559px){
+#slider{
+  width:100%;
+  height: 45em;
+  position:relative;
+  overflow:hidden;
+}
+.slides{
+  width:400%;
+  height:100%;
+  position:relative;
+  -webkit-animation:slide 20s infinite;
+  -moz-animation:slide 20s infinite;
+  animation:slide 20s infinite;
+}
+.slider{
+  width:25%;
+  height:100%;
+  display: flex;
+  float:left;
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+}
+.images{
+  width: 25em;
+  height: 15em;
+  margin-top: 1em;
+  display: flex;
+  margin: auto;
+  position: relative;
+  left: 1em;
+  margin-top: 9em;
+}
+#what{
+  margin-top: -9em;
+}
+#what__text{
+  margin-top: -15em;
+  font-size: 1.25em;
+  width: 20em;
+}
+
+#offer__text{
+  font-size: 1.25em;
+  width: 20em;
+}
+.flex__title{
+  position: relative;
+  left: 1em;
+  margin-top: -1em;
+}
+.flex__text{
+  margin-left: 4em;
+}
+.images img{
+  width: 25em;
+  height: 15em;
+  margin-top: -6em;
+  border-radius: 3px;
+  box-shadow: 8px 8px 12px 2px #323232;
+}
+
+/* Animation */
+@-webkit-keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-300%;
+  }
+  96%{
+    margin-left:-300%;
+  }
+}
+@-moz-keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-300%;
+  }
+  96%{
+    margin-left:-300%;
+  }
+}
+@keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-300%;
+  }
+  96%{
+    margin-left:-300%;
+  }
+}
+.flex-ul__item--hover{
+  margin-top: -.25em;
+  margin-left: -.75em;
+  font-size: 1.5em;
+}
+
+.flex-ul__item--hover:hover{
+  font-size: 1.75em;
+}
+
+#logo {
+  height: 6.5em;
+  width: 6.5em;
+  transition: all 0s
+}
+
+.logo__box{
+  height: 6em;
+  width: 6.5em;
+  box-shadow: 0px 20px 20px -10px #323232;
+  margin-left: -.75em;
+  margin-top: 1em;
+  transition: all 0s
+}
+.flex-ul{
+  height: 3em;
+}
+#community-dropdown{
+  margin-left: -60px;
+}
+}
