@@ -1,408 +1,118 @@
-@media only screen and (min-device-width: 1024px){
-  /* Slider */
-  #slider{
-    width:100%;
-    height: 45em;
-    position:relative;
-    overflow:hidden;
-  }
-  .slides{
-    width:400%;
-    height:100%;
-    position:relative;
-    -webkit-animation:slide 20s infinite;
-    -moz-animation:slide 20s infinite;
-    animation:slide 20s infinite;
-  }
-  .slider{
-    width:25%;
-    height:100%;
-    display: flex;
-    float:left;
-    position:relative;
-    z-index:1;
-    overflow:hidden;
-  }
-  .images{
-    width: 50em;
-    height: 30em;
-    margin-top: -3em;
-    display: flex;
-    margin: auto;
-  }
-  .images img{
-    width: 50em;
-    height: 30em;
-    margin-top: -3em;
-    border-radius: 3px;
-    box-shadow: 8px 8px 12px 2px #323232;
-  }
-
-  /* Animation */
-  @-webkit-keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
-  }
-  @-moz-keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
-  }
-  @keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
-  }
+/* Slider */
+#slider{
+  width:100%;
+  height: 45em;
+  position:relative;
+  overflow:hidden;
 }
-/* -------------------------------------------- iPhone 6 ----------- */
-
-/* Portrait and Landscape */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2){}
-
-
-/* Portrait */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
-  /* Slider */
-  .Site-content{
-    height: 120em;
-    width: 95em;
-    margin-left: -1em;
-  }
-
-  #slider{
-    margin-top: 20em
-    width:100%;
-    height: 45em;
-    position:relative;
-    overflow:hidden;
-  }
-  .slides{
-    width:400%;
-    height:100%;
-    position:relative;
-    -webkit-animation:slide 20s infinite;
-    -moz-animation:slide 20s infinite;
-    animation:slide 20s infinite;
-  }
-  .slider{
-    width:25%;
-    height:100%;
-    display: flex;
-    float:left;
-    position:relative;
-    z-index:1;
-    overflow:hidden;
-  }
-  .slide img{
-    width:55em;
-    height:33em;
-  }
-  .slide img{
-    width:55em;
-    height:33em;
-  }
-  .images{
-    width: 55em;
-    height: 33em;
-    display: flex;
-    margin: auto;
-  }
-  .images img{
-    width: 55em;
-    height: 33em;
-    border-radius: 3px;
-    box-shadow: 8px 8px 12px 2px #323232;
-  }
-
-  /* Animation */
-  @-webkit-keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
-  }
-  @-moz-keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
-  }
-  @keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
-  }
+.slides{
+  width:400%;
+  height:100%;
+  position:relative;
+  -webkit-animation:slide 20s infinite;
+  -moz-animation:slide 20s infinite;
+  animation:slide 20s infinite;
+}
+.slider{
+  width:25%;
+  height:100%;
+  display: flex;
+  float:left;
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+}
+.images{
+  width: 50em;
+  height: 30em;
+  margin-top: -3em;
+  display: flex;
+  margin: auto;
+}
+.images img{
+  width: 50em;
+  height: 30em;
+  margin-top: -3em;
+  border-radius: 3px;
+  box-shadow: 8px 8px 12px 2px #323232;
 }
 
-/* Landscape */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape){
-  /* Slider */
-  .Site-content{
-    height: 116em;
-    width: 85em;
-    margin-left: -6em;
+/* Animation */
+@-webkit-keyframes slide{
+  0%,100%{
+    margin-left:0%;
   }
-
-  #slider{
-    margin-top: 5em;
-    width:100%;
-    height: 45em;
-    position:relative;
-    overflow:hidden;
+  21%{
+    margin-left:0%;
   }
-  .slides{
-    width:400%;
-    height:100%;
-    position:relative;
-    -webkit-animation:slide 20s infinite;
-    -moz-animation:slide 20s infinite;
-    animation:slide 20s infinite;
+  25%{
+    margin-left:-100%;
   }
-  .slider{
-    width:25%;
-    height:100%;
-    display: flex;
-    float:left;
-    position:relative;
-    z-index:1;
-    overflow:hidden;
+  46%{
+    margin-left:-100%;
   }
-  .slide img{
-    width:55em;
-    height:33em;
+  50%{
+    margin-left:-200%;
   }
-  .slide img{
-    width:55em;
-    height:33em;
+  71%{
+    margin-left:-200%;
   }
-  .images{
-    width: 55em;
-    height: 33em;
-    display: flex;
-    margin: auto;
+  75%{
+    margin-left:-300%;
   }
-  .images img{
-    width: 55em;
-    height: 33em;
-    border-radius: 3px;
-    box-shadow: 8px 8px 12px 2px #323232;
-  }
-
-  /* Animation */
-  @-webkit-keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
-  }
-  @-moz-keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
-  }
-  @keyframes slide{
-    0%,100%{
-      margin-left:0%;
-    }
-    21%{
-      margin-left:0%;
-    }
-    25%{
-      margin-left:-100%;
-    }
-    46%{
-      margin-left:-100%;
-    }
-    50%{
-      margin-left:-200%;
-    }
-    71%{
-      margin-left:-200%;
-    }
-    75%{
-      margin-left:-300%;
-    }
-    96%{
-      margin-left:-300%;
-    }
+  96%{
+    margin-left:-300%;
   }
 }
-
-  /* ------------------------------------------- iPhone 6+ ----------- */
-
-  /* Portrait and Landscape */
-  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3)
-
-
-  /* Portrait */
-  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait)
-
-
-  /* Landscape */
-  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape)
+@-moz-keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-300%;
+  }
+  96%{
+    margin-left:-300%;
+  }
+}
+@keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-300%;
+  }
+  96%{
+    margin-left:-300%;
+  }
+}

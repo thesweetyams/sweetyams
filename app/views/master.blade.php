@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="publishable_key" content="{{$_ENV['STRIPE_PUBLISHABLE_KEY']}}">
-	<meta name="viewport" content="width=device-width" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Sweet Yams</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -15,12 +15,6 @@
 <body class="Site">
 	<div class="wrapper">
 		@include('.partials.navbar')
-	</div>
-
-	<div class="mobile-content">
-		<div class="content-container">
-			@yield('content')
-		</div>
 	</div>
 
 	<div class="desktop-content">
