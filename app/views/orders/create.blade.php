@@ -55,7 +55,7 @@
 		<!-- Third Column -->
 		<!-- Order Display -->
 		<div id="ajaxContainer">
-			
+			<h1>Current Order</h1>
 		</div> <!-- #ajaxContainer -->
 
 </div> <!-- .ordersPageContainer -->
