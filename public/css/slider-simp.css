@@ -1,7 +1,7 @@
 /* Slider */
 #slider{
   width:100%;
-  height:500px;
+  height: 45em;
   position:relative;
   overflow:hidden;
 }
@@ -9,33 +9,38 @@
   width:400%;
   height:100%;
   position:relative;
-  -webkit-animation:slide 30s infinite;
-  -moz-animation:slide 30s infinite;
-  animation:slide 30s infinite;
+  -webkit-animation:slide 20s infinite;
+  -moz-animation:slide 20s infinite;
+  animation:slide 20s infinite;
 }
 .slider{
   width:25%;
   height:100%;
+  display: flex;
   float:left;
   position:relative;
   z-index:1;
   overflow:hidden;
 }
 .slide img{
-  width:100%;
-  height:100%;
+  width:55em;
+  height:33em;
 }
 .slide img{
-  width:100%;
-  height:100%;
+  width:55em;
+  height:33em;
 }
-.image{
-  width:100%;
-  height:100%;
+.images{
+  width: 55em;
+  height: 33em;
+  display: flex;
+  margin: auto;
 }
-.image img{
-  width:100%;
-  height:100%;
+.images img{
+  width: 55em;
+  height: 33em;
+  border-radius: 3px;
+  box-shadow: 8px 8px 12px 2px #323232;
 }
 
 /* Animation */

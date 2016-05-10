@@ -1,6 +1,6 @@
 setTimeout(function() {
 	$('.alert').slideUp(900);
-}, 500);
+}, 1000);
 
 $(function() {
   	var $h5 = $('h5');

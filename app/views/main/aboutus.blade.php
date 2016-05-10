@@ -3,33 +3,20 @@
 
 @section('content')
   <div class="flex">
-    <h1 class="flex__title">What is Sweet Yams?</h1>
-    <p class="flex__text">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-  </div>
-
-  <div class="flex">
     <img class="flex__cater" id="flex__cater--left" src="/img/pictures/mural.jpeg" alt="">
     <img class="flex__cater" id="flex__cater--right" src="/img/pictures/flowers.jpeg" alt="">
   </div>
 
   <div class="flex">
-    <h1 class="flex__title">Who is Sweet Yams?</h1>
+    <h1 class="flex__title">What is Sweet Yams?</h1>
     <p class="flex__text">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Sweet Yams, located on the East Side of SA in (East Point). Our mission is to bring delicious, organic, healthy food and make it affordable and accessible to everyone. We're on a mission to heal the world through food; nurturing your mind, body, and soul with Organic local & Organic nationwide ingredients. We offer an all organic juice program, by focusing on consumption of nutrients by way of organic juices. Sweet Yams also provides the community with an organic food program. Fresh prepared meals that you choose off the menu, packaged and ready for you to warm and eat at your convenience.
+We keep it simple, fresh and full of love! Eat Better, Feel Better, Live Better!
     </p>
   </div>
 
   <div class="flex">
     <img class="flex__cater" id="flex__cater--left" src="/img/pictures/love.jpeg" alt="">
     <img class="flex__cater" id="flex__cater--right" src="/img/pictures/organic.jpeg" alt="">
-  </div>
-
-  <div class="flex">
-    <h1 class="flex__title">Our History</h1>
-    <p class="flex__text">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
   </div>
 @stop
