@@ -20,7 +20,7 @@ class OrdersController extends \BaseController {
     $addOns       = AddOn::all();
     return View::make('orders.create')->with(['menuItems' => $menuItems,
       'menuCategory' => $menuCategory,
-      'addOns' => $addOns]);
+      'addOns' => $addOns,]);
   }
 
   public function store()
@@ -182,11 +182,9 @@ class OrdersController extends \BaseController {
     return Redirect::action('OrdersController@confirmOrder');
   }
 
-  // public function getAjax()
-  // {
-  //  $orderId = Input::get('order_id');
-  //  $orderItems = OrderItem::($orderId);
-  //  return $order;
-  // }
+  public function deleteLastItem() 
+  {
+      
+  }
 
 }

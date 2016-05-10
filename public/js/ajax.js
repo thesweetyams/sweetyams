@@ -18,7 +18,7 @@ $(function (){
 			},
 			success: function(order) {
 				console.log(order);
-				$orders.append('<p>' + order.order_item.name + ': ' + '$' + (order.order_item.price / 100).toFixed(2) + '</p>');
+				$orders.append('<p class="singleOrderItem">' + order.order_item.name + ': ' + '$' + (order.order_item.price / 100).toFixed(2) + '</p>');
 				order.item_addons.forEach(function(addon) {
 					$orders.append('<ul><li>' + addon.description + ' ' + (addon.price / 100).toFixed(2) + '</li></ul>');
 				});

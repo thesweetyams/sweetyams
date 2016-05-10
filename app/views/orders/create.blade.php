@@ -26,13 +26,12 @@
 						@if($category->id == $item->menu_id)
 							{{ Form::open(['action' => 'OrdersController@store', 'method' => 'post', 'class' => 'menuItemForm']) }}
 								<!-- Single Menu Item Name -->
-								<span>{{{$item->name}}}</span>
 								<!-- The Price of One Menu Item -->
-								<span>${{{$item->price()}}}</span>
+								<p>{{{$item->name}}} :<span>${{{$item->price()}}}</span></p>
+								
 								<!-- Mushroom Burger AddOns -->
 								@if($category->name == 'Organic Mushroom Burger')
-									<div class="mushroomAddOns">
-										<p>{{{$item->name}}}</p>
+									<div class="mushroomAddOns">										
 										@foreach($addOns as $addOn)
 											<p>{{{$addOn->description}}}</p>
 											<p>{{{$addOn->price()}}}</p>
@@ -43,24 +42,22 @@
 								
 								<!-- Each Menu Items Button and Hidden Id -->
 								{{ Form::hidden('item_id', $item->id, ['class' => 'item_id'])}}
-								{{ Form::submit('Add to Order', ['class' => 'addItemButton']) }}
+								{{ Form::submit('Add', ['class' => 'addItemButton butn']) }}
 
 							{{ Form::close() }}
 						@endif  <!-- category check if check -->
 					@endforeach  <!-- .menuItems as item -->
 				@endforeach  <!-- .menuCategory as category -->
-			<a href="{{{action("OrdersController@confirmOrder")}}}"class="confirmOrder"><button class="confirmOrder">Confirm Order</button></a>
 		</div>  <!-- .itemsContainer -->
 
-		<!-- Third Column -->
-		<!-- Order Display -->
-		<div id="ajaxContainer">
-			<h1>Current Order</h1>
-			<a href="{{{action("OrdersController@confirmOrder")}}}"class="confirmOrder"><button class="confirmOrder">Confirm Order</button></a>
-
-		</div> <!-- #ajaxContainer -->
-
-</div> <!-- .ordersPageContainer -->
+			<!-- Order Display -->
+	
+	</div> <!-- .ordersPageContainer -->
+		
+			<div id="ajaxContainer">
+				<h1 class="currentOrderHeader">Current Order</h1>
+				<a href="{{{action("OrdersController@confirmOrder")}}}"class="confirmOrder"><button class="confirmOrder butn">Confirm Order</button></a>
+			</div> <!-- #ajaxContainer -->
 
 @stop
 
