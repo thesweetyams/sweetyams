@@ -26,7 +26,7 @@
 						@if($category->id == $item->menu_id)
 							{{ Form::open(['action' => 'OrdersController@store', 'method' => 'post', 'class' => 'menuItemForm']) }}
 								<!-- Single Menu Item Name -->
-								<span>{{{$item->name}}}</span>
+								<span>{{{$item->name}}} :</span>
 								<!-- The Price of One Menu Item -->
 								<span>${{{$item->price()}}}</span>
 								<!-- Mushroom Burger AddOns -->
@@ -52,15 +52,14 @@
 			<a href="{{{action("OrdersController@confirmOrder")}}}"class="confirmOrder"><button class="confirmOrder">Confirm Order</button></a>
 		</div>  <!-- .itemsContainer -->
 
-		<!-- Third Column -->
-		<!-- Order Display -->
-		<div id="ajaxContainer">
-			<h1>Current Order</h1>
-			<a href="{{{action("OrdersController@confirmOrder")}}}"class="confirmOrder"><button class="confirmOrder">Confirm Order</button></a>
-
-		</div> <!-- #ajaxContainer -->
-
-</div> <!-- .ordersPageContainer -->
+			<!-- Order Display -->
+	
+	</div> <!-- .ordersPageContainer -->
+		
+			<div id="ajaxContainer">
+				<h1>Current Order</h1>
+				<a href="{{{action("OrdersController@confirmOrder")}}}"class="confirmOrder"><button class="confirmOrder">Confirm Order</button></a>
+			</div> <!-- #ajaxContainer -->
 
 @stop
 
