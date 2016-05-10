@@ -53,8 +53,8 @@
 
 		<!-- Third Column -->
 		<!-- Order Display -->
-		<div id="ajaxContainer" class="column">
-			<h6 class="currentOrder">Current Order Items:</h6>
+		<div id="ajaxContainer">
+			
 		</div> <!-- #ajaxContainer -->
 
 </div> <!-- .ordersPageContainer -->
