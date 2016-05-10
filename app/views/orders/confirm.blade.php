@@ -10,21 +10,19 @@
 
   <p>You're total: $<span id='totalCost'> {{{$order->subtotal()}}}</span></p>
   @foreach($order->orderItems as $orderItem)
-    <h2>{{{$orderItem->menuItem->name}}}</h2>
-    <span>{{{$orderItem->menuItem->price}}}</span>
-  @if ($orderItem->menuItem->image)
-    <img src="{{{$orderItem->menuItem->image}}}">
-  @endif
+    <h2>{{{$orderItem->menuItem->name}}}
+    <span>${{{number_format((float)($orderItem->menuItem->price / 100), 2, '.', '')}}}</span></h2>
     <ul>
     @foreach($orderItem->orderItemAddOns as $orderItemAddOn)
       <li>{{{$orderItemAddOn->addOn->description}}}</li>
       <span>{{{$orderItemAddOn->addOn->price}}}</span>
     @endforeach
     </ul>
+    <hr>
+
     {{ Form::open(['method' => 'DELETE', 'action' => ['OrdersController@destroy', $orderItem->id]]) }}
       {{ Form::submit('Delete Item', ['class' => 'btn btn-danger']) }}
     {{ Form::close() }}
-    <hr>
   @endforeach
   <a href="{{{action("OrdersController@create")}}}" style="color:black;"><button>Edit Order</button></a>
   {{Form::open(['action' => 'OrdersController@charge', 'id' => 'billing-form'])}}
