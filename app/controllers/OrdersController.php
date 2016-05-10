@@ -20,7 +20,7 @@ class OrdersController extends \BaseController {
     $addOns       = AddOn::all();
     return View::make('orders.create')->with(['menuItems' => $menuItems,
       'menuCategory' => $menuCategory,
-      'addOns' => $addOns]);
+      'addOns' => $addOns,]);
   }
 
   public function store()
