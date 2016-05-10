@@ -10,9 +10,9 @@
 	
 		<!-- First Column -->
 		<div class="menuItemsSidebar column">
-			<h2 class="menuNameHeader">Menu Items</h2>
+			<h2 class="menuNameHeader" id="top">Menu Items</h2>
 			@foreach($menuCategory as $category)
-				<a href="#{{{$category->id}}}"><h5 class="menuName">{{{$category->name}}}</h5></a>
+				<a href="#{{{$category->id}}}" class="menuName"><h5>{{{$category->name}}}</h5></a>
 			@endforeach
 		</div>
 
@@ -20,18 +20,18 @@
 		<div class="itemsContainer column">
 			@foreach($menuCategory as $category)
 				<!-- Menu Section Title -->
-				<h2 class="menuCategory">{{{$category->name}}}</h2>
+				
+				<a href="#top" id="{{{$category->id}}}"><h2 class="menuCategory">{{{$category->name}}}</h2></a>
 					@foreach($menuItems as $item)
 						@if($category->id == $item->menu_id)
 							{{ Form::open(['action' => 'OrdersController@store', 'method' => 'post', 'class' => 'menuItemForm']) }}
 								<!-- Single Menu Item Name -->
-								<span>{{{$item->name}}}</span>
 								<!-- The Price of One Menu Item -->
-								<span>${{{$item->price()}}}</span>
+								<p>{{{$item->name}}} :<span>${{{$item->price()}}}</span></p>
+								
 								<!-- Mushroom Burger AddOns -->
 								@if($category->name == 'Organic Mushroom Burger')
-									<div class="mushroomAddOns">
-										<p>{{{$item->name}}}</p>
+									<div class="mushroomAddOns">										
 										@foreach($addOns as $addOn)
 											<p>{{{$addOn->description}}}</p>
 											<p>{{{$addOn->price()}}}</p>
@@ -42,22 +42,22 @@
 								
 								<!-- Each Menu Items Button and Hidden Id -->
 								{{ Form::hidden('item_id', $item->id, ['class' => 'item_id'])}}
-								{{ Form::submit('Add to Order', ['class' => 'addItemButton']) }}
+								{{ Form::submit('Add', ['class' => 'addItemButton butn']) }}
 
 							{{ Form::close() }}
 						@endif  <!-- category check if check -->
 					@endforeach  <!-- .menuItems as item -->
 				@endforeach  <!-- .menuCategory as category -->
-			<a href="{{{action("OrdersController@confirmOrder")}}}"class="confirmOrder"><button class="confirmOrder">Confirm Order</button></a>
 		</div>  <!-- .itemsContainer -->
 
-		<!-- Third Column -->
-		<!-- Order Display -->
-		<div id="ajaxContainer" class="column">
-			<h6 class="currentOrder">Current Order Items:</h6>
-		</div> <!-- #ajaxContainer -->
-
-</div> <!-- .ordersPageContainer -->
+			<!-- Order Display -->
+	
+	</div> <!-- .ordersPageContainer -->
+		
+			<div id="ajaxContainer">
+				<h1 class="currentOrderHeader">Current Order</h1>
+				<a href="{{{action("OrdersController@confirmOrder")}}}"class="confirmOrder"><button id="confirmButton" class="confirmOrder butn">Confirm Order</button></a>
+			</div> <!-- #ajaxContainer -->
 
 @stop
 

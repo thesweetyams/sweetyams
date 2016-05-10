@@ -20,7 +20,7 @@ class OrdersController extends \BaseController {
     $addOns       = AddOn::all();
     return View::make('orders.create')->with(['menuItems' => $menuItems,
       'menuCategory' => $menuCategory,
-      'addOns' => $addOns]);
+      'addOns' => $addOns,]);
   }
 
   public function store()
@@ -30,7 +30,7 @@ class OrdersController extends \BaseController {
 
     } else {
       $order = new Order();
-      $order->user_id = 1;
+      $order->user_id = Auth::user()->id;
       $order->save();
       Session::put('order_id', $order->id);
     }
@@ -102,20 +102,18 @@ class OrdersController extends \BaseController {
       $orderPrice[] = $orderItem->menuItem->price();
     }
     $description = 'this is the description';
-
     $data    = [
       'userEmail' => $email,
       'order'     => $orderArray,
       'price'     => $orderPrice
     ];
-
     Mail::send('emails.contact', $data, function($message) use ($data)
     {
       $message->from('tleffew1994@gmail.com', 'SweetYams');
       $message->to($data['userEmail'])->subject('Order Details');
     });
     Session::flash('successMessage', 'The order was successfully sent.');
-    return Redirect::actian('MainController@index'); 
+    return Redirect::action('MainController@index'); 
   }
 
   public function sendChargeEmail()
@@ -184,11 +182,9 @@ class OrdersController extends \BaseController {
     return Redirect::action('OrdersController@confirmOrder');
   }
 
-  // public function getAjax()
-  // {
-  //  $orderId = Input::get('order_id');
-  //  $orderItems = OrderItem::($orderId);
-  //  return $order;
-  // }
+  public function deleteLastItem() 
+  {
+      
+  }
 
 }

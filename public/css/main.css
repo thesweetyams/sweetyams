@@ -21,7 +21,655 @@ body {
 .Site-content {
   flex: 1; }
 
+<<<<<<< HEAD
 .nav-container {
+=======
+@media only screen and (min-device-width: 1024px) {
+  .nav-container {
+    position: relative;
+    z-index: 5; }
+
+  .flex-nav {
+    min-height: 3em;
+    position: relative;
+    z-index: 1; }
+
+  .flex-ul {
+    background-image: url("../../img/textures/wood2.png");
+    border-bottom: 2px solid #e26b21;
+    box-shadow: 0px 4px 12px #323232;
+    list-style: none;
+    display: flex;
+    height: 5.25em; }
+
+  .flex-ul__item {
+    flex: 1;
+    height: 11px; }
+
+  .flex-ul__item--contact,
+  .flex-ul__item--about,
+  .flex-ul__item--logo,
+  .flex-ul__item--menu {
+    flex: 0.35; }
+
+  .flex-ul__item--community {
+    flex: 0.25;
+    margin-right: 1em; }
+
+  .flex-ul__item--hover {
+    color: white;
+    font-size: 2.5em;
+    font-family: "Slabo 27px", serif;
+    letter-spacing: 4px;
+    padding: 20px 5px 5px 5px;
+    text-shadow: black 0.1em 0.1em 0.3em;
+    display: inline-block; }
+
+  .flex-ul__item--logo {
+    align-content: center; }
+
+  .flex-ul__item--hover:hover {
+    color: white;
+    font-size: 3em;
+    text-decoration: none;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    transition: all 0.25s; }
+
+  a:active,
+  a:link,
+  a:visited {
+    color: white;
+    text-decoration: none; }
+
+  #logo {
+    height: 12em;
+    width: 12em;
+    position: relative;
+    z-index: 150; }
+
+  .logo__box {
+    border-radius: 50%;
+    height: 11em;
+    width: 12em;
+    box-shadow: 0px 32px 20px -10px #323232;
+    flex: 2;
+    margin-left: -0.8em;
+    color: white;
+    transition: all 0.75s;
+    position: relative;
+    z-index: 0; }
+
+  .dropdown {
+    margin: -15px 0px 0px -17px;
+    padding: 0px 0px 0px 0px;
+    display: none;
+    position: relative;
+    z-index: -1;
+    width: 10.85em;
+    height: 10em; }
+
+  .box-shadow {
+    height: 8em;
+    width: 10.75em;
+    margin: -114px 0px 0px 0px;
+    box-shadow: 0px 12px 20px #323232; }
+
+  .dropdown-list {
+<<<<<<< HEAD
+    background-image: url("../../img/navicons/sign.png");
+=======
+    background-image: url("../../img/navicons/sign2.png");
+>>>>>>> 96741d0206ebc9cd4ce0df81ab33e08078c2d68c
+    background-repeat: no-repeat;
+    font-size: 1.25em;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.15em;
+    list-style-type: none;
+    width: 8.85em;
+    height: 8em;
+    text-align: center;
+    padding: 30px 0px 0px 0px;
+    margin: -10px 0px 0px -2px; }
+<<<<<<< HEAD
+=======
+
+  #community-dropdown {
+    margin-left: -10px;
+    font-size: 1em; }
+
+  #community-dropdown-list {
+    padding: 30px 0px 0px 0px; }
+
+  #community-dropdown-list a:hover {
+    font-size: 1.2em; }
+
+  .dropdown-list a:hover {
+    font-size: 1.15em; }
+
+  .flex-ul__item--hover:hover + .dropdown,
+  .dropdown:hover {
+    display: block; } }
+/* -------------------------------------------- iPhone 6 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .nav-container {
+    position: relative;
+    z-index: 5; }
+
+  .flex-nav {
+    min-height: 3em;
+    position: relative;
+    z-index: 1; }
+
+  .flex-ul {
+    background-image: url("../../img/textures/wood2.png");
+    border-bottom: 2px solid #e26b21;
+    box-shadow: 0px 4px 12px #323232;
+    list-style: none;
+    display: flex;
+    height: 8em; }
+
+  .flex-ul__item {
+    flex: 1;
+    height: 11px; }
+
+  .flex-ul__item--contact,
+  .flex-ul__item--about,
+  .flex-ul__item--logo,
+  .flex-ul__item--menu {
+    flex: 0.45; }
+
+  .flex-ul__item--community {
+    flex: 0.25;
+    margin-right: 3.5em; }
+
+  .flex-ul__item--hover {
+    color: white;
+    font-size: 4em;
+    font-family: "Slabo 27px", serif;
+    letter-spacing: 4px;
+    padding: 20px 5px 5px 5px;
+    text-shadow: black 0.1em 0.1em 0.3em;
+    display: inline-block; }
+
+  .flex-ul__item--logo {
+    align-content: center; }
+
+  .flex-ul__item--hover:hover {
+    color: white;
+    font-size: 4em;
+    text-decoration: none;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    transition: all 0.25s; }
+
+  a:active,
+  a:link,
+  a:visited {
+    color: white;
+    text-decoration: none; }
+
+  #logo {
+    height: 13em;
+    width: 13em;
+    position: relative;
+    z-index: 150;
+    margin-top: 1em; }
+
+  .logo__box {
+    border-radius: 50%;
+    height: 13em;
+    width: 13em;
+    box-shadow: 0px 18px 12px -10px #323232;
+    flex: 2;
+    margin-left: 0em;
+    color: white;
+    transition: all 0.75s;
+    position: relative;
+    z-index: 0; }
+
+  .dropdown {
+    margin: -15px 0px 0px 0px;
+    padding: 15px 0px 0px 0px;
+    display: none;
+    position: relative;
+    z-index: -1;
+    width: 10.85em;
+    height: 10em; }
+
+  .box-shadow {
+    height: 15em;
+    width: 21.9em;
+    margin: -210px 0px 0px 0px;
+    box-shadow: 0px 12px 20px #323232; }
+
+  .dropdown-list {
+    background-image: url("../../img/navicons/sign.png");
+    background-repeat: no-repeat;
+    font-size: 1.25em;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.15em;
+    list-style-type: none;
+    width: 20em;
+    height: 15em;
+    text-align: center;
+    padding: 70px 30px 0px 0px;
+    margin: -10px 0px 0px -2px; }
+
+  #community-dropdown {
+    margin-left: -125px;
+    font-size: 1em; }
+
+  .drop__text {
+    font-size: 1.75em; }
+
+  #community-dropdown-list {
+    padding: 70px 20px 0px 0px; }
+
+  #community-dropdown-list a:hover {
+    font-size: 1.75em; }
+
+  .dropdown-list a:hover {
+    font-size: 1.75em; }
+
+  .flex-ul__item--hover:hover + .dropdown,
+  .dropdown:hover {
+    display: block; } }
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .nav-container {
+    position: relative;
+    z-index: 5; }
+
+  .flex-nav {
+    min-height: 3em;
+    position: relative;
+    z-index: 1; }
+
+  .flex-ul {
+    background-image: url("../../img/textures/wood2.png");
+    border-bottom: 2px solid #e26b21;
+    box-shadow: 0px 4px 12px #323232;
+    list-style: none;
+    display: flex;
+    height: 5.25em; }
+
+  .flex-ul__item {
+    flex: 1;
+    height: 11px; }
+
+  .flex-ul__item--contact,
+  .flex-ul__item--about,
+  .flex-ul__item--logo,
+  .flex-ul__item--menu {
+    flex: 0.35; }
+
+  .flex-ul__item--community {
+    flex: 0.25;
+    margin-right: 1em; }
+
+  .flex-ul__item--hover {
+    color: white;
+    font-size: 3em;
+    font-family: "Slabo 27px", serif;
+    letter-spacing: 4px;
+    padding: 20px 5px 5px 5px;
+    text-shadow: black 0.1em 0.1em 0.3em;
+    display: inline-block; }
+
+  .flex-ul__item--logo {
+    align-content: center; }
+
+  .flex-ul__item--hover:hover {
+    color: white;
+    font-size: 3em;
+    text-decoration: none;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    transition: all 0.25s; }
+
+  a:active,
+  a:link,
+  a:visited {
+    color: white;
+    text-decoration: none; }
+
+  #logo {
+    height: 13em;
+    width: 13em;
+    position: relative;
+    z-index: 150;
+    margin-top: 1em; }
+
+  .logo__box {
+    border-radius: 50%;
+    height: 13em;
+    width: 13em;
+    box-shadow: 0px 18px 12px -10px #323232;
+    flex: 2;
+    margin-left: 0em;
+    color: white;
+    transition: all 0.75s;
+    position: relative;
+    z-index: 0; }
+
+  .dropdown {
+    margin: -15px 0px 0px 0px;
+    padding: 15px 0px 0px 0px;
+    display: none;
+    position: relative;
+    z-index: -1;
+    width: 10.85em;
+    height: 10em; }
+
+  .box-shadow {
+    height: 15em;
+    width: 21.9em;
+    margin: -210px 0px 0px 0px;
+    box-shadow: 0px 12px 20px #323232; }
+
+  .dropdown-list {
+    background-image: url("../../img/navicons/sign.png");
+    background-repeat: no-repeat;
+    font-size: 1.25em;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.15em;
+    list-style-type: none;
+    width: 20em;
+    height: 15em;
+    text-align: center;
+    padding: 70px 30px 0px 0px;
+    margin: -10px 0px 0px -2px; }
+
+  #community-dropdown {
+    margin-left: -10px;
+    font-size: 1em; }
+
+  .drop__text {
+    font-size: 1.75em; }
+
+  #community-dropdown-list {
+    padding: 70px 20px 0px 0px; }
+
+  #community-dropdown-list a:hover {
+    font-size: 1.75em; }
+
+  .dropdown-list a:hover {
+    font-size: 1.75em; }
+
+  .flex-ul__item--hover:hover + .dropdown,
+  .dropdown:hover {
+    display: block; } }
+/* ------------------------------------------- iPhone 6+ ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  .nav-container {
+    position: relative;
+    z-index: 5; }
+
+  .flex-nav {
+    min-height: 3em;
+    position: relative;
+    z-index: 1; }
+
+  .flex-ul {
+    background-image: url("../../img/textures/wood2.png");
+    border-bottom: 2px solid #e26b21;
+    box-shadow: 0px 4px 12px #323232;
+    list-style: none;
+    display: flex;
+    height: 8em; }
+
+  .flex-ul__item {
+    flex: 1;
+    height: 11px; }
+
+  .flex-ul__item--contact,
+  .flex-ul__item--about,
+  .flex-ul__item--logo,
+  .flex-ul__item--menu {
+    flex: 0.45; }
+
+  .flex-ul__item--community {
+    flex: 0.25;
+    margin-right: 3.5em; }
+
+  .flex-ul__item--hover {
+    color: white;
+    font-size: 4em;
+    font-family: "Slabo 27px", serif;
+    letter-spacing: 4px;
+    padding: 20px 5px 5px 5px;
+    text-shadow: black 0.1em 0.1em 0.3em;
+    display: inline-block; }
+
+  .flex-ul__item--logo {
+    align-content: center; }
+
+  .flex-ul__item--hover:hover {
+    color: white;
+    font-size: 4em;
+    text-decoration: none;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    transition: all 0.25s; }
+
+  a:active,
+  a:link,
+  a:visited {
+    color: white;
+    text-decoration: none; }
+
+  #logo {
+    height: 13em;
+    width: 13em;
+    position: relative;
+    z-index: 150;
+    margin-top: 1em; }
+
+  .logo__box {
+    border-radius: 50%;
+    height: 13em;
+    width: 13em;
+    box-shadow: 0px 18px 12px -10px #323232;
+    flex: 2;
+    margin-left: 0em;
+    color: white;
+    transition: all 0.75s;
+    position: relative;
+    z-index: 0; }
+
+  .dropdown {
+    margin: -15px 0px 0px 0px;
+    padding: 15px 0px 0px 0px;
+    display: none;
+    position: relative;
+    z-index: -1;
+    width: 10.85em;
+    height: 10em; }
+
+  .box-shadow {
+    height: 15em;
+    width: 21.9em;
+    margin: -210px 0px 0px 0px;
+    box-shadow: 0px 12px 20px #323232; }
+
+  .dropdown-list {
+    background-image: url("../../img/navicons/sign.png");
+    background-repeat: no-repeat;
+    font-size: 1.25em;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.15em;
+    list-style-type: none;
+    width: 20em;
+    height: 15em;
+    text-align: center;
+    padding: 70px 30px 0px 0px;
+    margin: -10px 0px 0px -2px; }
+
+  #community-dropdown {
+    margin-left: -125px;
+    font-size: 1em; }
+
+  .drop__text {
+    font-size: 1.75em; }
+
+  #community-dropdown-list {
+    padding: 70px 20px 0px 0px; }
+
+  #community-dropdown-list a:hover {
+    font-size: 1.75em; }
+
+  .dropdown-list a:hover {
+    font-size: 1.75em; }
+
+  .flex-ul__item--hover:hover + .dropdown,
+  .dropdown:hover {
+    display: block; } }
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .nav-container {
+    position: relative;
+    z-index: 5; }
+
+  .flex-nav {
+    min-height: 3em;
+    position: relative;
+    z-index: 1; }
+
+  .flex-ul {
+    background-image: url("../../img/textures/wood2.png");
+    border-bottom: 2px solid #e26b21;
+    box-shadow: 0px 4px 12px #323232;
+    list-style: none;
+    display: flex;
+    height: 5.25em; }
+
+  .flex-ul__item {
+    flex: 1;
+    height: 11px; }
+
+  .flex-ul__item--contact,
+  .flex-ul__item--about,
+  .flex-ul__item--logo,
+  .flex-ul__item--menu {
+    flex: 0.35; }
+
+  .flex-ul__item--community {
+    flex: 0.25;
+    margin-right: 1em; }
+
+  .flex-ul__item--hover {
+    color: white;
+    font-size: 3em;
+    font-family: "Slabo 27px", serif;
+    letter-spacing: 4px;
+    padding: 20px 5px 5px 5px;
+    text-shadow: black 0.1em 0.1em 0.3em;
+    display: inline-block; }
+
+  .flex-ul__item--logo {
+    align-content: center; }
+
+  .flex-ul__item--hover:hover {
+    color: white;
+    font-size: 3em;
+    text-decoration: none;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    transition: all 0.25s; }
+
+  a:active,
+  a:link,
+  a:visited {
+    color: white;
+    text-decoration: none; }
+
+  #logo {
+    height: 10em;
+    width: 10em;
+    position: relative;
+    z-index: 150;
+    margin-top: 0.25em; }
+
+  .logo__box {
+    border-radius: 50%;
+    height: 10em;
+    width: 10em;
+    box-shadow: 0px 18px 12px -10px #323232;
+    flex: 2;
+    margin-left: 0em;
+    color: white;
+    transition: all 0.75s;
+    position: relative;
+    z-index: 0; }
+
+  .dropdown {
+    margin: -15px 0px 0px -17px;
+    padding: 15px 0px 0px 0px;
+    display: none;
+    position: relative;
+    z-index: -1;
+    width: 15em;
+    height: 10em; }
+
+  .box-shadow {
+    height: 16.5em;
+    width: 21.5em;
+    margin: -320px 0px 0px 5px;
+    box-shadow: 0px 12px 20px #323232; }
+
+  .dropdown-list {
+    background-image: url("../../img/navicons/sign.png");
+    background-repeat: no-repeat;
+    font-size: 2em;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.15em;
+    list-style-type: none;
+    width: 18em;
+    height: 13em;
+    text-align: center;
+    padding: 80px 180px 0px 0px;
+    margin: -30px 0px 0px -2px; }
+
+  #community-dropdown {
+    margin: -15px 0px 0px -180px;
+    font-size: 1em; }
+
+  #community-dropdown-list {
+    padding: 80px 180px 0px 0px; }
+
+  #community-dropdown-list a:hover {
+    font-size: 1.2em; }
+
+  .dropdown-list a:hover {
+    font-size: 1.15em; }
+
+  .flex-ul__item--hover:hover + .dropdown,
+  .dropdown:hover {
+    display: block; } }
+/* -------------------------------------- iPad 3 and 4 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* --------------------------------------- Galaxy S5 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ---------------------------------------- HTC One ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* -------------------------------------------- iPhone 6 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.25em;
+  margin: -3.5em 7em 0.5em 12em;
+  padding-top: 8em;
+  min-height: 100vh;
+  background-image: linear-gradient(260deg, #BEEE9E 0%, #E6FFBF 100%);
+>>>>>>> 32bd357a5c555b20f0e18f5b011374e0c9304ce0
   position: relative;
   z-index: 5; }
 
@@ -48,6 +696,7 @@ body {
 .flex-ul__item--menu {
   flex: 0.35; }
 
+<<<<<<< HEAD
 .flex-ul__item--community {
   flex: 0.25;
   margin-right: 1em; }
@@ -62,6 +711,131 @@ body {
   display: inline-block; }
 
 .flex-ul__item--logo {
+=======
+#addressButton {
+  height: 10%;
+  width: 80%;
+  margin: auto auto 3em auto;
+  border: 30px;
+  border-top: 5px;
+  border-image: url("../../img/textures/wood2.png") 40 repeat;
+  box-shadow: 2px 8px 15px 2px #323232;
+  position: relative;
+  z-index: 4; }
+
+.item {
+  height: 10%;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  margin-bottom: 2em;
+  margin-top: 1em; }
+>>>>>>> 96741d0206ebc9cd4ce0df81ab33e08078c2d68c
+
+  #community-dropdown {
+    margin-left: -10px;
+    font-size: 1em; }
+
+  #community-dropdown-list {
+    padding: 30px 0px 0px 0px; }
+
+  #community-dropdown-list a:hover {
+    font-size: 1.2em; }
+
+  .dropdown-list a:hover {
+    font-size: 1.15em; }
+
+<<<<<<< HEAD
+  .flex-ul__item--hover:hover + .dropdown,
+  .dropdown:hover {
+    display: block; } }
+/* -------------------------------------------- iPhone 6 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ------------------------------------------- iPhone 6+ ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  .flex-ul {
+    background-color: green; } }
+/* Portrait */
+/* Landscape */
+/* -------------------------------------- iPad 3 and 4 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* --------------------------------------- Galaxy S5 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ---------------------------------------- HTC One ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+=======
+/* Landscape */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.25em;
+  margin: -3.5em 10em 0.5em 14em;
+  padding-top: 8em;
+  min-height: 100vh;
+  background-image: linear-gradient(260deg, #BEEE9E 0%, #E6FFBF 100%);
+  position: relative;
+  z-index: -5;
+  box-shadow: -15px -10px 160px 30px #E6FFBF;
+  font-family: "Slabo 27px", serif; }
+
+.Site-content {
+  position: relative;
+  z-index: -10;
+  min-height: 100%; }
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 2em; }
+
+.flex__contact {
+  flex-direction: column; }
+
+.flex__title {
+  margin: 0em auto;
+  margin-top: 0em;
+  font-size: 3.5em;
+  text-decoration: underline;
+  padding-right: 0.75em;
+  text-align: center;
+  color: black;
+  text-shadow: white 0.04em 0.015em 0.015em; }
+
+.flex__text {
+  font-size: 2.25em;
+  letter-spacing: 0.05em;
+  margin: auto;
+  margin-bottom: 1em;
+  color: black;
+  text-shadow: white 0.06em 0.02em 0.01em; }
+
+.flex__juice,
+.flex__food {
+  height: 24em;
+  width: 32em;
+  margin-right: 2em;
+  box-shadow: 2px 8px 15px 2px #323232;
+  border-radius: 4px; }
+
+.flex__fields {
+  display: flex;
+  margin: auto;
+  margin-bottom: 3em; }
+
+.flex__form {
+  width: 30em;
+  display: flex;
+>>>>>>> 32bd357a5c555b20f0e18f5b011374e0c9304ce0
   align-content: center; }
 
 .flex-ul__item--hover:hover {
@@ -145,6 +919,7 @@ a:visited {
   flex-direction: column;
   justify-content: center;
   border-radius: 0.25em;
+  margin: -1.5em 10em;
   margin-top: -1.5em;
   margin-left: auto;
   margin-right: auto;
@@ -161,8 +936,23 @@ a:visited {
   flex: 1;
   width: 95%;
   position: relative;
+<<<<<<< HEAD
+  z-index: -10; }
+=======
   z-index: -10;
+<<<<<<< HEAD
   margin: 1em 0em 0em 2.5vw; }
+=======
+  margin: 2em 0em 0em 2.5vw; }
+
+.mobile-content {
+  position: relative;
+  z-index: -10;
+  margin: 0em 0em 0em auto;
+  padding-right: 4em;
+  display: none; }
+>>>>>>> 96741d0206ebc9cd4ce0df81ab33e08078c2d68c
+>>>>>>> 32bd357a5c555b20f0e18f5b011374e0c9304ce0
 
 .flex {
   display: flex;
@@ -174,8 +964,13 @@ a:visited {
   flex-direction: column; }
 
 .flex__title {
+<<<<<<< HEAD
+  margin: 0em auto;
+  font-size: 3.5em;
+=======
   margin-top: 0em;
   margin: 0em 5vw;
+>>>>>>> 96741d0206ebc9cd4ce0df81ab33e08078c2d68c
   text-decoration: underline;
   padding-right: 0.75em;
   text-align: center;
@@ -214,14 +1009,22 @@ a:visited {
 #flex__juice--left,
 #flex__food--left {
   justify-content: flex-start;
+<<<<<<< HEAD
+  margin-bottom: 0.5em; }
+=======
   margin-bottom: 0.5em;
   width: 31em; }
+>>>>>>> 96741d0206ebc9cd4ce0df81ab33e08078c2d68c
 
 #flex__juice--right,
 #flex__food--right {
   justify-content: flex-end;
+<<<<<<< HEAD
+  margin-bottom: 0.5em; }
+=======
   margin-bottom: 0.5em;
   width: 31em; }
+>>>>>>> 96741d0206ebc9cd4ce0df81ab33e08078c2d68c
 
 .flex__cater {
   height: 22em;

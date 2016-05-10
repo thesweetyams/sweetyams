@@ -373,7 +373,7 @@ class MenuItemsTableSeeder extends Seeder {
 
 		$menuItem = new MenuItem;
 		$menuItem->menu_id = 9;
-		$menuItem->name = "The one and onlye 'Sweet Potato Cupcake'";
+		$menuItem->name = "The one and only 'Sweet Potato Cupcake'";
 		$menuItem->price = 200;
 		$menuItem->save();
 
@@ -381,9 +381,22 @@ class MenuItemsTableSeeder extends Seeder {
 
 		$menuItem = new MenuItem;
 		$menuItem->menu_id = 9;
-		$menuItem->name = 'Organic Teas: Sweet Tea, Mint & Honey, Green Tea';
+		$menuItem->name = 'Organic Tea Sweet Tea';
 		$menuItem->price = 225;
 		$menuItem->save();
+
+		$menuItem = new MenuItem;
+		$menuItem->menu_id = 9;
+		$menuItem->name = 'Organic Tea Mint & Honey';
+		$menuItem->price = 225;
+		$menuItem->save();
+
+		$menuItem = new MenuItem;
+		$menuItem->menu_id = 9;
+		$menuItem->name = 'Organic Tea Green Tea';
+		$menuItem->price = 225;
+		$menuItem->save();
+		
 
 		$menuItem = new MenuItem;
 		$menuItem->menu_id = 9;
