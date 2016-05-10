@@ -56,6 +56,8 @@
 		<!-- Order Display -->
 		<div id="ajaxContainer">
 			<h1>Current Order</h1>
+			<a href="{{{action("OrdersController@confirmOrder")}}}"class="confirmOrder"><button class="confirmOrder">Confirm Order</button></a>
+
 		</div> <!-- #ajaxContainer -->
 
 </div> <!-- .ordersPageContainer -->
