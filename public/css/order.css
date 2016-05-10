@@ -50,6 +50,7 @@ h2.menuCategory {
 }
 .menuNameHeader {
 	/*font-size: 1.5em;*/
+	text-align: center;
 	padding-bottom: 5px;
 	background-color: #75d264;
 	border-bottom: 3px solid #75d264;
@@ -58,11 +59,15 @@ h2.menuCategory {
 .menuName {
 	color: black;
 	font-family: Arial;
-	font-weight: light;
+	font-weight: 100;
 	font-size: 1.25em;
 	padding-bottom: 5px;
 	background-color: #adeaa1;
 	border-bottom: 3px solid #75d264;
+}
+
+a.menuName:first-of-type {
+	border-top: 3px solid black;
 }
 
 /* Flex Children Columns*/
@@ -146,6 +151,14 @@ h2.menuCategory {
   background-image: linear-gradient(to bottom, #95e086, #95e086);
   text-decoration: none;
 }
-p.singleOrderItem {
+p {
 	font-family: Arial;
+}
+
+#confirmButton {
+	margin-bottom: 15px;
+}
+
+.singleOrderItem {
+	text-align: left;
 }
