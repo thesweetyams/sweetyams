@@ -2,11 +2,16 @@
 
 class Menu extends BaseModel
 {
-	protected $table = 'menu';
-	public $timestamps = false;
+  public static $rules = array(
+    'name'   => 'required|min:1',
+    'description' => 'required',
+    'price' => 'required'
+  );
+  protected $table = 'menu';
+  public $timestamps = false;
 
-	public function menuItems() 
-	{
-		return $this->hasMany('MenuItem');
-	}
+  public function menuItems()
+  {
+    return $this->hasMany('MenuItem');
+  }
 }
