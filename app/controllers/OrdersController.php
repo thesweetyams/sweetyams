@@ -182,11 +182,9 @@ class OrdersController extends \BaseController {
     return Redirect::action('OrdersController@confirmOrder');
   }
 
-  // public function getAjax()
-  // {
-  //  $orderId = Input::get('order_id');
-  //  $orderItems = OrderItem::($orderId);
-  //  return $order;
-  // }
+  public function deleteLastItem() 
+  {
+      
+  }
 
 }

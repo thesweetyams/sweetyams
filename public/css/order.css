@@ -1,10 +1,21 @@
+.mushroomAddOns {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+}
+.checkbox {
+	width: 50%;
+}
+
 button.confirmOrder {
-	color: black;
+	display:block;
+	margin-left;
 }
 a:focus , a:active {
 	outline: none;
 }
 input.addItemButton {
+	border-color: #C0C0C0;
 	outline: none;
 }
 
@@ -15,12 +26,7 @@ input.addItemButton {
 	flex-direction: row;
 	/*margin: 0 auto;*/
 }
-#ajaxContainer {
-	display: block;
-	position: fixed;
-	top:300px;
-	right:200px;
-}
+
 input.addItemButton:hover {
 	background-color: #DF682B;
 	color: white;
@@ -61,7 +67,7 @@ h2.menuCategory {
 
 /* Flex Children Columns*/
 .column {
-	margin: 10px;
+	margin: 20px;
 }
 
 /* Side Bar */
@@ -76,6 +82,7 @@ h2.menuCategory {
 /* Menu Items/Form */
 .itemsContainer {
 	display: flex;
+	max-width: 60%;
 	flex-basis: 60%;
 	flex-direction: column;
 	border-top: 30px solid #df682b;
@@ -87,20 +94,58 @@ h2.menuCategory {
 	font-weight: light;
 	display: flex;
 	flex-direction: row;
+	margin-bottom: 10px;
+
 }
 .addItemButton {
 	border-radius: 5px;
 	margin-left: auto;
 	color: #e06d31;
   	background: rgba(0,0,0,0);
-  	border: solid 3px #e06d31;
-  	height: 50px;
+  	border: solid 1px #e06d31;
+  	height: 35px;
 }
 
 .menuCategory {
 	border-bottom: 3px solid black;
 }
+
+#ajaxContainer {
+	display: block;
+	width: 300px;
+	position: fixed;
+	top:195px;
+	right:100px;
+	border-top: 30px solid #EBB84D;
+}
+.confirmOrder {
+	margin-left: auto;
+}
 .currentOrderHeader {
-	text-align: center;
+	text-align: left;
 }
 
+.butn {
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #df682b;
+  text-decoration: none;
+}
+
+.butn:hover {
+  background: #95e086;
+  background-image: -webkit-linear-gradient(top, #95e086, #95e086);
+  background-image: -moz-linear-gradient(top, #95e086, #95e086);
+  background-image: -ms-linear-gradient(top, #95e086, #95e086);
+  background-image: -o-linear-gradient(top, #95e086, #95e086);
+  background-image: linear-gradient(to bottom, #95e086, #95e086);
+  text-decoration: none;
+}
+p.singleOrderItem {
+	font-family: Arial;
+}
