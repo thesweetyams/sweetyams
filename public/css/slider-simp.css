@@ -37,6 +37,14 @@
   box-shadow: 8px 8px 12px 2px #323232;
 }
 
+#offer__text{
+  text-align: justify;
+}
+
+#what__text{
+  text-align: justify;
+}
+
 /* Animation */
 @-webkit-keyframes slide{
   0%,100%{
@@ -173,9 +181,10 @@
 }
 #what__text{
   margin-top: -2em;
-  margin-left: 6em;
+  margin-left: 5em;
   font-size: 1.75em;
   width: 20em;
+  text-align: justify;
 }
 #offer{
   font-size: 2.5em;
@@ -184,9 +193,10 @@
 
 #offer__text{
   margin-top: 1em;
-  margin-left: 6em;
+  margin-left: 5em;
   font-size: 1.75em;
   width: 20em;
+  text-align: justify;
 }
 
 /* Animation */
@@ -277,7 +287,7 @@
 .logo__box{
   height: 10em;
   width: 11em;
-  box-shadow: 0px 20px 20px -10px #323232;
+  box-shadow: 0px 30px 22px -10px #323232;
   margin-left: 0em;
   margin-top: 1em;
   transition: all .5s
@@ -338,9 +348,10 @@
 }
 #what__text{
   margin-top: -6em;
-  margin-left: 5em;
+  margin-left: 4em;
   font-size: 1.75em;
   width: 20em;
+  text-align: justify;
 }
 #offer{
   font-size: 2.5em;
@@ -349,9 +360,10 @@
 
 #offer__text{
   margin-top: 1em;
-  margin-left: 5em;
+  margin-left: 4em;
   font-size: 1.75em;
   width: 20em;
+  text-align: justify;
 }
 
 /* Animation */
@@ -442,7 +454,7 @@
 .logo__box{
   height: 9em;
   width: 10em;
-  box-shadow: 0px 20px 20px -10px #323232;
+  box-shadow: 0px 28px 24px -8px #323232;
   margin-left: 0em;
   margin-top: 1em;
   transition: all .5s
@@ -504,9 +516,10 @@
 }
 #what__text{
   margin-top: -6em;
-  margin-left: 3em;
+  margin-left: 2em;
   font-size: 1.75em;
   width: 20em;
+  text-align: justify;
 }
 #offer{
   font-size: 2.5em;
@@ -515,9 +528,10 @@
 
 #offer__text{
   margin-top: 1em;
-  margin-left: 3em;
+  margin-left: 2em;
   font-size: 1.75em;
   width: 20em;
+  text-align: justify;
 }
 
 /* Animation */
@@ -610,16 +624,16 @@
 }
 
 #logo {
-  height: 9em;
-  width: 9em;
+  height: 8em;
+  width: 8em;
   transition: all .5s
 }
 
 .logo__box{
-  height: 8em;
-  width: 9em;
-  box-shadow: 0px 20px 20px -10px #323232;
-  margin-left: -1.75em;
+  height: 7em;
+  width: 8em;
+  box-shadow: 0px 28px 24px -10px #323232;
+  margin-left: -1.25em;
   margin-top: 1.5em;
   transition: all .5s
 }
@@ -675,9 +689,10 @@
 }
 #what__text{
   margin-top: -16em;
-  margin-left: 6em;
+  margin-left: 5em;
   font-size: 1.25em;
   width: 20em;
+  text-align: justify;
 }
 #welcome{
   font-size: 2.25em;
@@ -689,8 +704,9 @@
 #offer__text{
   font-size: 1.25em;
   margin-top: 1em;
-  margin-left: 6em;
+  margin-left: 5em;
   width: 20em;
+  text-align: justify;
 }
 .flex__title{
   position: relative;
@@ -806,7 +822,7 @@
 .logo__box{
   height: 7em;
   width: 8em;
-  box-shadow: 0px 20px 20px -10px #323232;
+  box-shadow: 0px 28px 24px -10px #323232;
   margin-left: -1.5em;
   margin-top: .25em;
   transition: all .5s
@@ -863,9 +879,10 @@
 }
 #what__text{
   margin-top: -16em;
-  margin-left: 5em;
+  margin-left: 4em;
   font-size: 1.25em;
   width: 20em;
+  text-align: justify;
 }
 #welcome{
   font-size: 2.25em;
@@ -877,8 +894,9 @@
 #offer__text{
   font-size: 1.25em;
   margin-top: 1em;
-  margin-left: 5em;
+  margin-left: 4em;
   width: 20em;
+  text-align: justify;
 }
 .flex__title{
   position: relative;
@@ -994,7 +1012,7 @@
 .logo__box{
   height: 6em;
   width: 7em;
-  box-shadow: 0px 20px 20px -10px #323232;
+  box-shadow: 0px 28px 26px -10px #323232;
   margin-left: -1.25em;
   margin-top: .25em;
   transition: all .5s
@@ -1184,7 +1202,7 @@
   .logo__box{
     height: 6em;
     width: 7em;
-    box-shadow: 0px 20px 20px -10px #323232;
+    box-shadow: 0px 28px 26px -10px #323232;
     margin-left: -1.25em;
     margin-top: .25em;
     transition: all .5s
@@ -1255,9 +1273,10 @@
 }
 #what__text{
   margin-top: -25em;
-  margin-left: 6em;
+  margin-left: 5.5em;
   font-size: 1em;
   width: 20em;
+  text-align: justify;
 }
 #offer{
   font-size: 2em;
@@ -1266,8 +1285,9 @@
 #offer__text{
   font-size: 1em;
   margin-top: 1em;
-  margin-left: 6em;
+  margin-left: 5.5em;
   width: 20em;
+  text-align: justify;
 }
 .flex__title{
   position: relative;
@@ -1383,7 +1403,7 @@
 .logo__box{
   height: 4em;
   width: 5em;
-  box-shadow: 0px 20px 20px -10px #323232;
+  box-shadow: 0px 26px 30px -8px #323232;
   margin-left: -.4em;
   margin-top: .75em;
   transition: all .5s
@@ -1454,7 +1474,8 @@
 }
 #what__text{
   margin-top: -25em;
-  margin-left: 6em;
+  margin-left: 5.5em;
+  text-align: justify;
   font-size: 1em;
   width: 20em;
 }
@@ -1465,7 +1486,8 @@
 #offer__text{
   font-size: 1em;
   margin-top: 1em;
-  margin-left: 6em;
+  margin-left: 5.5em;
+  text-align: justify;
   width: 20em;
 }
 .flex__title{
@@ -1582,7 +1604,7 @@
 .logo__box{
   height: 3.5em;
   width: 4.5em;
-  box-shadow: 0px 20px 20px -10px #323232;
+  box-shadow: 0px 28px 26px -10px #323232;
   margin-left: -1em;
   margin-top: .75em;
   transition: all .5s
