@@ -296,6 +296,31 @@
   margin-top: 1em;
   transition: all .5s
 }
+.dropdown{
+  display: none;
+}
+.box-shadow{
+  display: none;
+}
+.dropdown-list{
+  display: none;
+}
+#community-dropdown{
+  display: none;
+}
+#community-dropdown-list{
+  display: none;
+}
+.flex-ul__item--hover:hover{
+  font-size: 2.5em;
+}
+.dropdown-list a:hover{
+  display: none;
+}
+.flex-ul__item--hover:hover + .dropdown,
+.dropdown:hover{
+  display: none;
+}
 }
 
 /*-------------------------715-686px-------------------------*/
@@ -464,6 +489,31 @@
   margin-left: 0em;
   margin-top: 1em;
   transition: all .5s
+}
+.dropdown{
+  display: none;
+}
+.box-shadow{
+  display: none;
+}
+.dropdown-list{
+  display: none;
+}
+#community-dropdown{
+  display: none;
+}
+#community-dropdown-list{
+  display: none;
+}
+.flex-ul__item--hover:hover{
+  font-size: 2.5em;
+}
+.dropdown-list a:hover{
+  display: none;
+}
+.flex-ul__item--hover:hover + .dropdown,
+.dropdown:hover{
+  display: none;
 }
 }
 
@@ -653,6 +703,31 @@
 }
 .content-container{
   margin-left: -2em;
+}
+.dropdown{
+  display: none;
+}
+.box-shadow{
+  display: none;
+}
+.dropdown-list{
+  display: none;
+}
+#community-dropdown{
+  display: none;
+}
+#community-dropdown-list{
+  display: none;
+}
+.flex-ul__item--hover:hover{
+  font-size: 2em;
+}
+.dropdown-list a:hover{
+  display: none;
+}
+.flex-ul__item--hover:hover + .dropdown,
+.dropdown:hover{
+  display: none;
 }
 }
 
@@ -845,6 +920,31 @@
 .social__info{
   font-size: .9em;
   margin-top: 2em;
+}
+.dropdown{
+  display: none;
+}
+.box-shadow{
+  display: none;
+}
+.dropdown-list{
+  display: none;
+}
+#community-dropdown{
+  display: none;
+}
+#community-dropdown-list{
+  display: none;
+}
+.flex-ul__item--hover:hover{
+  font-size: 1.5em;
+}
+.dropdown-list a:hover{
+  display: none;
+}
+.flex-ul__item--hover:hover + .dropdown,
+.dropdown:hover{
+  display: none;
 }
 }
 
@@ -1050,6 +1150,31 @@
 .content-container{
   margin-left: -2em;
 }
+.dropdown{
+  display: none;
+}
+.box-shadow{
+  display: none;
+}
+.dropdown-list{
+  display: none;
+}
+#community-dropdown{
+  display: none;
+}
+#community-dropdown-list{
+  display: none;
+}
+.flex-ul__item--hover:hover{
+  font-size: 1.25em;
+}
+.dropdown-list a:hover{
+  display: none;
+}
+.flex-ul__item--hover:hover + .dropdown,
+.dropdown:hover{
+  display: none;
+}
 }
 
 /*-------------------------449-405px----------------------*/
@@ -1237,6 +1362,31 @@
   }
   .social__logo--yelp{
     width: 3.5em;
+  }
+  .dropdown{
+    display: none;
+  }
+  .box-shadow{
+    display: none;
+  }
+  .dropdown-list{
+    display: none;
+  }
+  #community-dropdown{
+    display: none;
+  }
+  #community-dropdown-list{
+    display: none;
+  }
+  .flex-ul__item--hover:hover{
+    font-size: 1.25em;
+  }
+  .dropdown-list a:hover{
+    display: none;
+  }
+  .flex-ul__item--hover:hover + .dropdown,
+  .dropdown:hover{
+    display: none;
   }
 }
 
@@ -1440,6 +1590,31 @@
 .social__logo--yelp{
   width: 3.5em;
 }
+.dropdown{
+  display: none;
+}
+.box-shadow{
+  display: none;
+}
+.dropdown-list{
+  display: none;
+}
+#community-dropdown{
+  display: none;
+}
+#community-dropdown-list{
+  display: none;
+}
+.flex-ul__item--hover:hover{
+  font-size: 1em;
+}
+.dropdown-list a:hover{
+  display: none;
+}
+.flex-ul__item--hover:hover + .dropdown,
+.dropdown:hover{
+  display: none;
+}
 }
 
 /*--------------------------399-------------------px*/
@@ -1642,5 +1817,30 @@
 }
 .social__logo--yelp{
   width: 3em;
+}
+.dropdown{
+  display: none;
+}
+.box-shadow{
+  display: none;
+}
+.dropdown-list{
+  display: none;
+}
+#community-dropdown{
+  display: none;
+}
+#community-dropdown-list{
+  display: none;
+}
+.flex-ul__item--hover:hover{
+  font-size: 1em;
+}
+.dropdown-list a:hover{
+  display: none;
+}
+.flex-ul__item--hover:hover + .dropdown,
+.dropdown:hover{
+  display: none;
 }
 }
