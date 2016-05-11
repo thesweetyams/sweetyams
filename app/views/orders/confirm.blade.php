@@ -1,48 +1,45 @@
 @extends('master')
+
 @section('css')
-  <style>
-  hr{
-width: 100%;
-}
-.textRight{
-margin-left:20%;
-}
-.formRight{
-margin-left:20%;
-display:inline;
-}
-</style>
-@stop
+<link rel="stylesheet" href="/css/confirm.css">
+
 @section('content')
-  @if (Session::has('successMessage'))
-      <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
-  @endif
-  @if (Session::has('errorMessage'))
-      <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
-  @endif
+      <template id="alert-template">
+      <div :class="alertClasses" v-show="show">
+        <slot></slot>
+      </div>
+    </template>
+      @if (Session::has('successMessage'))
+          <div class="Alert Alert--Success">{{{ Session::get('successMessage') }}}</div>
+      @endif
+      @if (Session::has('errorMessage'))
+          <div class="Alert Alert--Error">{{{ Session::get('errorMessage') }}}</div>
+      @endif
 
-  @foreach($order->orderItems as $orderItem)
-    <h2>{{{$orderItem->menuItem->name}}}
-    <span class="textRight">${{{number_format((float)($orderItem->menuItem->price / 100), 2, '.', '')}}}</span>  
-    {{ Form::open(['method' => 'DELETE', 'action' => ['OrdersController@destroy', $orderItem->id], 'class' => 'formRight']) }}
-      {{ Form::submit('Delete Item', ['class' => 'btn btn-danger']) }}
-    {{ Form::close() }}
-</h2>  
-    <ul>
-    @foreach($orderItem->orderItemAddOns as $orderItemAddOn)
-      <li>{{{$orderItemAddOn->addOn->description}}}</li>
-      <span>{{{$orderItemAddOn->addOn->price}}}</span>
-    @endforeach
-    </ul>
+        @foreach($order->orderItems as $orderItem)
+            <div class="orderDiv">
+                <p class="child">{{{$orderItem->menuItem->name}}}</p>
+                    <span class="textRight child">${{{number_format((float)($orderItem->menuItem->price / 100), 2, '.', '')}}}</span>  
+                    {{ Form::open(['method' => 'DELETE', 'action' => ['OrdersController@destroy', $orderItem->id], 'class' => 'formRight']) }}
+                        {{ Form::submit('Delete Item', ['class' => 'butn']) }}
+                    {{ Form::close() }}
+            
+            <ul>
+                @foreach($orderItem->orderItemAddOns as $orderItemAddOn)
+                    <li>{{{$orderItemAddOn->addOn->description}}}</li>
+                    <span>{{{$orderItemAddOn->addOn->price}}}</span>
+                @endforeach
+            </ul>
 
-  
-    <hr>
-  @endforeach
+        </div> <!-- .orderDiv -->
+        <hr>
+
+        @endforeach
   <a href="{{{action("OrdersController@create")}}}" style="color:black;"><button>Edit Order</button></a>
   <p>You're total: $<span id='totalCost'> {{{$order->subtotal()}}}</span></p>
-  {{Form::open(['action' => 'OrdersController@charge', 'id' => 'billing-form'])}}
     {{Form::radio('orderType', 'carryout', null, ['class' => 'checkbox'])}}
-    <span>Carry Out</span>
+    <span>Carry Out</span>  {{Form::open(['action' => 'OrdersController@charge', 'id' => 'billing-form'])}}
+
     @if ($order->subtotal() >= 15)                                            
       {{Form::radio('orderType', 'delivery', null, ['class' => 'checkbox'])}}
       <span>Delivery</span>

@@ -1,9 +1,12 @@
 @extends('master')
 @section('css')
 	<link rel="stylesheet" href="/css/slider-simp.css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="/css/order.css">
 @stop
 
 @section('content')
+	<alert type="orderNow"><a href="{{{action('OrdersController@create')}}}">Click Here<strong class="black">To Order NOW!</strong></a>
+	</alert>
 	<h1 class="flex__title" id="welcome">Welcome to Sweet Yams!</h1>
 	<div id="slider">
 		<div class="slides">
