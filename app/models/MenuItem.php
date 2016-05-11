@@ -2,25 +2,31 @@
 
 class MenuItem extends Eloquent
 {
-	protected $table = 'menu_items';
+  protected $table = 'menu_items';
 
-	public function menu() 
-	{
-		return $this->belongsTo('Menu');
-	}
+  public static $rules = array(
+    'name'   => 'required|min:1',
+    'description' => 'required',
+    'price' => 'required'
+  );
 
-	public function addOns() 
-	{
-		return $this->hasMany('AddOn');
-	}
+  public function menu()
+  {
+    return $this->belongsTo('Menu');
+  }
 
-	public function orderItems() 
-	{
-		return $this->hasMany('OrderItem');
-	}
-	public function price() 
-	{
-		return number_format((float)($this->price / 100), 2, '.', '');
-	}
+  public function addOns()
+  {
+    return $this->hasMany('AddOn');
+  }
+
+  public function orderItems()
+  {
+    return $this->hasMany('OrderItem');
+  }
+  public function price()
+  {
+    return number_format((float)($this->price / 100), 2, '.', '');
+  }
 
 }

@@ -1,10 +1,10 @@
-
+@extends ('.master')
 @section('content')
     @if (Session::has('errorMessage'))
         <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
     @endif
-
-        <h1>Menu Items</h1>
+        
+        <h1> Create a Menu Item</h1>
         {{Form::open(['action'=>'AdminController@store', 'method' => 'post', 'files' => 'true'])}}
 
         <div class="form-group">
