@@ -5,8 +5,11 @@
 width: 100%;
 }
 .textRight{
-/* text-align:right; */
-/* display:flex; */
+margin-left:20%;
+}
+.formRight{
+margin-left:20%;
+display:inline;
 }
 </style>
 @stop
@@ -19,8 +22,12 @@ width: 100%;
   @endif
 
   @foreach($order->orderItems as $orderItem)
-    <h2>{{{$orderItem->menuItem->name}}}</h2>
-    <span class="textRight">${{{number_format((float)($orderItem->menuItem->price / 100), 2, '.', '')}}}</span>
+    <h2>{{{$orderItem->menuItem->name}}}
+    <span class="textRight">${{{number_format((float)($orderItem->menuItem->price / 100), 2, '.', '')}}}</span>  
+    {{ Form::open(['method' => 'DELETE', 'action' => ['OrdersController@destroy', $orderItem->id], 'class' => 'formRight']) }}
+      {{ Form::submit('Delete Item', ['class' => 'btn btn-danger']) }}
+    {{ Form::close() }}
+</h2>  
     <ul>
     @foreach($orderItem->orderItemAddOns as $orderItemAddOn)
       <li>{{{$orderItemAddOn->addOn->description}}}</li>
@@ -28,9 +35,7 @@ width: 100%;
     @endforeach
     </ul>
 
-    {{ Form::open(['method' => 'DELETE', 'action' => ['OrdersController@destroy', $orderItem->id]]) }}
-      {{ Form::submit('Delete Item', ['class' => 'btn btn-danger']) }}
-    {{ Form::close() }}
+  
     <hr>
   @endforeach
   <a href="{{{action("OrdersController@create")}}}" style="color:black;"><button>Edit Order</button></a>
@@ -43,7 +48,7 @@ width: 100%;
       <span>Delivery</span>
     @else
       <p>For delivery price needs to be over $15</p>
-    @endif
+      @endif
     <script
     var $total = parseInt($('#totalCost').html());
       src="https://checkout.stripe.com/checkout.js" class="stripe-button"

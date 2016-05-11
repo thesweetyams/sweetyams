@@ -1,8 +1,8 @@
 @extends('master')
 
 @section('css')
-
-  @section('content')
+@stop
+@section('content')
     <div class="flex">
       <h1 class="flex__title">Juice Healing Program</h1>
     </div>
