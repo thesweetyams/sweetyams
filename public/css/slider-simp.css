@@ -1,3 +1,5 @@
+/*---------------------DESKTOP VIEW----------------------*/
+
 @media screen and (min-width: 815px){
 /* Slider */
 #slider{
@@ -125,6 +127,8 @@
   }
 }
 }
+
+/*-------------------------814-715px------------------------*/
 
 @media screen and (max-width: 814px) and (min-width: 715px){
 #slider{
@@ -294,6 +298,8 @@
 }
 }
 
+/*-------------------------715-686px-------------------------*/
+
 @media screen and (max-width: 715px) and (min-width: 686px){
 #slider{
   width:100%;
@@ -461,6 +467,7 @@
 }
 }
 
+/*-------------------------686-560px----------------------------------*/
 
 @media screen and (max-width: 686px) and (min-width: 560px){
 #slider{
@@ -648,6 +655,8 @@
   margin-left: -2em;
 }
 }
+
+/*-------------------------559-500px------------------------*/
 
 @media screen and (max-width: 559px) and (min-width: 500px){
 #slider{
@@ -839,6 +848,7 @@
 }
 }
 
+/*-------------------------499-450px------------------------*/
 @media screen and (max-width: 499px) and (min-width: 450px){
 #slider{
   width:100%;
@@ -1042,6 +1052,7 @@
 }
 }
 
+/*-------------------------449-405px----------------------*/
 @media screen and (max-width: 449px) and (min-width: 405){
   #slider{
     width:100%;
@@ -1229,6 +1240,7 @@
   }
 }
 
+/*-------------------------449-400px-----------------------*/
 @media screen and (max-width: 449px) and (min-width: 400px){
 #slider{
   width:100%;
@@ -1429,6 +1441,8 @@
   width: 3.5em;
 }
 }
+
+/*--------------------------399-------------------px*/
 
 @media screen and (max-width: 399px){
 #slider{
