@@ -24,10 +24,12 @@ new Vue ({
 $(document).ready(function () {
 	var $window = $(window);
 	var $component = $('.Alert.Alert--OrderNow').css({right: '-60px'});
-	$window.on('scroll', function() {
-		$component.animate({
-			right: '0'
-		}, 200);
-	});
+	if(window.location.pathname == '/') {
+		$window.on('scroll', function() {
+			$component.animate({
+				right: '0'
+			}, 300);
+		});
+	};
 });
 

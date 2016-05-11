@@ -5,11 +5,11 @@
 @stop
 
 @section('content')
-  <div class="container">
     @if (Session::has('errorMessage'))
       <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
     @endif
-  
+    <h2>Sweetyams Login</h2>
+      <div class="container">
     {{Form::open(['action' => 'UsersController@doLogin', 'method' => 'post'])}}
       <div class="row">
         <div class="col-xs-6 col-sm-6 col-md-6">
@@ -28,8 +28,9 @@
         </div>
       {{ Form::submit()	}}
     {{ Form::close() }}
+      </div>
+</div>
   <a href="{{{action("MainController@signup")}}}">Sign up</a>
-</div> <!-- /container -->
 @stop
 
 
