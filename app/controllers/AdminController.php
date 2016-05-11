@@ -31,7 +31,7 @@ class AdminController extends \BaseController {
 	 */
 	public function store()
 	{
-		$menu = new Menu();
+		$menu = new MenuItem();
 
 		return $this->validation($menu);
 	}
@@ -67,7 +67,7 @@ class AdminController extends \BaseController {
 	}
 
 	public function menuIsNull($id){
-		$dish = Menu::find($id);
+		$dish = MenuItem::find($id);
 		if (is_null($dish)) {
 			App::abort(404);
 		}
@@ -101,7 +101,7 @@ class AdminController extends \BaseController {
 
 	public function validation($menu)
 	{
-		$validator = Validator::make(Input::all(), Menu::$rules);
+		$validator = Validator::make(Input::all(), MenuItem::$rules);
 
 		// attempt validation
 		if ($validator->fails()) {
