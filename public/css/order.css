@@ -166,8 +166,36 @@ p {
 
 /* Session Components CSS */
 .Alert {
-	position: relative;
+	text-align: center;
+	position: fixed;
+	height:120px;
+	width: 60px;
+	top: 100px;
+	right: 0;
+	border-bottom-left-radius: 3%;
+	border-top-left-radius: 3%;
 	background-color: #ddd;
-	border: 1px solid darken(#ddd, 10%);
 	padding: 1em;
-}	
+}
+.Alert--Success {
+	background: lighten(green, 70%);
+	border: 1px solid lighten(green, 30%);
+}
+.Alert--Error {
+	background: light(red, 70%);
+	border: 1px solid lighten(red, 30%);
+}
+.Alert--OrderNow {
+	background-color: #e59d43;
+
+	border: 1px solid black;
+
+}
+.Alert__close {
+	font-family: Arial;
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	font-weight: bold;
+	cursor: pointer;
+}

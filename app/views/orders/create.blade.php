@@ -3,11 +3,14 @@
 @section('css')
 	<link rel="stylesheet" href="/css/order.css">
 @stop
-
-@section('content')
-	
+@section('content')	
 	<div class="orderPageContainer">
-	
+	  @if (Session::has('successMessage'))
+	      <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
+	  @endif
+	  @if (Session::has('errorMessage'))
+	      <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
+	  @endif
 		<!-- First Column -->
 		<div class="menuItemsSidebar column">
 			<h2 class="menuNameHeader" id="top">Menu Items</h2>
