@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('css')
-	<link rel="stylesheet" href="/css/order.css">
+	<link rel="stylesheet" href="/css/order.css" media="screen" title="no title" charset="utf-8">
 @stop
 @section('content')	
 	<div class="orderPageContainer">
