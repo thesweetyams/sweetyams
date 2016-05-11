@@ -22,5 +22,6 @@
 						@endforeach
 				{{ Form::submit()	}}
         {{ Form::close() }}
+      </div>
     </div> <!-- /container -->
 @stop
