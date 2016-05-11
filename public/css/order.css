@@ -175,7 +175,6 @@ p {
 	border-bottom-left-radius: 3%;
 	border-top-left-radius: 3%;
 	background-color: #ddd;
-	border: 3px solid darken(#ddd, 10%);
 	padding: 1em;
 }
 .Alert--Success {
@@ -187,8 +186,8 @@ p {
 	border: 1px solid lighten(red, 30%);
 }
 .Alert--OrderNow {
-	background-color: #e06a2c;
-	border: 2px solid darken(#e06a2c, 25%);
+	background-color: #e59d43;
+
 	border: 1px solid black;
 
 }

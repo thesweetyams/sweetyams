@@ -15,6 +15,7 @@
 	@yield('css')
 </head>
 <body class="Site">
+
 	<alert type="orderNow">
 		<a href="{{{action('OrdersController@create')}}}">Click Here
 			<strong>To Order NOW!</strong>
