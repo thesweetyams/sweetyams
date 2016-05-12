@@ -126,6 +126,15 @@
     margin-left:-300%;
   }
 }
+#map-canvas,
+#addressForm,
+#addressButton{
+  width: 90vw;
+}
+#map-canvas{
+  width: 89.9vw;
+  margin-left: 2.5em;
+}
 }
 
 /*-------------------------814-715px------------------------*/
