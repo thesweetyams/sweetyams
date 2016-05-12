@@ -12,7 +12,6 @@
 	<link rel="icon" href="/img/navicons/sweetyamsfinal.png">
 	<link href='https://fonts.googleapis.com/css?family=Handlee|Slabo+27px' rel='stylesheet' type='text/css'>
 	@yield('css')
-	</style>
 </head>
 <body class="Site">
 

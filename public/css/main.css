@@ -329,6 +329,9 @@ a:visited {
 .flex__create {
   margin-left: -30em; }
 
+.flex__title--confirm {
+  margin-bottom: 2em; }
+
 .footer {
   background-image: url("../../img/textures/wood2.png");
   box-shadow: -1px -4px 15px #323232;
