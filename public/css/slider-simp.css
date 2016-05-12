@@ -1876,7 +1876,7 @@
   height: 12em;
   margin-top: 1em;
   display: flex;
-  margin: auto;
+  margin-left: 4em;
   position: relative;
   left: 1em;
   margin-top: 9em;
@@ -1911,9 +1911,12 @@
   position: relative;
   left: 1em;
   margin-top: -1em;
+  margin-left: 2em;
+  font-size: 2em;
 }
 .flex__text{
   margin-left: 4em;
+  font-size: 1.5em;
 }
 .images img{
   width: 20em;
@@ -2082,7 +2085,7 @@
 #flex__food--right{
   height: 12em;
   width: 16em;
-  margin-left: 4em;
+  margin-left: 6em;
 }
 .flex__text--responsive{
   margin-top: 1em;
@@ -2092,7 +2095,7 @@
   text-align: justify;
 }
 .content-container{
-  margin-left: -3em;
+  margin-left: -2em;
 }
 .flex__form{
   width: 24em;
@@ -2102,10 +2105,10 @@
 #addressForm,
 #addressButton{
   width: 90vw;
-  margin-left: 3.5em;
+  margin-left: 2.5em;
 }
 #map-canvas{
-  margin-left: 3.5em;
+  margin-left: 2.5em;
 }
 #addressForm,
 #addressButton{
