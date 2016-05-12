@@ -324,13 +324,11 @@ a:visited {
 
 .content-container--confirm {
   min-height: 80vh;
+  background-color: none;
   width: 100%; }
 
 .flex__create {
   margin-left: -30em; }
-
-.flex__title--confirm {
-  margin-bottom: 2em; }
 
 .footer {
   background-image: url("../../img/textures/wood2.png");
