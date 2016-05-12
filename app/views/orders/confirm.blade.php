@@ -15,7 +15,7 @@
       @if (Session::has('errorMessage'))
           <div class="Alert Alert--Error">{{{ Session::get('errorMessage') }}}</div>
       @endif
-
+      <h1 class="flex__title">Your Order</h1>
         @foreach($order->orderItems as $orderItem)
             <div class="orderDiv">
                 <p class="child">{{{$orderItem->menuItem->name}}}</p>
