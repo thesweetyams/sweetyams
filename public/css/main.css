@@ -283,7 +283,6 @@ a:visited {
 .item {
   height: 10%;
   width: 100%;
-  border: 1px solid black;
   display: flex;
   margin-bottom: 2em;
   margin-top: 1em; }
@@ -307,6 +306,28 @@ a:visited {
   width: 19em;
   display: flex;
   flex: 1; }
+
+.flex__description {
+  font-size: 1.25em;
+  letter-spacing: 0.05em;
+  margin: auto;
+  margin-bottom: 1em;
+  color: black;
+  text-shadow: white 0.06em 0.02em 0.01em; }
+
+.flex__order {
+  flex: 1;
+  text-align: left; }
+
+.flex__price {
+  text-align: right; }
+
+.content-container--confirm {
+  min-height: 80vh;
+  width: 100%; }
+
+.flex__create {
+  margin-left: -30em; }
 
 .footer {
   background-image: url("../../img/textures/wood2.png");

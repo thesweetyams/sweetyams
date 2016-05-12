@@ -19,7 +19,7 @@
       {{Form::open()}}
       <fieldset class="flex__form">
         {{Form::label('name', 'Name', ['class' => 'flex__form'])}}
-        {{form::text('name', null, ['class' => 'flex__form'])}}
+        {{Form::text('name', null, ['class' => 'flex__form'])}}
       </fieldset>
       <fieldset class="flex__form">
         {{Form::label('email', 'Email', ['class' => 'flex__form'])}}

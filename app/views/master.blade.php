@@ -12,6 +12,7 @@
 	<link rel="icon" href="/img/navicons/sweetyamsfinal.png">
 	<link href='https://fonts.googleapis.com/css?family=Handlee|Slabo+27px' rel='stylesheet' type='text/css'>
 	@yield('css')
+	</style>
 </head>
 <body class="Site">
 
@@ -20,7 +21,7 @@
 	</div>
 
 	<div class="desktop-content">
-		<div class="content-container">
+		<div class="content-container content-container--create content-container--confirm">
 			@yield('content')
 		</div>
 	</div>
