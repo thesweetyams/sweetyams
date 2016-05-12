@@ -3,7 +3,8 @@
 @section('css')
 	<link rel="stylesheet" href="/css/order.css" media="screen" title="no title" charset="utf-8">
 @stop
-@section('content')	
+@section('content')
+<div class="flex flex__create">
 	<div class="orderPageContainer">
 	  @if (Session::has('successMessage'))
 	      <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
@@ -23,7 +24,7 @@
 		<div class="itemsContainer column">
 			@foreach($menuCategory as $category)
 				<!-- Menu Section Title -->
-				
+
 				<a href="#top" id="{{{$category->id}}}"><h2 class="menuCategory">{{{$category->name}}}</h2></a>
 					@foreach($menuItems as $item)
 						@if($category->id == $item->menu_id)
@@ -31,18 +32,18 @@
 								<!-- Single Menu Item Name -->
 								<!-- The Price of One Menu Item -->
 								<p>{{{$item->name}}} :<span>${{{$item->price()}}}</span></p>
-								
+
 								<!-- Mushroom Burger AddOns -->
 								@if($category->name == 'Organic Mushroom Burger')
-									<div class="mushroomAddOns">										
+									<div class="mushroomAddOns">
 										@foreach($addOns as $addOn)
 											<p>{{{$addOn->description}}}</p>
 											<p>{{{$addOn->price()}}}</p>
 											{{Form::checkbox('add_on_id[]', $addOn->id, null, ['class' => 'checkbox'])}}
 										@endforeach
 									</div>
-								@endif										
-								
+								@endif
+
 								<!-- Each Menu Items Button and Hidden Id -->
 								{{ Form::hidden('item_id', $item->id, ['class' => 'item_id'])}}
 								{{ Form::submit('Add', ['class' => 'addItemButton butn']) }}
@@ -54,14 +55,14 @@
 		</div>  <!-- .itemsContainer -->
 
 			<!-- Order Display -->
-	
+
 	</div> <!-- .ordersPageContainer -->
-		
+
 			<div id="ajaxContainer">
 				<h1 class="currentOrderHeader">Current Order</h1>
 				<a href="{{{action("OrdersController@confirmOrder")}}}"class="confirmOrder"><button id="confirmButton" class="confirmOrder butn">Confirm Order</button></a>
 			</div> <!-- #ajaxContainer -->
-
+</div>
 @stop
 
 

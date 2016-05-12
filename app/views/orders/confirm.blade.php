@@ -19,11 +19,11 @@
         @foreach($order->orderItems as $orderItem)
             <div class="orderDiv">
                 <p class="child">{{{$orderItem->menuItem->name}}}</p>
-                    <span class="textRight child">${{{number_format((float)($orderItem->menuItem->price / 100), 2, '.', '')}}}</span>  
+                    <span class="textRight child">${{{number_format((float)($orderItem->menuItem->price / 100), 2, '.', '')}}}</span>
                     {{ Form::open(['method' => 'DELETE', 'action' => ['OrdersController@destroy', $orderItem->id], 'class' => 'formRight']) }}
                         {{ Form::submit('Delete Item', ['class' => 'butn']) }}
                     {{ Form::close() }}
-            
+
             <ul>
                 @foreach($orderItem->orderItemAddOns as $orderItemAddOn)
                     <li>{{{$orderItemAddOn->addOn->description}}}</li>
@@ -36,11 +36,11 @@
 
         @endforeach
   <a href="{{{action("OrdersController@create")}}}" style="color:black;"><button>Edit Order</button></a>
-  <p>You're total: $<span id='totalCost'> {{{$order->subtotal()}}}</span></p>
+  <p>Your total: $<span id='totalCost'> {{{$order->subtotal()}}}</span></p>
     {{Form::radio('orderType', 'carryout', null, ['class' => 'checkbox'])}}
     <span>Carry Out</span>  {{Form::open(['action' => 'OrdersController@charge', 'id' => 'billing-form'])}}
 
-    @if ($order->subtotal() >= 15)                                            
+    @if ($order->subtotal() >= 15)
       {{Form::radio('orderType', 'delivery', null, ['class' => 'checkbox'])}}
       <span>Delivery</span>
     @else
@@ -71,7 +71,7 @@ $('.checkbox').on('click', function(){
   $('.stripe-button-el').attr('disabled', false);
   $('#submit').attr('disabled', false);
 });
-if($('.stripe-button-el').is('disabled') 
+if($('.stripe-button-el').is('disabled')
    || $('#submit').attr('disabled')) {
   $('.stripe-button-el').on('click', function() {
     alert('Delivery type needs to be set');

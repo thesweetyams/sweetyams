@@ -325,15 +325,36 @@
 .flex__juice,
 .flex__food,
 #flex__juice--left,
+#flex__cater--left,
 #flex__food--left,
 #flex__juice--right,
+#flex__cater--right,
 #flex__food--right{
   height: 21em;
   width: 28em;
   margin-left: 6em;
 }
+.flex__text--responsive{
+  margin-top: 1em;
+  margin-left: 6em;
+  font-size: 1.75em;
+  width: 17em;
+  text-align: justify;
 }
-
+#map-canvas,
+#addressForm,
+#addressButton{
+  width: 90vw;
+}
+#map-canvas{
+  margin-left: .3em;
+}
+.menuItemsSidebar,
+.itemsContainer,
+#ajaxContainer{
+  width: 30%;
+}
+}
 /*-------------------------715-686px-------------------------*/
 
 @media screen and (max-width: 715px) and (min-width: 686px){
@@ -530,12 +551,33 @@
 .flex__juice,
 .flex__food,
 #flex__juice--left,
+#flex__cater--left,
 #flex__food--left,
 #flex__juice--right,
+#flex__cater--right,
 #flex__food--right{
   height: 18em;
   width: 24em;
   margin-left: 6.5em;
+}
+.flex__text--responsive{
+  margin-top: 1em;
+  margin-left: 8em;
+  font-size: 1.75em;
+  width: 14em;
+  text-align: justify;
+}
+.flex__form{
+  width: 25em;
+  margin-left: 1em;
+}
+#map-canvas,
+#addressForm,
+#addressButton{
+  width: 90vw;
+}
+#map-canvas{
+  margin-left: 1.25em;
 }
 }
 
@@ -755,12 +797,34 @@
 .flex__juice,
 .flex__food,
 #flex__juice--left,
+#flex__cater--left,
 #flex__food--left,
 #flex__juice--right,
+#flex__cater--right,
 #flex__food--right{
   height: 15em;
   width: 20em;
   margin-left: 5em;
+}
+.flex__text--responsive{
+  margin-top: 1em;
+  margin-left: 8em;
+  font-size: 1.75em;
+  width: 12em;
+  text-align: justify;
+}
+.flex__form{
+  width: 24em;
+  margin-left: 1.5em;
+}
+#map-canvas,
+#addressForm,
+#addressButton{
+  width: 90vw;
+  margin-left: 3em;
+}
+#map-canvas{
+  margin-left: 3em;
 }
 }
 
@@ -983,12 +1047,33 @@
 .flex__juice,
 .flex__food,
 #flex__juice--left,
+#flex__cater--left,
 #flex__food--left,
 #flex__juice--right,
+#flex__cater--right,
 #flex__food--right{
   height: 12em;
   width: 16em;
   margin-left: 4em;
+}
+.flex__text--responsive{
+  margin-top: 1em;
+  margin-left: 4em;
+  font-size: 1.75em;
+  width: 14em;
+  text-align: justify;
+}
+.flex__form{
+  width: 26em;
+  margin-left: .5em;
+}
+#map-canvas,
+#addressForm,
+#addressButton{
+  width: 90vw;
+}
+#map-canvas{
+  margin-left: 1em;
 }
 }
 
@@ -1223,12 +1308,34 @@
 .flex__juice,
 .flex__food,
 #flex__juice--left,
+#flex__cater--left,
 #flex__food--left,
 #flex__juice--right,
+#flex__cater--right,
 #flex__food--right{
   height: 12em;
   width: 16em;
   margin-left: 6em;
+}
+.flex__text--responsive{
+  margin-top: 1em;
+  margin-left: 4em;
+  font-size: 1.75em;
+  width: 14em;
+  text-align: justify;
+}
+.flex__form{
+  width: 25em;
+  margin-left: 1em;
+}
+#map-canvas,
+#addressForm,
+#addressButton{
+  width: 90vw;
+  margin-left: 3em;
+}
+#map-canvas{
+  margin-left: 3em;
 }
 }
 
@@ -1387,7 +1494,7 @@
   #logo {
     height: 7em;
     width: 7em;
-    transition: all .5s
+    transition: all .5s;
   }
 
   .logo__box{
@@ -1396,16 +1503,13 @@
     box-shadow: 0px 28px 26px -10px #323232;
     margin-left: -1.25em;
     margin-top: .25em;
-    transition: all .5s
+    transition: all .5s;
   }
   .flex-ul{
     height: 3em;
   }
   #community-dropdown{
     margin-left: -60px;
-  }
-  .content-container{
-    margin-left: -1em;
   }
   .social__info{
     font-size: .8em;
@@ -1451,6 +1555,21 @@
     height: 12em;
     width: 16em;
     margin-left: 8em;
+  }
+  .flex__text--responsive{
+    margin-top: 1em;
+    margin-left: 4em;
+    font-size: 1.75em;
+    width: 14em;
+    text-align: justify;
+  }
+  .content-container{
+    margin-left: -3em;
+  }
+  #map-canvas,
+  #addressForm,
+  #addressButton{
+    width: 90vw;
   }
 }
 
@@ -1683,12 +1802,37 @@
 .flex__juice,
 .flex__food,
 #flex__juice--left,
+#flex__cater--left,
 #flex__food--left,
 #flex__juice--right,
+#flex__cater--right,
 #flex__food--right{
   height: 12em;
   width: 16em;
   margin-left: 4em;
+}
+.flex__text--responsive{
+  margin-top: 1em;
+  margin-left: 3em;
+  font-size: 1.5em;
+  width: 15em;
+  text-align: justify;
+}
+.content-container{
+  margin-left: -2em;
+}
+.flex__form{
+  width: 23em;
+  margin-left: 1em;
+}
+#map-canvas,
+#addressForm,
+#addressButton{
+  width: 90vw;
+  margin-left: 2.5em;
+}
+#map-canvas{
+  margin-left: 2.5em;
 }
 }
 
@@ -1922,11 +2066,40 @@
 .flex__juice,
 .flex__food,
 #flex__juice--left,
+#flex__cater--left,
 #flex__food--left,
 #flex__juice--right,
+#flex__cater--right,
 #flex__food--right{
   height: 12em;
   width: 16em;
   margin-left: 4em;
+}
+.flex__text--responsive{
+  margin-top: 1em;
+  margin-left: 3em;
+  font-size: 1.5em;
+  width: 15em;
+  text-align: justify;
+}
+.content-container{
+  margin-left: -3em;
+}
+.flex__form{
+  width: 24em;
+  margin-left: 1em;
+}
+#map-canvas,
+#addressForm,
+#addressButton{
+  width: 90vw;
+  margin-left: 3.5em;
+}
+#map-canvas{
+  margin-left: 3.5em;
+}
+#addressForm,
+#addressButton{
+  width: 90vw;
 }
 }
