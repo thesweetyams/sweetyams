@@ -113,7 +113,7 @@ class OrdersController extends \BaseController {
       $message->to($data['userEmail'])->subject('Order Details');
     });
     Session::flash('successMessage', 'The order was successfully sent.');
-    return Redirect::action('MainController@index'); 
+    return Redirect::action('MainController@index');
   }
 
   public function sendChargeEmail()
@@ -137,7 +137,6 @@ class OrdersController extends \BaseController {
       $message->from('tleffew1994@gmail.com', 'SweetYams');
       $message->to($data['userEmail'])->subject('Order Details');
     });
-    Session::flash('successMessage', 'The order was successfully sent.');
   }
 
   public function charge()
@@ -154,6 +153,7 @@ class OrdersController extends \BaseController {
       ));
 
       $this->sendChargeEmail();
+      Session::flash('successMessage', 'The order was successfully sent.');
       return Redirect::action('MainController@index');
 
     } catch(\Stripe\Error\Card $e) {
@@ -182,9 +182,9 @@ class OrdersController extends \BaseController {
     return Redirect::action('OrdersController@confirmOrder');
   }
 
-  public function deleteLastItem() 
+  public function deleteLastItem()
   {
-      
+
   }
 
 }
