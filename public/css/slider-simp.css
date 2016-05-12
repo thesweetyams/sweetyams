@@ -321,6 +321,17 @@
 .dropdown:hover{
   display: none;
 }
+.flex__cater,
+.flex__juice,
+.flex__food,
+#flex__juice--left,
+#flex__food--left,
+#flex__juice--right,
+#flex__food--right{
+  height: 21em;
+  width: 28em;
+  margin-left: 6em;
+}
 }
 
 /*-------------------------715-686px-------------------------*/
@@ -514,6 +525,17 @@
 .flex-ul__item--hover:hover + .dropdown,
 .dropdown:hover{
   display: none;
+}
+.flex__cater,
+.flex__juice,
+.flex__food,
+#flex__juice--left,
+#flex__food--left,
+#flex__juice--right,
+#flex__food--right{
+  height: 18em;
+  width: 24em;
+  margin-left: 6.5em;
 }
 }
 
@@ -728,6 +750,17 @@
 .flex-ul__item--hover:hover + .dropdown,
 .dropdown:hover{
   display: none;
+}
+.flex__cater,
+.flex__juice,
+.flex__food,
+#flex__juice--left,
+#flex__food--left,
+#flex__juice--right,
+#flex__food--right{
+  height: 15em;
+  width: 20em;
+  margin-left: 5em;
 }
 }
 
@@ -945,6 +978,17 @@
 .flex-ul__item--hover:hover + .dropdown,
 .dropdown:hover{
   display: none;
+}
+.flex__cater,
+.flex__juice,
+.flex__food,
+#flex__juice--left,
+#flex__food--left,
+#flex__juice--right,
+#flex__food--right{
+  height: 12em;
+  width: 16em;
+  margin-left: 4em;
 }
 }
 
@@ -1175,6 +1219,17 @@
 .dropdown:hover{
   display: none;
 }
+.flex__cater,
+.flex__juice,
+.flex__food,
+#flex__juice--left,
+#flex__food--left,
+#flex__juice--right,
+#flex__food--right{
+  height: 12em;
+  width: 16em;
+  margin-left: 6em;
+}
 }
 
 /*-------------------------449-405px----------------------*/
@@ -1387,6 +1442,15 @@
   .flex-ul__item--hover:hover + .dropdown,
   .dropdown:hover{
     display: none;
+  }
+  .flex__cater,
+  .flex__juice,
+  .flex__food,
+  #flex__juice--left,
+  #flex__juice--right{
+    height: 12em;
+    width: 16em;
+    margin-left: 8em;
   }
 }
 
@@ -1615,6 +1679,17 @@
 .dropdown:hover{
   display: none;
 }
+.flex__cater,
+.flex__juice,
+.flex__food,
+#flex__juice--left,
+#flex__food--left,
+#flex__juice--right,
+#flex__food--right{
+  height: 12em;
+  width: 16em;
+  margin-left: 4em;
+}
 }
 
 /*--------------------------399-------------------px*/
@@ -1805,7 +1880,7 @@
   margin-left: -60px;
 }
 .content-container{
-  margin-left: -2em;
+  margin-left: -3em;
 }
 .social__info{
   font-size: .7em;
@@ -1842,5 +1917,16 @@
 .flex-ul__item--hover:hover + .dropdown,
 .dropdown:hover{
   display: none;
+}
+.flex__cater,
+.flex__juice,
+.flex__food,
+#flex__juice--left,
+#flex__food--left,
+#flex__juice--right,
+#flex__food--right{
+  height: 12em;
+  width: 16em;
+  margin-left: 4em;
 }
 }
