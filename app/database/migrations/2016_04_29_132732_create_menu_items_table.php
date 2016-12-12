@@ -15,8 +15,8 @@ class CreateMenuItemsTable extends Migration {
 		Schema::create('menu_items', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('menu_id')->length(10)->unsigned()->default(1);
-			$table->foreign('menu_id')->references('id')->on('menu');
+			$table->integer('menu_id');//->length(10)->unsigned()->default(1);
+			//$table->foreign('menu_id')->references('id')->on('menu');
 			$table->string('name');
 			$table->string('description');
 			$table->string('available');

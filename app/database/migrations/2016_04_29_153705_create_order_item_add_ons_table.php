@@ -15,10 +15,10 @@ class CreateOrderItemAddOnsTable extends Migration {
 		Schema::create('order_item_add_ons', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('order_item_id')->length(10)->unsigned();
-			$table->foreign('order_item_id')->references('id')->on('order_items');
-			$table->integer('add_on_id')->length(10)->unsigned();
-			$table->foreign('add_on_id')->references('id')->on('add_ons');
+			$table->integer('order_item_id');//->length(10)->unsigned();
+			// $table->foreign('order_item_id')->references('id')->on('order_items');
+			$table->integer('add_on_id');//->length(10)->unsigned();
+			// $table->foreign('add_on_id')->references('id')->on('add_ons');
 		});
 	}
 
