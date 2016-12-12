@@ -4,6 +4,7 @@
 	<link rel="stylesheet" href="/css/order.css" media="screen" title="no title" charset="utf-8">
 @stop
 @section('content')
+
 <div class="flex flex__create">
 	<div class="orderPageContainer">
 	  @if (Session::has('successMessage'))
@@ -47,7 +48,7 @@
 								<!-- Each Menu Items Button and Hidden Id -->
 								{{ Form::hidden('item_id', $item->id, ['class' => 'item_id'])}}
 								{{ Form::submit('Add', ['class' => 'addItemButton butn']) }}
-
+								
 							{{ Form::close() }}
 						@endif  <!-- category check if check -->
 					@endforeach  <!-- .menuItems as item -->
